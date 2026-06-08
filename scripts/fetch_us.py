@@ -88,6 +88,11 @@ def fetch_price(ticker: str) -> dict | None:
         prev  = round(float(prev), 4) if prev else None
         chg   = round((close - prev) / prev * 100, 2) if prev else None
 
+        # NaN が発生した場合は None に変換（JSON仕様ではNaNは不正値）
+        import math
+        if chg is not None and math.isnan(chg):
+            chg = None
+
         return {
             "ticker":     symbol,
             "close":      close,
