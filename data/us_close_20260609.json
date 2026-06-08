@@ -29,8 +29,8 @@
     "dxy": {
       "ticker": "DX-Y.NYB",
       "close": 99.93,
-      "prev_close": NaN,
-      "change_pct": NaN
+      "prev_close": null,
+      "change_pct": null
     },
     "us10y": {
       "ticker": "^TNX",
