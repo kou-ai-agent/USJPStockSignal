@@ -1,0 +1,41 @@
+name: 朝の米国終値取得・予測
+
+on:
+  schedule:
+    # 毎朝 AM5:30 JST = 前日 20:30 UTC（月〜金）
+    - cron: '30 20 * * 0-4'
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  fetch-and-predict:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # data/フォルダへのpushに必要
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 依存パッケージインストール
+        run: pip install yfinance anthropic
+
+      - name: 米国終値取得（fetch_us.py）
+        run: python scripts/fetch_us.py
+
+      - name: Claude予測（predict.py）
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/predict.py
+
+      - name: 生成ファイルをGitにコミット・プッシュ
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/us_close_*.json data/predict_*.json
+          git diff --cached --quiet || git commit -m "data: 米国終値・予測 $(date +'%Y%m%d' -d '+9 hours')"
+          git push
