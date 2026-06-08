@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+# データ・ログ（ローカルのみ）
+*.log
+check_result.csv
+
+# Excel・作業ファイル（Googleドライブで管理）
+*.xlsx
+*.xls
