@@ -1,0 +1,676 @@
+{
+  "date": "20260610",
+  "fetched_at": "2026-06-10 07:07:16 JST",
+  "market_summary": {
+    "sp500": {
+      "ticker": "^GSPC",
+      "close": 7386.6499,
+      "prev_close": 7405.73,
+      "change_pct": -0.26
+    },
+    "nasdaq": {
+      "ticker": "^IXIC",
+      "close": 25678.8223,
+      "prev_close": 25929.6602,
+      "change_pct": -0.97
+    },
+    "dow": {
+      "ticker": "^DJI",
+      "close": 50872.1094,
+      "prev_close": 50786.0117,
+      "change_pct": 0.17
+    },
+    "vix": {
+      "ticker": "^VIX",
+      "close": 19.87,
+      "prev_close": 18.92,
+      "change_pct": 5.02
+    },
+    "dxy": {
+      "ticker": "DX-Y.NYB",
+      "close": 99.985,
+      "prev_close": 100.05,
+      "change_pct": -0.06
+    },
+    "us10y": {
+      "ticker": "^TNX",
+      "close": 4.528,
+      "prev_close": 4.552,
+      "change_pct": -0.53
+    }
+  },
+  "signals": {
+    "ABB": {
+      "ticker": "ABBNY",
+      "close": 101.12,
+      "prev_close": 103.36,
+      "change_pct": -2.17
+    },
+    "ABNB": {
+      "ticker": "ABNB",
+      "close": 131.35,
+      "prev_close": 134.43,
+      "change_pct": -2.29
+    },
+    "ADM": {
+      "ticker": "ADM",
+      "close": 80.12,
+      "prev_close": 80.22,
+      "change_pct": -0.12
+    },
+    "ALB": {
+      "ticker": "ALB",
+      "close": 152.79,
+      "prev_close": 149.84,
+      "change_pct": 1.97
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "close": 475.505,
+      "prev_close": 490.33,
+      "change_pct": -3.02
+    },
+    "AMT": {
+      "ticker": "AMT",
+      "close": 190.83,
+      "prev_close": 189.1,
+      "change_pct": 0.91
+    },
+    "ANET": {
+      "ticker": "ANET",
+      "close": 152.16,
+      "prev_close": 156.4,
+      "change_pct": -2.71
+    },
+    "ASTS": {
+      "ticker": "ASTS",
+      "close": 88.71,
+      "prev_close": 92.06,
+      "change_pct": -3.64
+    },
+    "AVAV": {
+      "ticker": "AVAV",
+      "close": 176.51,
+      "prev_close": 184.68,
+      "change_pct": -4.42,
+      "name": "エアロバイロメント"
+    },
+    "BAC": {
+      "ticker": "BAC",
+      "close": 54.42,
+      "prev_close": 53.63,
+      "change_pct": 1.47
+    },
+    "BE": {
+      "ticker": "BE",
+      "close": 259.61,
+      "prev_close": 253.57,
+      "change_pct": 2.38
+    },
+    "BKNG": {
+      "ticker": "BKNG",
+      "close": 163.99,
+      "prev_close": 162.3,
+      "change_pct": 1.04,
+      "name": "ブッキングHD"
+    },
+    "CAT": {
+      "ticker": "CAT",
+      "close": 914.7,
+      "prev_close": 915.64,
+      "change_pct": -0.1,
+      "name": "キャタピラー"
+    },
+    "CCJ": {
+      "ticker": "CCJ",
+      "close": 102.27,
+      "prev_close": 105.44,
+      "change_pct": -3.01
+    },
+    "CEG": {
+      "ticker": "CEG",
+      "close": 251.65,
+      "prev_close": 250.67,
+      "change_pct": 0.39
+    },
+    "COIN": {
+      "ticker": "COIN",
+      "close": 155.5,
+      "prev_close": 162.11,
+      "change_pct": -4.08,
+      "name": "コインベース"
+    },
+    "CRSP": {
+      "ticker": "CRSP",
+      "close": 51.48,
+      "prev_close": 51.6,
+      "change_pct": -0.23
+    },
+    "CRWD": {
+      "ticker": "CRWD",
+      "close": 644.93,
+      "prev_close": 658.79,
+      "change_pct": -2.1,
+      "name": "クラウドストライク"
+    },
+    "CTVA": {
+      "ticker": "CTVA",
+      "close": 75.01,
+      "prev_close": 75.86,
+      "change_pct": -1.12
+    },
+    "CVX": {
+      "ticker": "CVX",
+      "close": 186.76,
+      "prev_close": 189.24,
+      "change_pct": -1.31
+    },
+    "DAL": {
+      "ticker": "DAL",
+      "close": 81.17,
+      "prev_close": 78.21,
+      "change_pct": 3.78
+    },
+    "DE": {
+      "ticker": "DE",
+      "close": 577.33,
+      "prev_close": 573.66,
+      "change_pct": 0.64,
+      "name": "ディア・アンド・カンパニー"
+    },
+    "DIS": {
+      "ticker": "DIS",
+      "close": 99.33,
+      "prev_close": 98.87,
+      "change_pct": 0.47
+    },
+    "DLR": {
+      "ticker": "DLR",
+      "close": 184.93,
+      "prev_close": 182.15,
+      "change_pct": 1.53
+    },
+    "EA": {
+      "ticker": "EA",
+      "close": 202.48,
+      "prev_close": 203.2,
+      "change_pct": -0.35
+    },
+    "ENPH": {
+      "ticker": "ENPH",
+      "close": 53.51,
+      "prev_close": 56.88,
+      "change_pct": -5.92
+    },
+    "F": {
+      "ticker": "F",
+      "close": 14.95,
+      "prev_close": 15.0,
+      "change_pct": -0.33
+    },
+    "FCX": {
+      "ticker": "FCX",
+      "close": 64.25,
+      "prev_close": 63.91,
+      "change_pct": 0.53,
+      "name": "フリーポート・マクモラン"
+    },
+    "GD": {
+      "ticker": "GD",
+      "close": 345.68,
+      "prev_close": 340.86,
+      "change_pct": 1.41,
+      "name": "ゼネラル・ダイナミクス"
+    },
+    "GE": {
+      "ticker": "GE",
+      "close": 330.44,
+      "prev_close": 322.04,
+      "change_pct": 2.61
+    },
+    "GEV": {
+      "ticker": "GEV",
+      "close": 920.15,
+      "prev_close": 933.85,
+      "change_pct": -1.47
+    },
+    "GIS": {
+      "ticker": "GIS",
+      "close": 33.72,
+      "prev_close": 33.14,
+      "change_pct": 1.75
+    },
+    "GLD": {
+      "ticker": "GLD",
+      "close": 390.78,
+      "prev_close": 397.27,
+      "change_pct": -1.63
+    },
+    "GM": {
+      "ticker": "GM",
+      "close": 83.76,
+      "prev_close": 83.77,
+      "change_pct": -0.01
+    },
+    "GOOGL": {
+      "ticker": "GOOGL",
+      "close": 364.26,
+      "prev_close": 363.31,
+      "change_pct": 0.26
+    },
+    "GS": {
+      "ticker": "GS",
+      "close": 1032.01,
+      "prev_close": 1045.0,
+      "change_pct": -1.24
+    },
+    "HCA": {
+      "ticker": "HCA",
+      "close": 374.9,
+      "prev_close": 361.32,
+      "change_pct": 3.76
+    },
+    "HII": {
+      "ticker": "HII",
+      "close": 297.52,
+      "prev_close": 292.26,
+      "change_pct": 1.8
+    },
+    "HON": {
+      "ticker": "HON",
+      "close": 215.7,
+      "prev_close": 211.8,
+      "change_pct": 1.84
+    },
+    "IBIT": {
+      "ticker": "IBIT",
+      "close": 35.14,
+      "prev_close": 35.89,
+      "change_pct": -2.09
+    },
+    "IONQ": {
+      "ticker": "IONQ",
+      "close": 56.69,
+      "prev_close": 62.8,
+      "change_pct": -9.73,
+      "name": "アイオンキュー"
+    },
+    "ISRG": {
+      "ticker": "ISRG",
+      "close": 426.61,
+      "prev_close": 418.61,
+      "change_pct": 1.91
+    },
+    "JPM": {
+      "ticker": "JPM",
+      "close": 312.7,
+      "prev_close": 311.11,
+      "change_pct": 0.51,
+      "name": "JPモルガン・チェース"
+    },
+    "KO": {
+      "ticker": "KO",
+      "close": 81.34,
+      "prev_close": 79.54,
+      "change_pct": 2.26,
+      "name": "コカ・コーラ"
+    },
+    "KTOS": {
+      "ticker": "KTOS",
+      "close": 56.19,
+      "prev_close": 57.73,
+      "change_pct": -2.67
+    },
+    "LMT": {
+      "ticker": "LMT",
+      "close": 530.13,
+      "prev_close": 520.07,
+      "change_pct": 1.93,
+      "name": "ロッキード・マーティン"
+    },
+    "LUNR": {
+      "ticker": "LUNR",
+      "close": 27.47,
+      "prev_close": 29.735,
+      "change_pct": -7.62
+    },
+    "MAR": {
+      "ticker": "MAR",
+      "close": 393.61,
+      "prev_close": 391.42,
+      "change_pct": 0.56
+    },
+    "MARA": {
+      "ticker": "MARA",
+      "close": 13.31,
+      "prev_close": 13.78,
+      "change_pct": -3.41
+    },
+    "MBLY": {
+      "ticker": "MBLY",
+      "close": 9.33,
+      "prev_close": 9.69,
+      "change_pct": -3.72
+    },
+    "MDLZ": {
+      "ticker": "MDLZ",
+      "close": 62.93,
+      "prev_close": 61.6,
+      "change_pct": 2.16
+    },
+    "MLM": {
+      "ticker": "MLM",
+      "close": 572.25,
+      "prev_close": 553.98,
+      "change_pct": 3.3
+    },
+    "MMM": {
+      "ticker": "MMM",
+      "close": 156.39,
+      "prev_close": 153.85,
+      "change_pct": 1.65
+    },
+    "MOS": {
+      "ticker": "MOS",
+      "close": 21.28,
+      "prev_close": 21.38,
+      "change_pct": -0.47
+    },
+    "MRNA": {
+      "ticker": "MRNA",
+      "close": 47.73,
+      "prev_close": 47.6,
+      "change_pct": 0.27
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "close": 403.41,
+      "prev_close": 411.74,
+      "change_pct": -2.02
+    },
+    "MSTR": {
+      "ticker": "MSTR",
+      "close": 117.02,
+      "prev_close": 127.2,
+      "change_pct": -8.0
+    },
+    "NEE": {
+      "ticker": "NEE",
+      "close": 84.83,
+      "prev_close": 84.01,
+      "change_pct": 0.98
+    },
+    "NFLX": {
+      "ticker": "NFLX",
+      "close": 81.41,
+      "prev_close": 82.64,
+      "change_pct": -1.49,
+      "name": "ネットフリックス"
+    },
+    "NNE": {
+      "ticker": "NNE",
+      "close": 23.94,
+      "prev_close": 25.85,
+      "change_pct": -7.39
+    },
+    "NOC": {
+      "ticker": "NOC",
+      "close": 548.67,
+      "prev_close": 540.81,
+      "change_pct": 1.45
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "close": 208.19,
+      "prev_close": 208.64,
+      "change_pct": -0.22,
+      "name": "エヌビディア"
+    },
+    "OKLO": {
+      "ticker": "OKLO",
+      "close": 56.48,
+      "prev_close": 58.94,
+      "change_pct": -4.17,
+      "name": "オクロ"
+    },
+    "PANW": {
+      "ticker": "PANW",
+      "close": 260.52,
+      "prev_close": 266.33,
+      "change_pct": -2.18
+    },
+    "PG": {
+      "ticker": "PG",
+      "close": 148.67,
+      "prev_close": 145.1,
+      "change_pct": 2.46
+    },
+    "PLD": {
+      "ticker": "PLD",
+      "close": 147.52,
+      "prev_close": 142.78,
+      "change_pct": 3.32,
+      "name": "プロロジス"
+    },
+    "PLTR": {
+      "ticker": "PLTR",
+      "close": 132.07,
+      "prev_close": 136.47,
+      "change_pct": -3.22
+    },
+    "PLUG": {
+      "ticker": "PLUG",
+      "close": 2.91,
+      "prev_close": 3.19,
+      "change_pct": -8.78,
+      "name": "プラグ・パワー"
+    },
+    "PWR": {
+      "ticker": "PWR",
+      "close": 691.95,
+      "prev_close": 693.81,
+      "change_pct": -0.27
+    },
+    "QBTS": {
+      "ticker": "QBTS",
+      "close": 23.52,
+      "prev_close": 25.83,
+      "change_pct": -8.94
+    },
+    "QUBT": {
+      "ticker": "QUBT",
+      "close": 9.505,
+      "prev_close": 10.45,
+      "change_pct": -9.04
+    },
+    "RBLX": {
+      "ticker": "RBLX",
+      "close": 43.0,
+      "prev_close": 42.3,
+      "change_pct": 1.65
+    },
+    "RCAT": {
+      "ticker": "RCAT",
+      "close": 11.495,
+      "prev_close": 12.46,
+      "change_pct": -7.74
+    },
+    "RDW": {
+      "ticker": "RDW",
+      "close": 15.75,
+      "prev_close": 18.57,
+      "change_pct": -15.19
+    },
+    "RGTI": {
+      "ticker": "RGTI",
+      "close": 19.69,
+      "prev_close": 21.765,
+      "change_pct": -9.53
+    },
+    "RKLB": {
+      "ticker": "RKLB",
+      "close": 108.23,
+      "prev_close": 113.65,
+      "change_pct": -4.77,
+      "name": "ロケット・ラボ"
+    },
+    "RTX": {
+      "ticker": "RTX",
+      "close": 181.56,
+      "prev_close": 178.66,
+      "change_pct": 1.62
+    },
+    "S": {
+      "ticker": "S",
+      "close": 15.24,
+      "prev_close": 15.75,
+      "change_pct": -3.24
+    },
+    "SCCO": {
+      "ticker": "SCCO",
+      "close": 175.17,
+      "prev_close": 170.48,
+      "change_pct": 2.75
+    },
+    "SMR": {
+      "ticker": "SMR",
+      "close": 10.0,
+      "prev_close": 10.76,
+      "change_pct": -7.06,
+      "name": "ニュースケール・パワー"
+    },
+    "SOX": {
+      "ticker": "^SOX",
+      "close": 12657.8096,
+      "prev_close": 12906.6904,
+      "change_pct": -1.93,
+      "name": "フィラデルフィア半導体指数"
+    },
+    "SPG": {
+      "ticker": "SPG",
+      "close": 211.89,
+      "prev_close": 207.34,
+      "change_pct": 2.19
+    },
+    "T": {
+      "ticker": "T",
+      "close": 22.71,
+      "prev_close": 22.5,
+      "change_pct": 0.93,
+      "name": "AT&T"
+    },
+    "TDOC": {
+      "ticker": "TDOC",
+      "close": 6.93,
+      "prev_close": 7.08,
+      "change_pct": -2.12
+    },
+    "TM": {
+      "ticker": "TM",
+      "close": 175.78,
+      "prev_close": 178.45,
+      "change_pct": -1.5
+    },
+    "TMUS": {
+      "ticker": "TMUS",
+      "close": 179.46,
+      "prev_close": 178.43,
+      "change_pct": 0.58
+    },
+    "TSLA": {
+      "ticker": "TSLA",
+      "close": 396.68,
+      "prev_close": 408.95,
+      "change_pct": -3.0,
+      "name": "テスラ"
+    },
+    "TSM": {
+      "ticker": "TSM",
+      "close": 427.92,
+      "prev_close": 426.8,
+      "change_pct": 0.26
+    },
+    "UMAC": {
+      "ticker": "UMAC",
+      "close": 23.9,
+      "prev_close": 25.85,
+      "change_pct": -7.54
+    },
+    "UNH": {
+      "ticker": "UNH",
+      "close": 413.0,
+      "prev_close": 406.57,
+      "change_pct": 1.58,
+      "name": "ユナイテッドヘルス"
+    },
+    "VMC": {
+      "ticker": "VMC",
+      "close": 279.0,
+      "prev_close": 269.98,
+      "change_pct": 3.34
+    },
+    "VRT": {
+      "ticker": "VRT",
+      "close": 289.52,
+      "prev_close": 300.57,
+      "change_pct": -3.68,
+      "name": "バーティブ"
+    },
+    "VRTX": {
+      "ticker": "VRTX",
+      "close": 445.77,
+      "prev_close": 442.96,
+      "change_pct": 0.63
+    },
+    "VST": {
+      "ticker": "VST",
+      "close": 146.22,
+      "prev_close": 146.9,
+      "change_pct": -0.46,
+      "name": "ビストラ"
+    },
+    "VZ": {
+      "ticker": "VZ",
+      "close": 45.78,
+      "prev_close": 45.44,
+      "change_pct": 0.75
+    },
+    "XBI": {
+      "ticker": "XBI",
+      "close": 131.38,
+      "prev_close": 128.43,
+      "change_pct": 2.3,
+      "name": "S&P バイオテックETF"
+    },
+    "XLF": {
+      "ticker": "XLF",
+      "close": 52.46,
+      "prev_close": 51.97,
+      "change_pct": 0.94
+    },
+    "XLRE": {
+      "ticker": "XLRE",
+      "close": 44.97,
+      "prev_close": 44.03,
+      "change_pct": 2.13
+    },
+    "XOM": {
+      "ticker": "XOM",
+      "close": 148.91,
+      "prev_close": 151.75,
+      "change_pct": -1.87,
+      "name": "エクソンモービル"
+    },
+    "ZS": {
+      "ticker": "ZS",
+      "close": 125.84,
+      "prev_close": 129.25,
+      "change_pct": -2.64
+    }
+  },
+  "stats": {
+    "total": 100,
+    "ok": 100,
+    "ng": 0
+  }
+}
