@@ -1,37 +1,41 @@
-﻿name: 譛昴・邀ｳ蝗ｽ邨ょ､蜿門ｾ励・莠域ｸｬ
+name: morning-fetch-and-predict
 
 on:
   schedule:
-    # 豈取悃 AM5:30 JST = 蜑肴律 20:30 UTC・域怦縲憺≡・・    - cron: '30 20 * * 0-4'
-  workflow_dispatch:  # 謇句虚螳溯｡後ｂ蜿ｯ閭ｽ
+    - cron: '30 20 * * 0-4'
+  workflow_dispatch:
 
 jobs:
   fetch-and-predict:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # data/繝輔か繝ｫ繝縺ｸ縺ｮpush縺ｫ蠢・ｦ・
-    steps:
-      - name: 繝ｪ繝昴ず繝医Μ繧偵メ繧ｧ繝・け繧｢繧ｦ繝・        uses: actions/checkout@v4
+      contents: write
 
-      - name: Python 繧ｻ繝・ヨ繧｢繝・・
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: 萓晏ｭ倥ヱ繝・こ繝ｼ繧ｸ繧､繝ｳ繧ｹ繝医・繝ｫ
+      - name: install-deps
         run: pip install yfinance anthropic
 
-      - name: 邀ｳ蝗ｽ邨ょ､蜿門ｾ暦ｼ・etch_us.py・・        run: python scripts/fetch_us.py
+      - name: fetch-us
+        run: python scripts/fetch_us.py
 
-      - name: Claude莠域ｸｬ・・redict.py・・        env:
+      - name: predict
+        env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/predict.py
 
-      - name: 逕滓・繝輔ぃ繧､繝ｫ繧竪it縺ｫ繧ｳ繝溘ャ繝医・繝励ャ繧ｷ繝･
+      - name: commit-and-push
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/us_close_*.json data/predict_*.json
-          git diff --cached --quiet || git commit -m "data: 邀ｳ蝗ｽ邨ょ､繝ｻ莠域ｸｬ $(date +'%Y%m%d' -d '+9 hours')"
-          git pull --rebase origin main`n          git push
-
+          git diff --cached --quiet || git commit -m "data: us-close and predict $(date +'%Y%m%d' -d '+9 hours')"
+          git pull --rebase origin main
+          git push
