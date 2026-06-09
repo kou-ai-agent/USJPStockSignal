@@ -1,41 +1,37 @@
-name: 朝の米国終値取得・予測
+﻿name: 譛昴・邀ｳ蝗ｽ邨ょ､蜿門ｾ励・莠域ｸｬ
 
 on:
   schedule:
-    # 毎朝 AM5:30 JST = 前日 20:30 UTC（月〜金）
-    - cron: '30 20 * * 0-4'
-  workflow_dispatch:  # 手動実行も可能
+    # 豈取悃 AM5:30 JST = 蜑肴律 20:30 UTC・域怦縲憺≡・・    - cron: '30 20 * * 0-4'
+  workflow_dispatch:  # 謇句虚螳溯｡後ｂ蜿ｯ閭ｽ
 
 jobs:
   fetch-and-predict:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # data/フォルダへのpushに必要
-
+      contents: write  # data/繝輔か繝ｫ繝縺ｸ縺ｮpush縺ｫ蠢・ｦ・
     steps:
-      - name: リポジトリをチェックアウト
-        uses: actions/checkout@v4
+      - name: 繝ｪ繝昴ず繝医Μ繧偵メ繧ｧ繝・け繧｢繧ｦ繝・        uses: actions/checkout@v4
 
-      - name: Python セットアップ
+      - name: Python 繧ｻ繝・ヨ繧｢繝・・
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: 依存パッケージインストール
+      - name: 萓晏ｭ倥ヱ繝・こ繝ｼ繧ｸ繧､繝ｳ繧ｹ繝医・繝ｫ
         run: pip install yfinance anthropic
 
-      - name: 米国終値取得（fetch_us.py）
-        run: python scripts/fetch_us.py
+      - name: 邀ｳ蝗ｽ邨ょ､蜿門ｾ暦ｼ・etch_us.py・・        run: python scripts/fetch_us.py
 
-      - name: Claude予測（predict.py）
-        env:
+      - name: Claude莠域ｸｬ・・redict.py・・        env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/predict.py
 
-      - name: 生成ファイルをGitにコミット・プッシュ
+      - name: 逕滓・繝輔ぃ繧､繝ｫ繧竪it縺ｫ繧ｳ繝溘ャ繝医・繝励ャ繧ｷ繝･
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/us_close_*.json data/predict_*.json
-          git diff --cached --quiet || git commit -m "data: 米国終値・予測 $(date +'%Y%m%d' -d '+9 hours')"
-          git push
+          git diff --cached --quiet || git commit -m "data: 邀ｳ蝗ｽ邨ょ､繝ｻ莠域ｸｬ $(date +'%Y%m%d' -d '+9 hours')"
+          git pull --rebase origin main`n          git push
+
