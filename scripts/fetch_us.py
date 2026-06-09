@@ -124,7 +124,8 @@ def main():
         result = fetch_price(symbol)
         if result:
             market_summary[key] = result
-            print(f"  OK  {key:8s} {symbol:12s} close={result['close']:>10.2f}  chg={result['change_pct']:>+6.2f}%")
+            chg_str = f"{result['change_pct']:>+6.2f}%" if result['change_pct'] is not None else "   N/A%"
+        print(f"  OK  {key:8s} {symbol:12s} close={result['close']:>10.2f}  chg={chg_str}")
         else:
             print(f"  NG  {key:8s} {symbol:12s} 取得失敗")
         time.sleep(0.2)
