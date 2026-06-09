@@ -653,7 +653,7 @@ function renderAnswerCards(answer) {
       </div>
       <div class="answer-meta">
         <span>${act.used_count ?? '--'}銘柄で判定</span>
-        <span style="color:var(--text2);font-size:11px;">${r.reason ? r.reason.slice(0,40) + '...' : ''}</span>
+        <span style="color:var(--text2);font-size:11px;">${r.reason || ''}</span>
       </div>
     </div>`;
   }).join('');
