@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "date": "20260609",
+      "correct": 4,
+      "incorrect": 13,
+      "skip": 13
+    }
+  ],
+  "total_correct": 4,
+  "total_incorrect": 13,
+  "total_skip": 13,
+  "overall_accuracy": 23.5,
+  "last_updated": "20260609"
+}
