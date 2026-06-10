@@ -532,7 +532,7 @@ function renderThemeTab() {
     const usCell = `
       <div class="theme-cell theme-cell-us">
         <div class="cell-top">
-          <div class="theme-name">${theme}</div>
+          <div class="theme-name">🇺🇸 ${theme}</div>
           <div style="display:flex;align-items:center;gap:4px;">
             <span class="conf-dot ${pred.confidence||'Low'}"></span>
             <span class="pred-badge ${pc}">${pred.prediction?pLbl(pred.prediction):'--'}</span>
@@ -552,7 +552,7 @@ function renderThemeTab() {
       jpCell = `
         <div class="theme-cell theme-cell-jp">
           <div class="cell-top">
-            <div class="theme-name" style="color:var(--text2)">${theme}</div>
+            <div class="theme-name" style="color:var(--text2)">🇯🇵 ${theme}</div>
           </div>
           <div class="jp-pending">⏳ ---</div>
         </div>`;
@@ -560,7 +560,7 @@ function renderThemeTab() {
       jpCell = `
         <div class="theme-cell theme-cell-jp">
           <div class="cell-top">
-            <div class="theme-name">${theme}</div>
+            <div class="theme-name">🇯🇵 ${theme}</div>
             <span class="verdict-icon">${vc?vIcon(vc):''}</span>
           </div>
           <div class="answer-row">
