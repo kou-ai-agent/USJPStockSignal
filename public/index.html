@@ -6,20 +6,20 @@
 <title>USJP Stock Signal</title>
 <style>
 :root {
-  --bg:        #0d1117;
-  --bg2:       #161b22;
-  --bg3:       #21262d;
-  --border:    #30363d;
-  --text:      #e6edf3;
-  --text2:     #8b949e;
-  --long:      #3fb950;
-  --long-bg:   rgba(63,185,80,0.12);
-  --short:     #f85149;
-  --short-bg:  rgba(248,81,73,0.12);
-  --neutral:   #d29922;
-  --neutral-bg:rgba(210,153,34,0.12);
-  --accent:    #58a6ff;
-  --navbar-height: 56px;
+  --bg:         #0d1117;
+  --bg2:        #161b22;
+  --bg3:        #21262d;
+  --border:     #30363d;
+  --text:       #e6edf3;
+  --text2:      #8b949e;
+  --long:       #3fb950;
+  --long-bg:    rgba(63,185,80,0.12);
+  --short:      #f85149;
+  --short-bg:   rgba(248,81,73,0.12);
+  --neutral:    #d29922;
+  --neutral-bg: rgba(210,153,34,0.12);
+  --accent:     #58a6ff;
+  --navbar-h:   56px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -32,7 +32,7 @@ body {
 header {
   background: var(--bg2); border-bottom: 1px solid var(--border);
   padding: 0 16px; display: flex; align-items: center;
-  justify-content: space-between; height: var(--navbar-height);
+  justify-content: space-between; height: var(--navbar-h);
   position: sticky; top: 0; z-index: 100;
 }
 .logo { font-size: 15px; font-weight: 700; color: var(--accent); }
@@ -41,17 +41,16 @@ header {
 .score-badge {
   background: var(--bg3); border: 1px solid var(--border);
   border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600;
+  white-space: nowrap;
 }
 .score-badge .num { color: var(--long); font-size: 15px; }
-
-/* ── Date Button (PTSモニター準拠) ── */
 .date-btn {
   background: none; border: 1px solid var(--border);
   color: var(--text); font-size: 13px; font-weight: 600;
   padding: 6px 12px; border-radius: 6px; cursor: pointer;
   white-space: nowrap; transition: background-color 0.15s; font-family: inherit;
 }
-.date-btn:hover { background-color: rgba(255,255,255,0.08); }
+.date-btn:hover { background: rgba(255,255,255,0.08); }
 
 /* ── Tabs ── */
 .tabs {
@@ -59,103 +58,124 @@ header {
   padding: 0 16px; display: flex;
 }
 .tab {
-  padding: 12px 20px; cursor: pointer; color: var(--text2);
+  padding: 12px 18px; cursor: pointer; color: var(--text2);
   font-size: 13px; font-weight: 500;
   border-bottom: 2px solid transparent; transition: all 0.15s; user-select: none;
 }
 .tab:hover { color: var(--text); }
 .tab.active { color: var(--text); border-bottom-color: var(--accent); }
 
-/* ── Main ── */
-main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
+/* ── Tab Content ── */
 .tab-content { display: none; }
 .tab-content.active { display: block; }
+main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 
-/* ── Summary Bar ── */
-.summary-bar {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 14px 16px; margin-bottom: 18px;
-  display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+/* ── 2カラムレイアウト ── */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
 }
-.market-grid { display: flex; gap: 10px; flex: 1; flex-wrap: wrap; }
+.split-col-header {
+  font-size: 11px; font-weight: 600; color: var(--text2);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  padding: 8px 0 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.col-flag { font-size: 16px; }
+
+/* スマホは縦積み */
+@media (max-width: 768px) {
+  .split-layout { grid-template-columns: 1fr; gap: 0; }
+  .split-col + .split-col { border-top: 2px solid var(--border); margin-top: 16px; padding-top: 16px; }
+}
+
+/* ── Market Summary ── */
+.market-grid { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
 .market-item {
   background: var(--bg3); border: 1px solid var(--border);
-  border-radius: 6px; padding: 8px 12px; min-width: 90px;
+  border-radius: 6px; padding: 7px 11px; min-width: 80px; flex: 1;
 }
-.market-name { font-size: 11px; color: var(--text2); }
-.market-chg  { font-size: 14px; font-weight: 700; }
+.market-name { font-size: 10px; color: var(--text2); }
+.market-chg  { font-size: 13px; font-weight: 700; }
 .up { color: var(--long); } .down { color: var(--short); } .flat { color: var(--neutral); }
 
-/* ── Section Header ── */
-.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-.section-title { font-size: 12px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; }
-.count-chips { display: flex; gap: 8px; font-size: 12px; }
-.chip { padding: 2px 10px; border-radius: 12px; font-weight: 600; }
+/* ── Count Chips ── */
+.count-chips { display: flex; gap: 6px; font-size: 11px; }
+.chip { padding: 2px 8px; border-radius: 10px; font-weight: 600; }
 .chip-long    { background: var(--long-bg);    color: var(--long); }
 .chip-short   { background: var(--short-bg);   color: var(--short); }
 .chip-neutral { background: var(--neutral-bg); color: var(--neutral); }
 
-/* ── Predict Grid ── */
-.predict-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 10px; }
+/* ── Theme Cards (予測側) ── */
+.theme-cards { display: flex; flex-direction: column; gap: 8px; }
 .predict-card {
   background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 14px 16px;
-  display: flex; flex-direction: column; gap: 8px;
-  transition: border-color 0.15s;
+  border-radius: 8px; padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 6px;
 }
-.predict-card:hover { border-color: #484f58; }
 .predict-card.long    { border-left: 3px solid var(--long); }
 .predict-card.short   { border-left: 3px solid var(--short); }
 .predict-card.neutral { border-left: 3px solid var(--neutral); }
 
 .card-top { display: flex; align-items: center; justify-content: space-between; }
-.theme-name { font-size: 14px; font-weight: 600; }
-.card-badges { display: flex; gap: 6px; align-items: center; }
-.pred-badge { padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; }
+.theme-name { font-size: 13px; font-weight: 600; }
+.card-badges { display: flex; gap: 5px; align-items: center; }
+.pred-badge { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
 .pred-badge.long    { background: var(--long-bg);    color: var(--long); }
 .pred-badge.short   { background: var(--short-bg);   color: var(--short); }
 .pred-badge.neutral { background: var(--neutral-bg); color: var(--neutral); }
-.conf-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.conf-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
 .conf-dot.High   { background: var(--accent); }
 .conf-dot.Medium { background: var(--neutral); }
 .conf-dot.Low    { background: var(--text2); }
 
-.signal-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text2); }
-.signal-ticker { font-family: monospace; font-weight: 600; color: var(--accent); font-size: 12px; }
-.signal-chg    { font-weight: 600; font-size: 12px; }
-.card-reason {
-  font-size: 12px; color: var(--text2); line-height: 1.5;
-  border-top: 1px solid var(--border); padding-top: 8px;
-}
+.signal-row { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); }
+.signal-ticker { font-family: monospace; font-weight: 600; color: var(--accent); }
+.signal-chg    { font-weight: 600; }
+.card-reason { font-size: 11px; color: var(--text2); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 6px; }
 
-/* ── Answer Grid ── */
-.answer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 10px; }
+/* ── Answer Cards (答え合わせ側) ── */
+.answer-cards { display: flex; flex-direction: column; gap: 8px; }
 .answer-card {
   background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 14px 16px;
-  display: flex; flex-direction: column; gap: 8px;
+  border-radius: 8px; padding: 12px 14px;
+  display: flex; flex-direction: column; gap: 6px;
 }
 .answer-card.correct   { border-left: 3px solid var(--long); }
 .answer-card.incorrect { border-left: 3px solid var(--short); }
 .answer-card.skip      { border-left: 3px solid var(--border); }
-.answer-top { display: flex; justify-content: space-between; align-items: center; }
-.verdict-icon { font-size: 18px; }
-.answer-chg   { font-size: 16px; font-weight: 700; }
-.answer-meta  { font-size: 11px; color: var(--text2); }
+.answer-top { display: flex; align-items: center; justify-content: space-between; }
+.verdict-icon { font-size: 16px; }
+.answer-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.answer-chg { font-size: 14px; font-weight: 700; }
+.answer-meta { font-size: 10px; color: var(--text2); }
+.answer-reason { font-size: 11px; color: var(--text2); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 6px; }
 
-/* ── Score ── */
+/* 朝の日本側プレースホルダー */
+.pending-box {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 40px 20px;
+  text-align: center; color: var(--text2); font-size: 13px;
+}
+.pending-box .icon { font-size: 28px; margin-bottom: 8px; }
+
+/* ── Score Tab ── */
 .score-section {
   background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 20px; margin-bottom: 20px;
+  border-radius: 8px; padding: 20px; margin-bottom: 16px;
 }
 .score-big { font-size: 48px; font-weight: 800; color: var(--long); line-height: 1; }
 .score-label { font-size: 13px; color: var(--text2); margin-top: 4px; }
-.score-stats { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+.score-stats { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
 .score-stat { display: flex; flex-direction: column; gap: 2px; }
 .score-stat-val   { font-size: 20px; font-weight: 700; }
 .score-stat-label { font-size: 11px; color: var(--text2); }
-
-.history-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+.section-title { font-size: 12px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .history-table th {
   text-align: left; padding: 8px 12px; color: var(--text2);
   font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
@@ -164,6 +184,53 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 .history-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
 .history-table tr:last-child td { border-bottom: none; }
 .history-table tr:hover td { background: var(--bg3); }
+
+/* ── 個別銘柄タブ ── */
+.theme-accordion {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; margin-bottom: 10px; overflow: hidden;
+}
+.accordion-header {
+  padding: 12px 16px; cursor: pointer; display: flex;
+  align-items: center; justify-content: space-between;
+  transition: background 0.15s; user-select: none;
+}
+.accordion-header:hover { background: var(--bg3); }
+.accordion-title { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+.accordion-meta  { font-size: 12px; color: var(--text2); display: flex; align-items: center; gap: 8px; }
+.accordion-arrow { font-size: 12px; color: var(--text2); transition: transform 0.2s; }
+.accordion-arrow.open { transform: rotate(90deg); }
+.accordion-body { display: none; border-top: 1px solid var(--border); }
+.accordion-body.open { display: block; }
+
+/* 個別銘柄の中の左右 */
+.stock-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.stock-split-col { padding: 12px 16px; }
+.stock-split-col + .stock-split-col { border-left: 1px solid var(--border); }
+@media (max-width: 768px) {
+  .stock-split { grid-template-columns: 1fr; }
+  .stock-split-col + .stock-split-col { border-left: none; border-top: 1px solid var(--border); }
+}
+
+.stock-col-title { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+.signal-list { display: flex; flex-direction: column; gap: 4px; }
+.signal-item { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+.signal-item:last-child { border-bottom: none; }
+.signal-item-name { color: var(--text2); }
+.signal-item-ticker { font-family: monospace; color: var(--accent); font-size: 11px; }
+.signal-item-chg { font-weight: 600; font-size: 12px; }
+
+.jp-stock-list { display: flex; flex-direction: column; gap: 4px; }
+.jp-stock-item { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+.jp-stock-item:last-child { border-bottom: none; }
+.jp-stock-name { color: var(--text2); font-size: 11px; }
+.jp-stock-code { font-family: monospace; color: var(--text2); font-size: 10px; }
+.jp-stock-chg  { font-weight: 600; font-size: 12px; }
+.jp-stock-excluded { opacity: 0.5; }
+.excluded-mark { font-size: 10px; color: var(--neutral); margin-left: 4px; }
 
 /* ── Loading / Error ── */
 .loading {
@@ -178,13 +245,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .error-msg {
   background: var(--short-bg); border: 1px solid var(--short);
-  border-radius: 6px; padding: 16px; color: var(--short); font-size: 13px; margin: 20px 0;
+  border-radius: 6px; padding: 16px; color: var(--short); font-size: 13px; margin: 16px 0;
 }
 .no-data { text-align: center; padding: 40px; color: var(--text2); font-size: 13px; }
 
-/* ── Calendar Popup (PTSモニター準拠) ── */
+/* ── Calendar (PTSモニター準拠) ── */
 .calendar-popup {
-  position: fixed; top: calc(var(--navbar-height) + 8px); right: 8px;
+  position: fixed; top: calc(var(--navbar-h) + 8px); right: 8px;
   background: var(--bg2); border: 1px solid var(--border);
   border-radius: 12px; padding: 12px; z-index: 500;
   width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);
@@ -195,8 +262,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 .cal-ym-btn {
   background: none; border: none; color: var(--text);
   font-size: 15px; font-weight: 600; cursor: pointer;
-  padding: 4px 8px; border-radius: 6px; font-family: inherit;
-  transition: background-color 0.15s;
+  padding: 4px 8px; border-radius: 6px; font-family: inherit; transition: background 0.15s;
 }
 .cal-ym-btn:hover { background: rgba(255,255,255,0.08); }
 .cal-arrows { display: flex; gap: 4px; }
@@ -204,8 +270,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
   background: none; border: 1px solid var(--border); color: var(--text);
   width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
   font-size: 18px; font-family: inherit;
-  display: flex; align-items: center; justify-content: center;
-  transition: background-color 0.15s;
+  display: flex; align-items: center; justify-content: center; transition: background 0.15s;
 }
 .cal-nav-btn:hover { background: rgba(255,255,255,0.08); }
 .cal-weekdays {
@@ -221,7 +286,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
   font-size: 13px; border-radius: 50%; border: none; background: none;
   color: var(--text2); opacity: 0.3; cursor: default; padding: 0; font-family: inherit;
 }
-.cal-day.available { color: var(--text); opacity: 1; cursor: pointer; transition: background-color 0.15s; }
+.cal-day.available { color: var(--text); opacity: 1; cursor: pointer; transition: background 0.15s; }
 .cal-day.available:hover:not(.selected) { background: rgba(255,255,255,0.1); }
 .cal-day.selected  { background: var(--accent) !important; color: #fff !important; font-weight: 700; opacity: 1 !important; }
 .cal-day.today:not(.selected) { border: 1px solid var(--accent); opacity: 1; color: var(--accent); }
@@ -230,7 +295,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 .cal-footer { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
 .cal-date-display { font-size: 13px; color: var(--text); padding: 5px 8px; text-align: right; }
 
-/* ── Drum Roll (PTSモニター準拠) ── */
+/* Drum Roll */
 .cal-drum-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.65);
   z-index: 600; display: flex; align-items: center; justify-content: center;
@@ -267,11 +332,10 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 .drum-actions button {
   background: none; border: 1px solid var(--border); color: var(--text2);
   padding: 7px 18px; border-radius: 8px; font-size: 14px;
-  cursor: pointer; font-family: inherit; transition: background-color 0.15s;
+  cursor: pointer; font-family: inherit; transition: background 0.15s;
 }
 .drum-actions button:hover { background: rgba(255,255,255,0.08); }
 .drum-btn-ok { background: var(--accent) !important; border-color: var(--accent) !important; color: #fff !important; }
-.drum-btn-ok:hover { opacity: 0.85; }
 
 @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -288,29 +352,53 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 </header>
 
 <div class="tabs">
-  <div class="tab active" data-tab="predict">予測</div>
-  <div class="tab" data-tab="answer">答え合わせ</div>
+  <div class="tab active" data-tab="theme">テーマ別</div>
+  <div class="tab" data-tab="stocks">個別銘柄</div>
   <div class="tab" data-tab="score">精度スコア</div>
 </div>
 
 <main>
-  <div class="tab-content active" id="tab-predict">
-    <div id="market-summary-area"></div>
-    <div class="section-header">
-      <div class="section-title">テーマ予測</div>
-      <div class="count-chips" id="predict-chips"></div>
+
+  <!-- テーマ別タブ -->
+  <div class="tab-content active" id="tab-theme">
+    <div class="split-layout">
+      <!-- 左：米国 -->
+      <div class="split-col" id="col-us">
+        <div class="split-col-header">
+          <span class="col-flag">🇺🇸</span> 米国市場
+          <span id="us-date" style="font-weight:400;color:var(--text2);font-size:10px;margin-left:auto"></span>
+        </div>
+        <div id="market-summary-area"><div class="loading">読み込み中</div></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <span style="font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;">テーマ予測</span>
+          <div class="count-chips" id="predict-chips"></div>
+        </div>
+        <div id="predict-area"></div>
+      </div>
+      <!-- 右：日本 -->
+      <div class="split-col" id="col-jp">
+        <div class="split-col-header">
+          <span class="col-flag">🇯🇵</span> 日本市場
+          <span id="jp-date" style="font-weight:400;color:var(--text2);font-size:10px;margin-left:auto"></span>
+        </div>
+        <div id="answer-area"><div class="loading">読み込み中</div></div>
+      </div>
     </div>
-    <div id="predict-area"><div class="loading">予測データを読み込み中</div></div>
   </div>
-  <div class="tab-content" id="tab-answer">
-    <div id="answer-area"><div class="loading">答え合わせデータを読み込み中</div></div>
+
+  <!-- 個別銘柄タブ -->
+  <div class="tab-content" id="tab-stocks">
+    <div id="stocks-area"><div class="loading">読み込み中</div></div>
   </div>
+
+  <!-- 精度スコアタブ -->
   <div class="tab-content" id="tab-score">
-    <div id="score-area"><div class="loading">スコアデータを読み込み中</div></div>
+    <div id="score-area"><div class="loading">読み込み中</div></div>
   </div>
+
 </main>
 
-<!-- Calendar Popup (PTSモニター準拠) -->
+<!-- Calendar -->
 <div id="calendar-popup" class="calendar-popup hidden">
   <div class="cal-header">
     <button id="cal-ym-btn" class="cal-ym-btn"></button>
@@ -324,12 +412,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
     <span class="cal-sat">土</span><span class="cal-sun">日</span>
   </div>
   <div id="cal-grid" class="cal-grid"></div>
-  <div class="cal-footer">
-    <div id="cal-date-display" class="cal-date-display"></div>
-  </div>
+  <div class="cal-footer"><div id="cal-date-display" class="cal-date-display"></div></div>
 </div>
-
-<!-- Drum Roll -->
 <div id="cal-drum-overlay" class="cal-drum-overlay hidden">
   <div class="cal-drum-panel">
     <div class="cal-drum-inner">
@@ -348,71 +432,55 @@ main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; }
 // =====================
 // Config
 // =====================
-const REPO_OWNER = 'kou-ai-agent';
-const REPO_NAME  = 'USJPStockSignal';
-const BRANCH     = 'main';
-const DATA_BASE  = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/data`;
-const DOW_JP     = ['日','月','火','水','木','金','土'];
-const DRUM_ITEM_H = 44;
+const OWNER    = 'kou-ai-agent';
+const REPO     = 'USJPStockSignal';
+const BRANCH   = 'main';
+const BASE     = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/data`;
+const DOW_JP   = ['日','月','火','水','木','金','土'];
+const DRUM_H   = 44;
 
 // =====================
 // State
 // =====================
-let appState = {
-  availableDates: [],
-  currentDate:    null,
-  master:         null,
+let S = {
+  dates:   [],   // YYYY-MM-DD
+  current: null, // YYYYMMDD
+  master:  null,
+  predict: null,
+  usClose: null,
+  answer:  null,
 };
-let calState = {
-  isOpen:    false,
-  viewYear:  new Date().getFullYear(),
-  viewMonth: new Date().getMonth() + 1,
-  drumYear:  new Date().getFullYear(),
-  drumMonth: new Date().getMonth() + 1,
+let calS = {
+  open: false, viewY: 2026, viewM: 6, drumY: 2026, drumM: 6,
 };
 
 // =====================
 // Utils
 // =====================
-async function fetchJSON(url) {
-  const res = await fetch(url + '?t=' + Date.now());
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return res.json();
+async function fetchJ(url) {
+  const r = await fetch(url + '?t=' + Date.now());
+  if (!r.ok) throw new Error(`${r.status}`);
+  return r.json();
 }
-function chgClass(v) {
-  if (v == null || isNaN(v)) return '';
-  return v > 0 ? 'up' : v < 0 ? 'down' : 'flat';
-}
-function chgStr(v, d=2) {
-  if (v == null || isNaN(v)) return 'N/A';
-  return (v >= 0 ? '+' : '') + v.toFixed(d) + '%';
-}
-function predClass(p) { return p === 'Long' ? 'long' : p === 'Short' ? 'short' : 'neutral'; }
-function predLabel(p) { return p === 'Long' ? '↑ Long' : p === 'Short' ? '↓ Short' : '→ Neutral'; }
-function verdictIcon(v) { return v === 'correct' ? '✅' : v === 'incorrect' ? '❌' : '⏭'; }
-function fmtDate(yyyymmdd) {
-  if (!yyyymmdd || yyyymmdd.length < 8) return yyyymmdd;
-  return `${yyyymmdd.slice(0,4)}/${yyyymmdd.slice(4,6)}/${yyyymmdd.slice(6,8)}`;
-}
-function fmtDash(yyyymmdd) {
-  if (!yyyymmdd || yyyymmdd.length < 8) return yyyymmdd;
-  return `${yyyymmdd.slice(0,4)}-${yyyymmdd.slice(4,6)}-${yyyymmdd.slice(6,8)}`;
-}
-function yyyymmddFromDash(dash) { return dash.replace(/-/g,''); }
-function fmtJP(dash) {
-  const [y,m,d] = dash.split('-').map(Number);
-  return `${y}年${m}月${d}日(${DOW_JP[new Date(y,m-1,d).getDay()]})`;
-}
+const chgCls = v => v == null || isNaN(v) ? '' : v > 0 ? 'up' : v < 0 ? 'down' : 'flat';
+const chgStr = (v, d=2) => v == null || isNaN(v) ? 'N/A' : (v>=0?'+':'')+v.toFixed(d)+'%';
+const pCls   = p => p==='Long'?'long':p==='Short'?'short':'neutral';
+const pLbl   = p => p==='Long'?'↑ Long':p==='Short'?'↓ Short':'→ Neutral';
+const vIcon  = v => v==='correct'?'✅':v==='incorrect'?'❌':'⏭';
+const toDate  = s => s ? `${s.slice(0,4)}/${s.slice(4,6)}/${s.slice(6,8)}` : '--';
+const toDash  = s => s ? `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}` : '';
+const fromDash= s => s.replace(/-/g,'');
+const fmtJP   = dash => { const [y,m,d]=dash.split('-').map(Number); return `${y}年${m}月${d}日(${DOW_JP[new Date(y,m-1,d).getDay()]})`; };
 
 // =====================
 // Tabs
 // =====================
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('tab-'+t.dataset.tab).classList.add('active');
   });
 });
 
@@ -420,327 +488,367 @@ document.querySelectorAll('.tab').forEach(tab => {
 // Load by date
 // =====================
 async function loadByDate(yyyymmdd) {
-  appState.currentDate = yyyymmdd;
-  const dash = fmtDash(yyyymmdd);
-  document.getElementById('date-btn').textContent = dash.replace(/-/g,'/');
-  calState.viewYear  = parseInt(yyyymmdd.slice(0,4));
-  calState.viewMonth = parseInt(yyyymmdd.slice(4,6));
+  S.current = yyyymmdd;
+  document.getElementById('date-btn').textContent = toDate(yyyymmdd).replace(/\//g,'/');
 
-  await Promise.all([
-    loadPredict(yyyymmdd),
-    loadAnswer(yyyymmdd),
+  // 並列取得
+  const [predict, usClose, answer] = await Promise.allSettled([
+    fetchJ(`${BASE}/predict_${yyyymmdd}.json`),
+    fetchJ(`${BASE}/us_close_${yyyymmdd}.json`),
+    fetchJ(`${BASE}/answer_${yyyymmdd}.json`),
   ]);
+
+  S.predict = predict.status==='fulfilled' ? predict.value : null;
+  S.usClose = usClose.status==='fulfilled' ? usClose.value : null;
+  S.answer  = answer.status==='fulfilled'  ? answer.value  : null;
+
+  renderThemeTab();
+  renderStocksTab();
 }
 
 // =====================
-// Predict Tab
+// テーマ別タブ
 // =====================
-async function loadPredict(yyyymmdd) {
-  document.getElementById('predict-area').innerHTML = '<div class="loading">読み込み中</div>';
-  document.getElementById('market-summary-area').innerHTML = '';
-  try {
-    const [predict, usClose] = await Promise.all([
-      fetchJSON(`${DATA_BASE}/predict_${yyyymmdd}.json`),
-      fetchJSON(`${DATA_BASE}/us_close_${yyyymmdd}.json`),
-    ]);
-    renderMarketSummary(usClose);
-    renderPredictCards(predict, usClose.signals || {});
-  } catch(e) {
-    document.getElementById('predict-area').innerHTML = `<div class="error-msg">予測データの取得に失敗しました。<br>${e.message}</div>`;
-  }
+function renderThemeTab() {
+  renderMarketSummary();
+  renderPredictCards();
+  renderAnswerCards();
 }
 
-function renderMarketSummary(usClose) {
-  const mkt = usClose.market_summary || {};
+function renderMarketSummary() {
+  const area = document.getElementById('market-summary-area');
+  if (!S.usClose) { area.innerHTML = '<div class="error-msg">米国データ取得失敗</div>'; return; }
+
+  document.getElementById('us-date').textContent = toDate(S.usClose.date);
+  const mkt = S.usClose.market_summary || {};
   const items = [
-    {key:'sp500',label:'S&P500'},{key:'nasdaq',label:'NASDAQ'},
-    {key:'dow',label:'DOW'},{key:'vix',label:'VIX'},
-    {key:'dxy',label:'DXY'},{key:'us10y',label:'米10年債'},
+    {k:'sp500',l:'S&P500'},{k:'nasdaq',l:'NASDAQ'},{k:'dow',l:'DOW'},
+    {k:'vix',l:'VIX'},{k:'dxy',l:'DXY'},{k:'us10y',l:'米10年債'},
   ];
-  const html = items.map(({key,label}) => {
-    const d = mkt[key] || {};
-    const chg = d.change_pct;
-    return `<div class="market-item">
-      <div class="market-name">${label}</div>
-      <div class="market-chg ${chgClass(chg)}">${chgStr(chg)}</div>
-    </div>`;
-  }).join('');
-  document.getElementById('market-summary-area').innerHTML = `
-    <div class="summary-bar">
-      <div style="font-size:11px;color:var(--text2)">米国市場<br>${fmtDate(usClose.date)}</div>
-      <div class="market-grid">${html}</div>
-    </div>`;
+  area.innerHTML = `<div class="market-grid">${items.map(({k,l})=>{
+    const d=mkt[k]||{}; const chg=d.change_pct;
+    return `<div class="market-item"><div class="market-name">${l}</div><div class="market-chg ${chgCls(chg)}">${chgStr(chg)}</div></div>`;
+  }).join('')}</div>`;
 }
 
-function renderPredictCards(predict, signals) {
-  const stats = predict.stats || {};
-  document.getElementById('predict-chips').innerHTML = `
-    <span class="chip chip-long">↑ Long ${stats.long??'--'}</span>
-    <span class="chip chip-short">↓ Short ${stats.short??'--'}</span>
-    <span class="chip chip-neutral">→ Neutral ${stats.neutral??'--'}</span>`;
+function renderPredictCards() {
+  const area  = document.getElementById('predict-area');
+  const chips = document.getElementById('predict-chips');
+  if (!S.predict) { area.innerHTML = '<div class="error-msg">予測データ取得失敗</div>'; chips.innerHTML=''; return; }
 
-  const themeSignalMap = {};
-  (appState.master?.themes || []).forEach(t => { themeSignalMap[t.theme] = t.us_signal; });
+  const st = S.predict.stats || {};
+  chips.innerHTML = `
+    <span class="chip chip-long">↑ ${st.long??0}</span>
+    <span class="chip chip-short">↓ ${st.short??0}</span>
+    <span class="chip chip-neutral">→ ${st.neutral??0}</span>`;
 
-  const cards = (predict.predictions || []).map(p => {
-    const pc  = predClass(p.prediction);
-    const sig = themeSignalMap[p.theme] || {};
-    const prim = sig.primary || {};
-    const sigData = signals[prim.ticker] || {};
-    const chg = sigData.change_pct;
+  const sigMap = {};
+  (S.master?.themes||[]).forEach(t=>{ sigMap[t.theme]=t.us_signal; });
+  const sigs = S.usClose?.signals || {};
+
+  area.innerHTML = `<div class="theme-cards">${(S.predict.predictions||[]).map(p=>{
+    const pc  = pCls(p.prediction);
+    const sig = sigMap[p.theme]||{};
+    const pr  = sig.primary||{};
+    const sd  = sigs[pr.ticker]||{};
     return `<div class="predict-card ${pc}">
       <div class="card-top">
         <div class="theme-name">${p.theme}</div>
         <div class="card-badges">
-          <span class="conf-dot ${p.confidence}" title="${p.confidence}"></span>
-          <span class="pred-badge ${pc}">${predLabel(p.prediction)}</span>
+          <span class="conf-dot ${p.confidence}"></span>
+          <span class="pred-badge ${pc}">${pLbl(p.prediction)}</span>
         </div>
       </div>
       <div class="signal-row">
-        <span class="signal-ticker">${prim.ticker||'--'}</span>
-        <span class="signal-chg ${chgClass(chg)}">${chgStr(chg)}</span>
-        <span style="color:var(--text2)">${prim.name||''}</span>
+        <span class="signal-ticker">${pr.ticker||'--'}</span>
+        <span class="signal-chg ${chgCls(sd.change_pct)}">${chgStr(sd.change_pct)}</span>
+        <span>${pr.name||''}</span>
       </div>
       <div class="card-reason">${p.reason||''}</div>
     </div>`;
-  }).join('');
-  document.getElementById('predict-area').innerHTML = `<div class="predict-grid">${cards}</div>`;
+  }).join('')}</div>`;
 }
 
-// =====================
-// Answer Tab
-// =====================
-async function loadAnswer(yyyymmdd) {
-  document.getElementById('answer-area').innerHTML = '<div class="loading">読み込み中</div>';
-  try {
-    const answer = await fetchJSON(`${DATA_BASE}/answer_${yyyymmdd}.json`);
-    renderAnswerCards(answer);
-  } catch(e) {
-    document.getElementById('answer-area').innerHTML = `<div class="no-data">答え合わせデータはまだありません。<br><small>${e.message}</small></div>`;
+function renderAnswerCards() {
+  const area = document.getElementById('answer-area');
+  const jpDate = document.getElementById('jp-date');
+
+  if (!S.answer) {
+    jpDate.textContent = '';
+    area.innerHTML = `<div class="pending-box">
+      <div class="icon">🕐</div>
+      大引け後（PM4:15以降）に<br>自動更新されます
+    </div>`;
+    return;
   }
-}
 
-function renderAnswerCards(answer) {
-  const stats = answer.stats || {};
-  const accuracy = stats.accuracy != null ? `${stats.accuracy}%` : '--';
-  const header = `<div class="summary-bar" style="margin-bottom:16px;">
-    <div>
-      <div style="font-size:11px;color:var(--text2)">本日正解率</div>
-      <div style="font-size:22px;font-weight:800;color:var(--long)">${accuracy}</div>
-      <div style="font-size:11px;color:var(--text2)">${stats.correct??0}正解 / ${stats.incorrect??0}不正解 / ${stats.skip??0}スキップ</div>
-    </div>
+  jpDate.textContent = toDate(S.answer.date||S.current);
+  const st = S.answer.stats || {};
+  const acc = st.accuracy!=null ? `${st.accuracy}%` : '--';
+
+  const header = `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:10px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+    <div><div style="font-size:11px;color:var(--text2)">本日正解率</div><div style="font-size:22px;font-weight:800;color:var(--long)">${acc}</div></div>
+    <div style="font-size:12px;color:var(--text2)">${st.correct??0}正解 / ${st.incorrect??0}不正解 / ${st.skip??0}スキップ</div>
   </div>`;
 
-  const cards = (answer.results || []).map(r => {
-    const act = r.actual || {};
-    const chg = act.avg_change_pct;
-    const anomalyNote = act.anomaly_mode ? '🔄' : act.excluded_count > 0 ? `⚠️${act.excluded_count}` : '';
+  const cards = (S.answer.results||[]).map(r=>{
+    const act=r.actual||{}; const chg=act.avg_change_pct;
+    const am = act.anomaly_mode?'🔄':act.excluded_count>0?`⚠️${act.excluded_count}`:'';
     return `<div class="answer-card ${r.verdict}">
       <div class="answer-top">
         <div class="theme-name">${r.theme}</div>
-        <span class="verdict-icon">${verdictIcon(r.verdict)}</span>
+        <span class="verdict-icon">${vIcon(r.verdict)}</span>
       </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-        <span class="pred-badge ${predClass(r.prediction)}">${predLabel(r.prediction)}</span>
-        <span style="color:var(--text2);font-size:12px;">→ 実際:</span>
-        <span class="pred-badge ${predClass(act.direction||'Neutral')}">${predLabel(act.direction||'Neutral')}</span>
-        <span class="answer-chg ${chgClass(chg)}">${chgStr(chg)}</span>
-        ${anomalyNote}
+      <div class="answer-row">
+        <span class="pred-badge ${pCls(r.prediction)}">${pLbl(r.prediction)}</span>
+        <span style="color:var(--text2);font-size:11px;">→</span>
+        <span class="pred-badge ${pCls(act.direction||'Neutral')}">${pLbl(act.direction||'Neutral')}</span>
+        <span class="answer-chg ${chgCls(chg)}">${chgStr(chg)}</span>
+        ${am}
       </div>
       <div class="answer-meta">${act.used_count??'--'}銘柄で判定</div>
-      <div class="card-reason">${r.reason||''}</div>
+      <div class="answer-reason">${r.reason||''}</div>
     </div>`;
   }).join('');
-  document.getElementById('answer-area').innerHTML = header + `<div class="answer-grid">${cards}</div>`;
+
+  area.innerHTML = header + `<div class="answer-cards">${cards}</div>`;
 }
 
 // =====================
-// Score Tab
+// 個別銘柄タブ
+// =====================
+function renderStocksTab() {
+  const area = document.getElementById('stocks-area');
+  if (!S.master) { area.innerHTML = '<div class="error-msg">マスターデータなし</div>'; return; }
+
+  const sigMap  = {};
+  (S.master.themes||[]).forEach(t=>{ sigMap[t.theme]=t.us_signal; });
+  const sigs    = S.usClose?.signals || {};
+  const predMap = {};
+  (S.predict?.predictions||[]).forEach(p=>{ predMap[p.theme]=p; });
+  const ansMap  = {};
+  (S.answer?.results||[]).forEach(r=>{ ansMap[r.theme]=r; });
+
+  area.innerHTML = (S.master.themes||[]).map(t=>{
+    const theme   = t.theme;
+    const pred    = predMap[theme] || {};
+    const ans     = ansMap[theme]  || {};
+    const act     = ans.actual     || {};
+    const sig     = sigMap[theme]  || {};
+    const verdict = ans.verdict;
+    const pc      = pCls(pred.prediction||'Neutral');
+    const acc     = verdict ? `${vIcon(verdict)} ` : '';
+    const avgChg  = act.avg_change_pct;
+
+    // 米国シグナルリスト
+    const primTicker = sig.primary?.ticker || '';
+    const subTickers = sig.sub || [];
+    const allTickers = primTicker ? [primTicker, ...subTickers] : subTickers;
+    const usRows = allTickers.slice(0,6).map(tk=>{
+      const d = sigs[tk] || {};
+      const isPrim = tk === primTicker;
+      return `<div class="signal-item">
+        <span class="signal-item-ticker" style="${isPrim?'color:var(--accent);font-weight:700':''}">${tk}</span>
+        <span class="signal-item-chg ${chgCls(d.change_pct)}">${chgStr(d.change_pct)}</span>
+      </div>`;
+    }).join('');
+
+    // 日本銘柄リスト
+    const details = ans.verdict ? ans.details || [] : [];
+    const detailMap = {};
+    details.forEach(d=>{ detailMap[d.code]=d; });
+
+    const jpRows = (t.jp_stocks||[]).map(s=>{
+      const d   = detailMap[s.code] || {};
+      const chg = d.change_pct;
+      const isExcluded = d.fetched && Math.abs(chg||0) > 5 && !act.anomaly_mode;
+      return `<div class="jp-stock-item ${isExcluded?'jp-stock-excluded':''}">
+        <div>
+          <span class="jp-stock-code">${s.code}</span>
+          <span class="jp-stock-name"> ${s.name.slice(0,10)}</span>
+          ${isExcluded?'<span class="excluded-mark">⚠️除外</span>':''}
+        </div>
+        <span class="jp-stock-chg ${chgCls(chg)}">${chg!=null?chgStr(chg):'--'}</span>
+      </div>`;
+    }).join('');
+
+    return `<div class="theme-accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <div class="accordion-title">
+          <span class="pred-badge ${pc}" style="font-size:10px;">${pred.prediction?pLbl(pred.prediction):'--'}</span>
+          ${theme}
+        </div>
+        <div class="accordion-meta">
+          ${acc}<span class="${chgCls(avgChg)}">${avgChg!=null?chgStr(avgChg):'大引け後'}</span>
+          <span class="accordion-arrow">›</span>
+        </div>
+      </div>
+      <div class="accordion-body">
+        <div class="stock-split">
+          <div class="stock-split-col">
+            <div class="stock-col-title">🇺🇸 米国シグナル</div>
+            <div class="signal-list">${usRows||'<div style="color:var(--text2);font-size:12px;">データなし</div>'}</div>
+          </div>
+          <div class="stock-split-col">
+            <div class="stock-col-title">🇯🇵 日本銘柄</div>
+            <div class="jp-stock-list">${jpRows||'<div style="color:var(--text2);font-size:12px;">大引け後に更新</div>'}</div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleAccordion(header) {
+  const body  = header.nextElementSibling;
+  const arrow = header.querySelector('.accordion-arrow');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+
+// =====================
+// 精度スコアタブ
 // =====================
 async function loadScore() {
   try {
-    const history = await fetchJSON(`${DATA_BASE}/score_history.json`);
-    renderScore(history);
-    document.getElementById('header-accuracy').textContent = history.overall_accuracy ?? '--';
+    const h = await fetchJ(`${BASE}/score_history.json`);
+    const acc = h.overall_accuracy ?? '--';
+    document.getElementById('header-accuracy').textContent = acc;
+    const records = (h.records||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
+    const rows = records.map(r=>{
+      const a = r.accuracy!=null?`${r.accuracy}%`:'--';
+      const c = r.accuracy>=60?'var(--long)':r.accuracy>=40?'var(--neutral)':'var(--short)';
+      return `<tr>
+        <td>${toDate(r.date)}</td>
+        <td style="color:${c};font-weight:600">${a}</td>
+        <td>${r.correct??0}</td><td>${r.incorrect??0}</td>
+        <td style="color:var(--text2)">${r.skip??0}</td>
+      </tr>`;
+    }).join('');
+    document.getElementById('score-area').innerHTML = `
+      <div class="score-section">
+        <div class="score-big">${acc}%</div>
+        <div class="score-label">累積正解率（Long/Short判定のみ）</div>
+        <div class="score-stats">
+          <div class="score-stat"><div class="score-stat-val" style="color:var(--long)">${h.total_correct??0}</div><div class="score-stat-label">通算正解</div></div>
+          <div class="score-stat"><div class="score-stat-val" style="color:var(--short)">${h.total_incorrect??0}</div><div class="score-stat-label">通算不正解</div></div>
+          <div class="score-stat"><div class="score-stat-val" style="color:var(--text2)">${h.total_skip??0}</div><div class="score-stat-label">通算スキップ</div></div>
+          <div class="score-stat"><div class="score-stat-val">${records.length}</div><div class="score-stat-label">運用日数</div></div>
+        </div>
+      </div>
+      <div class="section-title">日別履歴</div>
+      ${records.length>0?`<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
+        <table class="history-table">
+          <thead><tr><th>日付</th><th>正解率</th><th>正解</th><th>不正解</th><th>スキップ</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`:'<div class="no-data">まだ履歴がありません。</div>'}`;
   } catch(e) {
     document.getElementById('score-area').innerHTML = `<div class="error-msg">スコアデータ取得失敗: ${e.message}</div>`;
   }
-}
-
-function renderScore(history) {
-  const accuracy = history.overall_accuracy != null ? `${history.overall_accuracy}` : '--';
-  const records  = (history.records || []).slice().sort((a,b) => b.date.localeCompare(a.date));
-  const rows = records.map(r => {
-    const acc = r.accuracy != null ? `${r.accuracy}%` : '--';
-    const col = r.accuracy >= 60 ? 'var(--long)' : r.accuracy >= 40 ? 'var(--neutral)' : 'var(--short)';
-    return `<tr>
-      <td>${fmtDate(r.date)}</td>
-      <td style="color:${col};font-weight:600">${acc}</td>
-      <td>${r.correct??0}</td><td>${r.incorrect??0}</td>
-      <td style="color:var(--text2)">${r.skip??0}</td>
-    </tr>`;
-  }).join('');
-
-  document.getElementById('score-area').innerHTML = `
-    <div class="score-section">
-      <div class="score-big">${accuracy}%</div>
-      <div class="score-label">累積正解率（Long/Short判定のみ）</div>
-      <div class="score-stats">
-        <div class="score-stat"><div class="score-stat-val" style="color:var(--long)">${history.total_correct??0}</div><div class="score-stat-label">通算正解</div></div>
-        <div class="score-stat"><div class="score-stat-val" style="color:var(--short)">${history.total_incorrect??0}</div><div class="score-stat-label">通算不正解</div></div>
-        <div class="score-stat"><div class="score-stat-val" style="color:var(--text2)">${history.total_skip??0}</div><div class="score-stat-label">通算スキップ</div></div>
-        <div class="score-stat"><div class="score-stat-val">${records.length}</div><div class="score-stat-label">運用日数</div></div>
-      </div>
-    </div>
-    <div class="section-header"><div class="section-title">日別履歴</div></div>
-    ${records.length > 0 ? `
-    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-      <table class="history-table">
-        <thead><tr><th>日付</th><th>正解率</th><th>正解</th><th>不正解</th><th>スキップ</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>` : '<div class="no-data">まだ履歴がありません。</div>'}`;
 }
 
 // =====================
 // Calendar (PTSモニター準拠)
 // =====================
 const calDOM = {
-  btn:         document.getElementById('date-btn'),
-  popup:       document.getElementById('calendar-popup'),
-  ymBtn:       document.getElementById('cal-ym-btn'),
-  prev:        document.getElementById('cal-prev'),
-  next:        document.getElementById('cal-next'),
-  grid:        document.getElementById('cal-grid'),
+  btn: document.getElementById('date-btn'),
+  popup: document.getElementById('calendar-popup'),
+  ymBtn: document.getElementById('cal-ym-btn'),
+  prev: document.getElementById('cal-prev'),
+  next: document.getElementById('cal-next'),
+  grid: document.getElementById('cal-grid'),
   dateDisplay: document.getElementById('cal-date-display'),
   drumOverlay: document.getElementById('cal-drum-overlay'),
-  drumYear:    document.getElementById('drum-year'),
-  drumMonth:   document.getElementById('drum-month'),
-  drumOk:      document.getElementById('drum-ok'),
-  drumCancel:  document.getElementById('drum-cancel'),
+  drumYear: document.getElementById('drum-year'),
+  drumMonth: document.getElementById('drum-month'),
+  drumOk: document.getElementById('drum-ok'),
+  drumCancel: document.getElementById('drum-cancel'),
 };
 
-function openCalendar() {
-  renderCalendar();
-  calDOM.popup.classList.remove('hidden');
-  calState.isOpen = true;
-}
-function closeCalendar() {
-  calDOM.popup.classList.add('hidden');
-  calState.isOpen = false;
-}
+function openCal()  { renderCal(); calDOM.popup.classList.remove('hidden'); calS.open=true; }
+function closeCal() { calDOM.popup.classList.add('hidden'); calS.open=false; }
 
-function renderCalendar() {
-  const { viewYear, viewMonth } = calState;
-  calDOM.ymBtn.textContent = `${viewYear}年${viewMonth}月 ›`;
-
-  const firstDow  = (new Date(viewYear, viewMonth-1, 1).getDay() + 6) % 7;
-  const daysInMon = new Date(viewYear, viewMonth, 0).getDate();
-  const today     = new Date(); today.setHours(0,0,0,0);
-
-  // availableDatesはYYYY-MM-DD形式
-  const available = new Set(appState.availableDates);
-
-  calDOM.grid.innerHTML = '';
-  for (let i = 0; i < firstDow; i++) {
-    const el = document.createElement('div');
-    el.className = 'cal-day';
-    calDOM.grid.appendChild(el);
-  }
-  for (let day = 1; day <= daysInMon; day++) {
-    const dash     = `${viewYear}-${String(viewMonth).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
-    const cellDate = new Date(viewYear, viewMonth-1, day);
-    const dowMon   = (cellDate.getDay() + 6) % 7;
-
-    const btn = document.createElement('button');
-    btn.className = 'cal-day';
-    btn.textContent = day;
-
-    if (cellDate > today || !available.has(dash)) {
-      btn.disabled = true;
-    } else {
+function renderCal() {
+  calDOM.ymBtn.textContent = `${calS.viewY}年${calS.viewM}月 ›`;
+  const first = (new Date(calS.viewY,calS.viewM-1,1).getDay()+6)%7;
+  const days  = new Date(calS.viewY,calS.viewM,0).getDate();
+  const today = new Date(); today.setHours(0,0,0,0);
+  const avail = new Set(S.dates);
+  calDOM.grid.innerHTML='';
+  for(let i=0;i<first;i++){const e=document.createElement('div');e.className='cal-day';calDOM.grid.appendChild(e);}
+  for(let d=1;d<=days;d++){
+    const dash=`${calS.viewY}-${String(calS.viewM).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const cell=new Date(calS.viewY,calS.viewM-1,d);
+    const dow=(cell.getDay()+6)%7;
+    const btn=document.createElement('button');
+    btn.className='cal-day'; btn.textContent=d;
+    if(cell>today||!avail.has(dash)){btn.disabled=true;}
+    else{
       btn.classList.add('available');
-      btn.addEventListener('click', (e) => { e.stopPropagation(); selectDay(yyyymmddFromDash(dash)); });
+      btn.addEventListener('click',e=>{e.stopPropagation();selectDay(fromDash(dash));});
     }
-    const currentDash = appState.currentDate ? fmtDash(appState.currentDate) : null;
-    if (dash === currentDash) btn.classList.add('selected');
-    if (cellDate.getTime() === today.getTime()) btn.classList.add('today');
-    if (dowMon === 5) btn.classList.add('sat');
-    if (dowMon === 6) btn.classList.add('sun');
+    if(S.current&&dash===toDash(S.current)) btn.classList.add('selected');
+    if(cell.getTime()===today.getTime()) btn.classList.add('today');
+    if(dow===5) btn.classList.add('sat');
+    if(dow===6) btn.classList.add('sun');
     calDOM.grid.appendChild(btn);
   }
-
-  if (appState.currentDate) {
-    calDOM.dateDisplay.textContent = fmtJP(fmtDash(appState.currentDate));
-  }
+  if(S.current) calDOM.dateDisplay.textContent=fmtJP(toDash(S.current));
 }
 
 function selectDay(yyyymmdd) {
-  closeCalendar();
-  setTimeout(() => loadByDate(yyyymmdd), 150);
+  closeCal();
+  calS.viewY=parseInt(yyyymmdd.slice(0,4));
+  calS.viewM=parseInt(yyyymmdd.slice(4,6));
+  loadByDate(yyyymmdd);
 }
 
-function openDrumRoll() {
-  calState.drumYear  = calState.viewYear;
-  calState.drumMonth = calState.viewMonth;
-  const maxYear = new Date().getFullYear() + 1;
-  const years   = [];
-  for (let y = 2025; y <= maxYear; y++) years.push({value:y, label:`${y}年`});
-  const months = Array.from({length:12}, (_,i) => ({value:i+1, label:`${i+1}月`}));
-  setupDrumCol(calDOM.drumYear,  years,  calState.drumYear-2025, v => { calState.drumYear=v; });
-  setupDrumCol(calDOM.drumMonth, months, calState.drumMonth-1,   v => { calState.drumMonth=v; });
+function openDrum() {
+  calS.drumY=calS.viewY; calS.drumM=calS.viewM;
+  const maxY=new Date().getFullYear()+1;
+  const years=[]; for(let y=2025;y<=maxY;y++) years.push({value:y,label:`${y}年`});
+  const months=Array.from({length:12},(_,i)=>({value:i+1,label:`${i+1}月`}));
+  setupDrum(calDOM.drumYear, years, calS.drumY-2025, v=>{calS.drumY=v;});
+  setupDrum(calDOM.drumMonth,months,calS.drumM-1,   v=>{calS.drumM=v;});
   calDOM.drumOverlay.classList.remove('hidden');
 }
-function closeDrumRoll() { calDOM.drumOverlay.classList.add('hidden'); }
+function closeDrum(){calDOM.drumOverlay.classList.add('hidden');}
 
-function setupDrumCol(el, items, initialIdx, onChange) {
-  el.innerHTML = '';
-  const pad = () => { const p=document.createElement('div'); p.className='drum-pad'; el.appendChild(p); };
-  pad(); pad();
-  items.forEach((item, i) => {
-    const div = document.createElement('div');
-    div.className = 'drum-item' + (i===initialIdx ? ' selected' : '');
-    div.textContent = item.label;
-    el.appendChild(div);
+function setupDrum(el,items,idx,onChange){
+  el.innerHTML='';
+  const pad=()=>{const p=document.createElement('div');p.className='drum-pad';el.appendChild(p);};
+  pad();pad();
+  items.forEach((item,i)=>{
+    const d=document.createElement('div');
+    d.className='drum-item'+(i===idx?' selected':'');
+    d.textContent=item.label; el.appendChild(d);
   });
-  pad(); pad();
-  requestAnimationFrame(() => { el.scrollTop = initialIdx * DRUM_ITEM_H; });
+  pad();pad();
+  requestAnimationFrame(()=>{el.scrollTop=idx*DRUM_H;});
   let timer;
-  el.addEventListener('scroll', () => {
+  el.addEventListener('scroll',()=>{
     clearTimeout(timer);
-    timer = setTimeout(() => {
-      const idx = Math.max(0, Math.min(items.length-1, Math.round(el.scrollTop/DRUM_ITEM_H)));
-      onChange(items[idx].value);
-      el.querySelectorAll('.drum-item').forEach((d,i) => d.classList.toggle('selected', i===idx));
-      el.scrollTo({top: idx*DRUM_ITEM_H, behavior:'smooth'});
-    }, 80);
+    timer=setTimeout(()=>{
+      const i=Math.max(0,Math.min(items.length-1,Math.round(el.scrollTop/DRUM_H)));
+      onChange(items[i].value);
+      el.querySelectorAll('.drum-item').forEach((d,j)=>d.classList.toggle('selected',j===i));
+      el.scrollTo({top:i*DRUM_H,behavior:'smooth'});
+    },80);
   });
 }
 
-function initCalendar() {
-  calDOM.btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    calState.isOpen ? closeCalendar() : openCalendar();
-  });
-  calDOM.ymBtn.addEventListener('click', (e) => { e.stopPropagation(); openDrumRoll(); });
-  calDOM.prev.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (--calState.viewMonth < 1) { calState.viewMonth=12; calState.viewYear--; }
-    renderCalendar();
-  });
-  calDOM.next.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (++calState.viewMonth > 12) { calState.viewMonth=1; calState.viewYear++; }
-    renderCalendar();
-  });
-  calDOM.popup.addEventListener('click', (e) => e.stopPropagation());
-  calDOM.drumOk.addEventListener('click', () => {
-    calState.viewYear=calState.drumYear; calState.viewMonth=calState.drumMonth;
-    closeDrumRoll(); renderCalendar();
-  });
-  calDOM.drumCancel.addEventListener('click', (e) => { e.stopPropagation(); closeDrumRoll(); });
-  calDOM.drumOverlay.addEventListener('click', (e) => { if(e.target===calDOM.drumOverlay) closeDrumRoll(); });
-  document.addEventListener('click', () => { if(calState.isOpen) closeCalendar(); });
+function initCal(){
+  calDOM.btn.addEventListener('click',e=>{e.stopPropagation();calS.open?closeCal():openCal();});
+  calDOM.ymBtn.addEventListener('click',e=>{e.stopPropagation();openDrum();});
+  calDOM.prev.addEventListener('click',e=>{e.stopPropagation();if(--calS.viewM<1){calS.viewM=12;calS.viewY--;}renderCal();});
+  calDOM.next.addEventListener('click',e=>{e.stopPropagation();if(++calS.viewM>12){calS.viewM=1;calS.viewY++;}renderCal();});
+  calDOM.popup.addEventListener('click',e=>e.stopPropagation());
+  calDOM.drumOk.addEventListener('click',()=>{calS.viewY=calS.drumY;calS.viewM=calS.drumM;closeDrum();renderCal();});
+  calDOM.drumCancel.addEventListener('click',e=>{e.stopPropagation();closeDrum();});
+  calDOM.drumOverlay.addEventListener('click',e=>{if(e.target===calDOM.drumOverlay)closeDrum();});
+  document.addEventListener('click',()=>{if(calS.open)closeCal();});
 }
 
 // =====================
@@ -748,44 +856,32 @@ function initCalendar() {
 // =====================
 async function init() {
   try {
-    // signal_master読み込み
-    appState.master = await fetchJSON(`${DATA_BASE}/signal_master.json`);
+    S.master = await fetchJ(`${BASE}/signal_master.json`);
 
-    // index.jsonから利用可能日付を取得
     let dates = [];
     try {
-      const idx = await fetchJSON(`${DATA_BASE}/index.json`);
+      const idx = await fetchJ(`${BASE}/index.json`);
       dates = idx.dates || [];
     } catch(e) {
-      // index.jsonがまだない場合はscore_historyから取得
       try {
-        const h = await fetchJSON(`${DATA_BASE}/score_history.json`);
-        dates = (h.records||[]).map(r => fmtDash(r.date));
-        document.getElementById('header-accuracy').textContent = h.overall_accuracy ?? '--';
+        const h = await fetchJ(`${BASE}/score_history.json`);
+        dates = (h.records||[]).map(r=>toDash(r.date));
       } catch(e2) {}
     }
+    S.dates = dates;
 
-    appState.availableDates = dates; // YYYY-MM-DD形式
+    const latest = dates.length > 0 ? fromDash(dates[0]) : (() => {
+      const jst = new Date(Date.now()+9*3600*1000);
+      return jst.toISOString().slice(0,10).replace(/-/g,'');
+    })();
 
-    // 最新日付を選択
-    if (dates.length > 0) {
-      const latestDash = dates[0];
-      const latest = yyyymmddFromDash(latestDash);
-      await loadByDate(latest);
-    } else {
-      // index.jsonがない場合は今日で試みる
-      const today = new Date();
-      const jst   = new Date(today.getTime() + 9*3600*1000);
-      const yyyymmdd = jst.toISOString().slice(0,10).replace(/-/g,'');
-      await loadByDate(yyyymmdd);
-    }
-
+    await loadByDate(latest);
     await loadScore();
-    initCalendar();
+    initCal();
 
   } catch(e) {
     console.error(e);
-    document.getElementById('predict-area').innerHTML = `<div class="error-msg">初期化失敗: ${e.message}</div>`;
+    document.getElementById('predict-area').innerHTML=`<div class="error-msg">初期化失敗: ${e.message}</div>`;
   }
 }
 
