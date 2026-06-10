@@ -240,6 +240,20 @@ def main():
     s = output["stats"]
     print(f"\nLong: {s['long']} / Short: {s['short']} / Neutral: {s['neutral']}")
     print(f"\n出力: {OUTPUT_JSON}")
+    # index.json 更新（朝の時点でカレンダーに当日を追加）
+    index_path = DATA_DIR / "index.json"
+    today_dash = datetime.now(JST).strftime("%Y-%m-%d")
+    if index_path.exists():
+        with open(index_path, encoding="utf-8") as f:
+            idx = json.load(f)
+    else:
+        idx = {"dates": []}
+    if today_dash not in idx["dates"]:
+        idx["dates"].insert(0, today_dash)
+        idx["dates"].sort(reverse=True)
+    with open(index_path, "w", encoding="utf-8") as f:
+        json.dump(idx, f, ensure_ascii=False, indent=2)
+    print(f"index.json updated: {today_dash}")
     print("=" * 60)
 
 
