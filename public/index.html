@@ -40,197 +40,203 @@ header {
 .header-right { display: flex; align-items: center; gap: 10px; }
 .score-badge {
   background: var(--bg3); border: 1px solid var(--border);
-  border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600;
-  white-space: nowrap;
+  border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600; white-space: nowrap;
 }
 .score-badge .num { color: var(--long); font-size: 15px; }
 .date-btn {
   background: none; border: 1px solid var(--border);
   color: var(--text); font-size: 13px; font-weight: 600;
   padding: 6px 12px; border-radius: 6px; cursor: pointer;
-  white-space: nowrap; transition: background-color 0.15s; font-family: inherit;
+  white-space: nowrap; transition: background 0.15s; font-family: inherit;
 }
 .date-btn:hover { background: rgba(255,255,255,0.08); }
 
 /* ── Tabs ── */
-.tabs {
-  background: var(--bg2); border-bottom: 1px solid var(--border);
-  padding: 0 16px; display: flex;
-}
+.tabs { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 16px; display: flex; }
 .tab {
   padding: 12px 18px; cursor: pointer; color: var(--text2);
-  font-size: 13px; font-weight: 500;
-  border-bottom: 2px solid transparent; transition: all 0.15s; user-select: none;
+  font-size: 13px; font-weight: 500; border-bottom: 2px solid transparent;
+  transition: all 0.15s; user-select: none;
 }
 .tab:hover { color: var(--text); }
 .tab.active { color: var(--text); border-bottom-color: var(--accent); }
-
-/* ── Tab Content ── */
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 
-/* ── 2カラムレイアウト ── */
-.split-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: start;
+/* ── Top Summary Bar ── */
+.top-summary {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px 16px; margin-bottom: 14px;
 }
-.split-col-header {
+.top-summary-inner {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 16px; align-items: start;
+}
+@media (max-width: 768px) { .top-summary-inner { grid-template-columns: 1fr; } }
+
+.market-section-title {
   font-size: 11px; font-weight: 600; color: var(--text2);
-  text-transform: uppercase; letter-spacing: 0.05em;
-  padding: 8px 0 10px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 12px;
-  display: flex; align-items: center; gap: 8px;
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
 }
-.col-flag { font-size: 16px; }
-
-/* スマホは縦積み */
-@media (max-width: 768px) {
-  .split-layout { grid-template-columns: 1fr; gap: 0; }
-  .split-col + .split-col { border-top: 2px solid var(--border); margin-top: 16px; padding-top: 16px; }
-}
-
-/* ── Market Summary ── */
-.market-grid { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.market-grid { display: flex; gap: 8px; flex-wrap: wrap; }
 .market-item {
   background: var(--bg3); border: 1px solid var(--border);
-  border-radius: 6px; padding: 7px 11px; min-width: 80px; flex: 1;
+  border-radius: 6px; padding: 6px 10px; min-width: 78px; flex: 1;
 }
 .market-name { font-size: 10px; color: var(--text2); }
 .market-chg  { font-size: 13px; font-weight: 700; }
-.up { color: var(--long); } .down { color: var(--short); } .flat { color: var(--neutral); }
 
-/* ── Count Chips ── */
-.count-chips { display: flex; gap: 6px; font-size: 11px; }
-.chip { padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+.score-section-box {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 6px; padding: 10px 16px; min-width: 220px;
+}
+.score-day-rate { font-size: 28px; font-weight: 800; color: var(--long); line-height: 1.1; }
+.score-day-rate.pending { color: var(--text2); }
+.score-day-detail { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.score-pending-note { font-size: 11px; color: var(--text2); margin-top: 6px; font-style: italic; }
+
+/* ── Theme Row Header ── */
+.theme-col-headers {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; margin-bottom: 8px;
+}
+.theme-col-header {
+  font-size: 11px; font-weight: 600; color: var(--text2);
+  text-transform: uppercase; letter-spacing: .05em;
+  padding: 6px 12px; background: var(--bg3); border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 6px;
+}
+.theme-col-header:first-child { border-radius: 6px 0 0 6px; border-right: none; }
+.theme-col-header:last-child  { border-radius: 0 6px 6px 0; }
+.count-chips { display: flex; gap: 5px; margin-left: auto; }
+.chip { padding: 1px 7px; border-radius: 10px; font-weight: 600; font-size: 10px; }
 .chip-long    { background: var(--long-bg);    color: var(--long); }
 .chip-short   { background: var(--short-bg);   color: var(--short); }
 .chip-neutral { background: var(--neutral-bg); color: var(--neutral); }
+@media (max-width: 768px) { .theme-col-headers { display: none; } }
 
-/* ── Theme Cards (予測側) ── */
-.theme-cards { display: flex; flex-direction: column; gap: 8px; }
-.predict-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 12px 14px;
+/* ── Theme Row ── */
+.theme-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; margin-bottom: 6px;
+  border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+}
+@media (max-width: 768px) {
+  .theme-row { grid-template-columns: 1fr; }
+}
+
+.theme-cell {
+  padding: 12px 14px; background: var(--bg2);
   display: flex; flex-direction: column; gap: 6px;
 }
-.predict-card.long    { border-left: 3px solid var(--long); }
-.predict-card.short   { border-left: 3px solid var(--short); }
-.predict-card.neutral { border-left: 3px solid var(--neutral); }
+.theme-cell-us { border-right: 1px solid var(--border); }
+@media (max-width: 768px) {
+  .theme-cell-us { border-right: none; border-bottom: 1px solid var(--border); }
+}
 
-.card-top { display: flex; align-items: center; justify-content: space-between; }
+/* 予測の色border */
+.theme-row.long    .theme-cell-us { border-left: 3px solid var(--long); }
+.theme-row.short   .theme-cell-us { border-left: 3px solid var(--short); }
+.theme-row.neutral .theme-cell-us { border-left: 3px solid var(--neutral); }
+.theme-row.correct   .theme-cell-jp { border-right: 3px solid var(--long); }
+.theme-row.incorrect .theme-cell-jp { border-right: 3px solid var(--short); }
+@media (max-width: 768px) {
+  .theme-row.correct   .theme-cell-jp { border-right: none; border-left: 3px solid var(--long); }
+  .theme-row.incorrect .theme-cell-jp { border-right: none; border-left: 3px solid var(--short); }
+}
+
+.cell-top { display: flex; align-items: center; justify-content: space-between; }
 .theme-name { font-size: 13px; font-weight: 600; }
-.card-badges { display: flex; gap: 5px; align-items: center; }
 .pred-badge { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
 .pred-badge.long    { background: var(--long-bg);    color: var(--long); }
 .pred-badge.short   { background: var(--short-bg);   color: var(--short); }
 .pred-badge.neutral { background: var(--neutral-bg); color: var(--neutral); }
-.conf-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+.conf-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 4px; }
 .conf-dot.High   { background: var(--accent); }
 .conf-dot.Medium { background: var(--neutral); }
 .conf-dot.Low    { background: var(--text2); }
 
 .signal-row { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text2); }
-.signal-ticker { font-family: monospace; font-weight: 600; color: var(--accent); }
+.signal-ticker { font-family: monospace; font-weight: 700; color: var(--accent); }
 .signal-chg    { font-weight: 600; }
-.card-reason { font-size: 11px; color: var(--text2); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 6px; }
+.card-reason { font-size: 11px; color: var(--text2); line-height: 1.5; }
 
-/* ── Answer Cards (答え合わせ側) ── */
-.answer-cards { display: flex; flex-direction: column; gap: 8px; }
-.answer-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 12px 14px;
-  display: flex; flex-direction: column; gap: 6px;
-}
-.answer-card.correct   { border-left: 3px solid var(--long); }
-.answer-card.incorrect { border-left: 3px solid var(--short); }
-.answer-card.skip      { border-left: 3px solid var(--border); }
-.answer-top { display: flex; align-items: center; justify-content: space-between; }
-.verdict-icon { font-size: 16px; }
-.answer-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+/* JP側 */
+.answer-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12px; }
 .answer-chg { font-size: 14px; font-weight: 700; }
 .answer-meta { font-size: 10px; color: var(--text2); }
-.answer-reason { font-size: 11px; color: var(--text2); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 6px; }
+.verdict-icon { font-size: 15px; }
 
 /* 朝の日本側プレースホルダー */
-.pending-box {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 40px 20px;
-  text-align: center; color: var(--text2); font-size: 13px;
+.jp-pending {
+  color: var(--text2); font-size: 12px;
+  display: flex; align-items: center; gap: 6px;
 }
-.pending-box .icon { font-size: 28px; margin-bottom: 8px; }
 
-/* ── Score Tab ── */
-.score-section {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; padding: 20px; margin-bottom: 16px;
-}
-.score-big { font-size: 48px; font-weight: 800; color: var(--long); line-height: 1; }
-.score-label { font-size: 13px; color: var(--text2); margin-top: 4px; }
-.score-stats { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
-.score-stat { display: flex; flex-direction: column; gap: 2px; }
-.score-stat-val   { font-size: 20px; font-weight: 700; }
-.score-stat-label { font-size: 11px; color: var(--text2); }
-.section-title { font-size: 12px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
-.history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.history-table th {
-  text-align: left; padding: 8px 12px; color: var(--text2);
-  font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--border); font-weight: 500;
-}
-.history-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
-.history-table tr:last-child td { border-bottom: none; }
-.history-table tr:hover td { background: var(--bg3); }
+.up { color: var(--long); } .down { color: var(--short); } .flat { color: var(--neutral); }
 
 /* ── 個別銘柄タブ ── */
 .theme-accordion {
   background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 8px; margin-bottom: 10px; overflow: hidden;
+  border-radius: 8px; margin-bottom: 8px; overflow: hidden;
 }
 .accordion-header {
-  padding: 12px 16px; cursor: pointer; display: flex;
-  align-items: center; justify-content: space-between;
+  padding: 12px 16px; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
   transition: background 0.15s; user-select: none;
 }
 .accordion-header:hover { background: var(--bg3); }
-.accordion-title { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+.accordion-title { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
 .accordion-meta  { font-size: 12px; color: var(--text2); display: flex; align-items: center; gap: 8px; }
 .accordion-arrow { font-size: 12px; color: var(--text2); transition: transform 0.2s; }
 .accordion-arrow.open { transform: rotate(90deg); }
 .accordion-body { display: none; border-top: 1px solid var(--border); }
 .accordion-body.open { display: block; }
-
-/* 個別銘柄の中の左右 */
-.stock-split {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
+.stock-split { display: grid; grid-template-columns: 1fr 1fr; }
 .stock-split-col { padding: 12px 16px; }
 .stock-split-col + .stock-split-col { border-left: 1px solid var(--border); }
 @media (max-width: 768px) {
   .stock-split { grid-template-columns: 1fr; }
   .stock-split-col + .stock-split-col { border-left: none; border-top: 1px solid var(--border); }
 }
-
-.stock-col-title { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-.signal-list { display: flex; flex-direction: column; gap: 4px; }
-.signal-item { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); }
-.signal-item:last-child { border-bottom: none; }
-.signal-item-name { color: var(--text2); }
-.signal-item-ticker { font-family: monospace; color: var(--accent); font-size: 11px; }
-.signal-item-chg { font-weight: 600; font-size: 12px; }
-
-.jp-stock-list { display: flex; flex-direction: column; gap: 4px; }
-.jp-stock-item { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); }
-.jp-stock-item:last-child { border-bottom: none; }
-.jp-stock-name { color: var(--text2); font-size: 11px; }
+.stock-col-title { font-size: 11px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+.signal-list, .jp-stock-list { display: flex; flex-direction: column; gap: 4px; }
+.signal-item, .jp-stock-item {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; padding: 4px 0; border-bottom: 1px solid var(--border);
+}
+.signal-item:last-child, .jp-stock-item:last-child { border-bottom: none; }
+.signal-item-ticker { font-family: monospace; color: var(--accent); font-size: 11px; font-weight: 700; }
+.signal-item-chg    { font-weight: 600; }
+.jp-stock-left { display: flex; flex-direction: column; }
 .jp-stock-code { font-family: monospace; color: var(--text2); font-size: 10px; }
+.jp-stock-name { font-size: 11px; color: var(--text2); }
 .jp-stock-chg  { font-weight: 600; font-size: 12px; }
-.jp-stock-excluded { opacity: 0.5; }
-.excluded-mark { font-size: 10px; color: var(--neutral); margin-left: 4px; }
+.jp-excluded   { opacity: 0.5; }
+.excluded-mark { font-size: 10px; color: var(--neutral); }
+
+/* ── 精度スコアタブ ── */
+.score-section {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 20px; margin-bottom: 16px;
+}
+.score-big { font-size: 48px; font-weight: 800; color: var(--long); line-height: 1; }
+.score-stats { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+.score-stat { display: flex; flex-direction: column; gap: 2px; }
+.score-stat-val   { font-size: 20px; font-weight: 700; }
+.score-stat-label { font-size: 11px; color: var(--text2); }
+.section-title { font-size: 12px; font-weight: 600; color: var(--text2); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
+.history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.history-table th {
+  text-align: left; padding: 8px 12px; color: var(--text2);
+  font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
+  border-bottom: 1px solid var(--border); font-weight: 500;
+}
+.history-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.history-table tr:last-child td { border-bottom: none; }
+.history-table tr:hover td { background: var(--bg3); }
 
 /* ── Loading / Error ── */
 .loading {
@@ -249,7 +255,7 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 }
 .no-data { text-align: center; padding: 40px; color: var(--text2); font-size: 13px; }
 
-/* ── Calendar (PTSモニター準拠) ── */
+/* ── Calendar ── */
 .calendar-popup {
   position: fixed; top: calc(var(--navbar-h) + 8px); right: 8px;
   background: var(--bg2); border: 1px solid var(--border);
@@ -260,23 +266,20 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 .calendar-popup.hidden { display: none; }
 .cal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .cal-ym-btn {
-  background: none; border: none; color: var(--text);
-  font-size: 15px; font-weight: 600; cursor: pointer;
-  padding: 4px 8px; border-radius: 6px; font-family: inherit; transition: background 0.15s;
+  background: none; border: none; color: var(--text); font-size: 15px; font-weight: 600;
+  cursor: pointer; padding: 4px 8px; border-radius: 6px; font-family: inherit; transition: background 0.15s;
 }
 .cal-ym-btn:hover { background: rgba(255,255,255,0.08); }
 .cal-arrows { display: flex; gap: 4px; }
 .cal-nav-btn {
   background: none; border: 1px solid var(--border); color: var(--text);
-  width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
-  font-size: 18px; font-family: inherit;
-  display: flex; align-items: center; justify-content: center; transition: background 0.15s;
+  width: 28px; height: 28px; border-radius: 6px; cursor: pointer; font-size: 18px;
+  font-family: inherit; display: flex; align-items: center; justify-content: center; transition: background 0.15s;
 }
 .cal-nav-btn:hover { background: rgba(255,255,255,0.08); }
 .cal-weekdays {
   display: grid; grid-template-columns: repeat(7, 1fr);
-  text-align: center; font-size: 11px; color: var(--text2);
-  margin-bottom: 4px; padding: 0 2px;
+  text-align: center; font-size: 11px; color: var(--text2); margin-bottom: 4px; padding: 0 2px;
 }
 .cal-weekdays .cal-sat { color: var(--accent); }
 .cal-weekdays .cal-sun { color: var(--short); }
@@ -294,8 +297,6 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 .cal-day.sun.available:not(.selected) { color: var(--short); }
 .cal-footer { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); }
 .cal-date-display { font-size: 13px; color: var(--text); padding: 5px 8px; text-align: right; }
-
-/* Drum Roll */
 .cal-drum-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.65);
   z-index: 600; display: flex; align-items: center; justify-content: center;
@@ -304,12 +305,10 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 .cal-drum-panel {
   background: var(--bg2); border: 1px solid var(--border);
   border-radius: 16px; padding: 16px; width: 240px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  animation: slideUp 0.2s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: slideUp 0.2s cubic-bezier(0.16,1,0.3,1);
 }
 .cal-drum-inner {
-  position: relative; display: flex;
-  height: 220px; margin-bottom: 14px; overflow: hidden; border-radius: 8px;
+  position: relative; display: flex; height: 220px; margin-bottom: 14px; overflow: hidden; border-radius: 8px;
 }
 .drum-col {
   flex: 1; overflow-y: scroll; scroll-snap-type: y mandatory;
@@ -331,12 +330,10 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 .drum-actions { display: flex; justify-content: flex-end; gap: 8px; }
 .drum-actions button {
   background: none; border: 1px solid var(--border); color: var(--text2);
-  padding: 7px 18px; border-radius: 8px; font-size: 14px;
-  cursor: pointer; font-family: inherit; transition: background 0.15s;
+  padding: 7px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; font-family: inherit; transition: background 0.15s;
 }
 .drum-actions button:hover { background: rgba(255,255,255,0.08); }
 .drum-btn-ok { background: var(--accent) !important; border-color: var(--accent) !important; color: #fff !important; }
-
 @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 </style>
@@ -358,44 +355,18 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 </div>
 
 <main>
-
-  <!-- テーマ別タブ -->
+  <!-- テーマ別 -->
   <div class="tab-content active" id="tab-theme">
-    <div class="split-layout">
-      <!-- 左：米国 -->
-      <div class="split-col" id="col-us">
-        <div class="split-col-header">
-          <span class="col-flag">🇺🇸</span> 米国市場
-          <span id="us-date" style="font-weight:400;color:var(--text2);font-size:10px;margin-left:auto"></span>
-        </div>
-        <div id="market-summary-area"><div class="loading">読み込み中</div></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-          <span style="font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;">テーマ予測</span>
-          <div class="count-chips" id="predict-chips"></div>
-        </div>
-        <div id="predict-area"></div>
-      </div>
-      <!-- 右：日本 -->
-      <div class="split-col" id="col-jp">
-        <div class="split-col-header">
-          <span class="col-flag">🇯🇵</span> 日本市場
-          <span id="jp-date" style="font-weight:400;color:var(--text2);font-size:10px;margin-left:auto"></span>
-        </div>
-        <div id="answer-area"><div class="loading">読み込み中</div></div>
-      </div>
-    </div>
+    <div id="theme-area"><div class="loading">読み込み中</div></div>
   </div>
-
-  <!-- 個別銘柄タブ -->
+  <!-- 個別銘柄 -->
   <div class="tab-content" id="tab-stocks">
     <div id="stocks-area"><div class="loading">読み込み中</div></div>
   </div>
-
-  <!-- 精度スコアタブ -->
+  <!-- 精度スコア -->
   <div class="tab-content" id="tab-score">
     <div id="score-area"><div class="loading">読み込み中</div></div>
   </div>
-
 </main>
 
 <!-- Calendar -->
@@ -429,54 +400,34 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 </div>
 
 <script>
-// =====================
-// Config
-// =====================
-const OWNER    = 'kou-ai-agent';
-const REPO     = 'USJPStockSignal';
-const BRANCH   = 'main';
-const BASE     = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/data`;
-const DOW_JP   = ['日','月','火','水','木','金','土'];
-const DRUM_H   = 44;
+const OWNER  = 'kou-ai-agent';
+const REPO   = 'USJPStockSignal';
+const BRANCH = 'main';
+const BASE   = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/data`;
+const DOW_JP = ['日','月','火','水','木','金','土'];
+const DRUM_H = 44;
 
-// =====================
-// State
-// =====================
-let S = {
-  dates:   [],   // YYYY-MM-DD
-  current: null, // YYYYMMDD
-  master:  null,
-  predict: null,
-  usClose: null,
-  answer:  null,
-};
-let calS = {
-  open: false, viewY: 2026, viewM: 6, drumY: 2026, drumM: 6,
-};
+let S = { dates:[], current:null, master:null, predict:null, usClose:null, answer:null };
+let calS = { open:false, viewY:2026, viewM:6, drumY:2026, drumM:6 };
 
-// =====================
-// Utils
-// =====================
 async function fetchJ(url) {
-  const r = await fetch(url + '?t=' + Date.now());
+  const r = await fetch(url+'?t='+Date.now());
   if (!r.ok) throw new Error(`${r.status}`);
   return r.json();
 }
-const chgCls = v => v == null || isNaN(v) ? '' : v > 0 ? 'up' : v < 0 ? 'down' : 'flat';
-const chgStr = (v, d=2) => v == null || isNaN(v) ? 'N/A' : (v>=0?'+':'')+v.toFixed(d)+'%';
+const chgCls = v => v==null||isNaN(v)?'':v>0?'up':v<0?'down':'flat';
+const chgStr = (v,d=2) => v==null||isNaN(v)?'--':(v>=0?'+':'')+v.toFixed(d)+'%';
 const pCls   = p => p==='Long'?'long':p==='Short'?'short':'neutral';
 const pLbl   = p => p==='Long'?'↑ Long':p==='Short'?'↓ Short':'→ Neutral';
 const vIcon  = v => v==='correct'?'✅':v==='incorrect'?'❌':'⏭';
-const toDate  = s => s ? `${s.slice(0,4)}/${s.slice(4,6)}/${s.slice(6,8)}` : '--';
-const toDash  = s => s ? `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}` : '';
-const fromDash= s => s.replace(/-/g,'');
-const fmtJP   = dash => { const [y,m,d]=dash.split('-').map(Number); return `${y}年${m}月${d}日(${DOW_JP[new Date(y,m-1,d).getDay()]})`; };
+const toDisp = s => s?`${s.slice(0,4)}/${s.slice(4,6)}/${s.slice(6,8)}`:'--';
+const toDash = s => s?`${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}`:'';
+const fromD  = s => s.replace(/-/g,'');
+const fmtJP  = d => { const [y,m,dd]=d.split('-').map(Number); return `${y}年${m}月${dd}日(${DOW_JP[new Date(y,m-1,dd).getDay()]})`; };
 
-// =====================
 // Tabs
-// =====================
-document.querySelectorAll('.tab').forEach(t => {
-  t.addEventListener('click', () => {
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
     document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
     t.classList.add('active');
@@ -484,142 +435,166 @@ document.querySelectorAll('.tab').forEach(t => {
   });
 });
 
-// =====================
-// Load by date
-// =====================
 async function loadByDate(yyyymmdd) {
   S.current = yyyymmdd;
-  document.getElementById('date-btn').textContent = toDate(yyyymmdd).replace(/\//g,'/');
+  document.getElementById('date-btn').textContent = toDisp(yyyymmdd);
+  calS.viewY = parseInt(yyyymmdd.slice(0,4));
+  calS.viewM = parseInt(yyyymmdd.slice(4,6));
 
-  // 並列取得
-  const [predict, usClose, answer] = await Promise.allSettled([
+  document.getElementById('theme-area').innerHTML  = '<div class="loading">読み込み中</div>';
+  document.getElementById('stocks-area').innerHTML = '<div class="loading">読み込み中</div>';
+
+  const [p, u, a] = await Promise.allSettled([
     fetchJ(`${BASE}/predict_${yyyymmdd}.json`),
     fetchJ(`${BASE}/us_close_${yyyymmdd}.json`),
     fetchJ(`${BASE}/answer_${yyyymmdd}.json`),
   ]);
-
-  S.predict = predict.status==='fulfilled' ? predict.value : null;
-  S.usClose = usClose.status==='fulfilled' ? usClose.value : null;
-  S.answer  = answer.status==='fulfilled'  ? answer.value  : null;
+  S.predict = p.status==='fulfilled' ? p.value : null;
+  S.usClose = u.status==='fulfilled' ? u.value : null;
+  S.answer  = a.status==='fulfilled' ? a.value : null;
 
   renderThemeTab();
   renderStocksTab();
 }
 
-// =====================
-// テーマ別タブ
-// =====================
+// ── テーマ別タブ ──
 function renderThemeTab() {
-  renderMarketSummary();
-  renderPredictCards();
-  renderAnswerCards();
-}
+  const area = document.getElementById('theme-area');
+  if (!S.predict && !S.usClose) {
+    area.innerHTML = '<div class="error-msg">データ取得失敗</div>'; return;
+  }
 
-function renderMarketSummary() {
-  const area = document.getElementById('market-summary-area');
-  if (!S.usClose) { area.innerHTML = '<div class="error-msg">米国データ取得失敗</div>'; return; }
+  const mkt    = S.usClose?.market_summary || {};
+  const sigs   = S.usClose?.signals        || {};
+  const st     = S.predict?.stats          || {};
+  const sigMap = {};
+  (S.master?.themes||[]).forEach(t=>{ sigMap[t.theme]=t.us_signal; });
+  const predMap = {};
+  (S.predict?.predictions||[]).forEach(p=>{ predMap[p.theme]=p; });
+  const ansMap  = {};
+  (S.answer?.results||[]).forEach(r=>{ ansMap[r.theme]=r; });
 
-  document.getElementById('us-date').textContent = toDate(S.usClose.date);
-  const mkt = S.usClose.market_summary || {};
-  const items = [
+  // 指数サマリー
+  const mktItems = [
     {k:'sp500',l:'S&P500'},{k:'nasdaq',l:'NASDAQ'},{k:'dow',l:'DOW'},
     {k:'vix',l:'VIX'},{k:'dxy',l:'DXY'},{k:'us10y',l:'米10年債'},
   ];
-  area.innerHTML = `<div class="market-grid">${items.map(({k,l})=>{
+  const mktHtml = mktItems.map(({k,l})=>{
     const d=mkt[k]||{}; const chg=d.change_pct;
     return `<div class="market-item"><div class="market-name">${l}</div><div class="market-chg ${chgCls(chg)}">${chgStr(chg)}</div></div>`;
-  }).join('')}</div>`;
-}
-
-function renderPredictCards() {
-  const area  = document.getElementById('predict-area');
-  const chips = document.getElementById('predict-chips');
-  if (!S.predict) { area.innerHTML = '<div class="error-msg">予測データ取得失敗</div>'; chips.innerHTML=''; return; }
-
-  const st = S.predict.stats || {};
-  chips.innerHTML = `
-    <span class="chip chip-long">↑ ${st.long??0}</span>
-    <span class="chip chip-short">↓ ${st.short??0}</span>
-    <span class="chip chip-neutral">→ ${st.neutral??0}</span>`;
-
-  const sigMap = {};
-  (S.master?.themes||[]).forEach(t=>{ sigMap[t.theme]=t.us_signal; });
-  const sigs = S.usClose?.signals || {};
-
-  area.innerHTML = `<div class="theme-cards">${(S.predict.predictions||[]).map(p=>{
-    const pc  = pCls(p.prediction);
-    const sig = sigMap[p.theme]||{};
-    const pr  = sig.primary||{};
-    const sd  = sigs[pr.ticker]||{};
-    return `<div class="predict-card ${pc}">
-      <div class="card-top">
-        <div class="theme-name">${p.theme}</div>
-        <div class="card-badges">
-          <span class="conf-dot ${p.confidence}"></span>
-          <span class="pred-badge ${pc}">${pLbl(p.prediction)}</span>
-        </div>
-      </div>
-      <div class="signal-row">
-        <span class="signal-ticker">${pr.ticker||'--'}</span>
-        <span class="signal-chg ${chgCls(sd.change_pct)}">${chgStr(sd.change_pct)}</span>
-        <span>${pr.name||''}</span>
-      </div>
-      <div class="card-reason">${p.reason||''}</div>
-    </div>`;
-  }).join('')}</div>`;
-}
-
-function renderAnswerCards() {
-  const area = document.getElementById('answer-area');
-  const jpDate = document.getElementById('jp-date');
-
-  if (!S.answer) {
-    jpDate.textContent = '';
-    area.innerHTML = `<div class="pending-box">
-      <div class="icon">🕐</div>
-      大引け後（PM4:15以降）に<br>自動更新されます
-    </div>`;
-    return;
-  }
-
-  jpDate.textContent = toDate(S.answer.date||S.current);
-  const st = S.answer.stats || {};
-  const acc = st.accuracy!=null ? `${st.accuracy}%` : '--';
-
-  const header = `<div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:10px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
-    <div><div style="font-size:11px;color:var(--text2)">本日正解率</div><div style="font-size:22px;font-weight:800;color:var(--long)">${acc}</div></div>
-    <div style="font-size:12px;color:var(--text2)">${st.correct??0}正解 / ${st.incorrect??0}不正解 / ${st.skip??0}スキップ</div>
-  </div>`;
-
-  const cards = (S.answer.results||[]).map(r=>{
-    const act=r.actual||{}; const chg=act.avg_change_pct;
-    const am = act.anomaly_mode?'🔄':act.excluded_count>0?`⚠️${act.excluded_count}`:'';
-    return `<div class="answer-card ${r.verdict}">
-      <div class="answer-top">
-        <div class="theme-name">${r.theme}</div>
-        <span class="verdict-icon">${vIcon(r.verdict)}</span>
-      </div>
-      <div class="answer-row">
-        <span class="pred-badge ${pCls(r.prediction)}">${pLbl(r.prediction)}</span>
-        <span style="color:var(--text2);font-size:11px;">→</span>
-        <span class="pred-badge ${pCls(act.direction||'Neutral')}">${pLbl(act.direction||'Neutral')}</span>
-        <span class="answer-chg ${chgCls(chg)}">${chgStr(chg)}</span>
-        ${am}
-      </div>
-      <div class="answer-meta">${act.used_count??'--'}銘柄で判定</div>
-      <div class="answer-reason">${r.reason||''}</div>
-    </div>`;
   }).join('');
 
-  area.innerHTML = header + `<div class="answer-cards">${cards}</div>`;
+  // 本日正解率
+  const hasAnswer = !!S.answer;
+  const ans_st = S.answer?.stats || {};
+  const acc    = ans_st.accuracy != null ? `${ans_st.accuracy}%` : '---';
+  const scoreHtml = `
+    <div class="score-section-box">
+      <div style="font-size:11px;color:var(--text2);margin-bottom:4px;">🇯🇵 本日正解率</div>
+      <div class="score-day-rate ${hasAnswer?'':'pending'}">${acc}</div>
+      <div class="score-day-detail">${hasAnswer
+        ? `${ans_st.correct??0}正解 / ${ans_st.incorrect??0}不正解 / ${ans_st.skip??0}スキップ`
+        : '---'
+      }</div>
+      ${!hasAnswer ? '<div class="score-pending-note">大引け後（PM4:15以降）に自動更新されます</div>' : ''}
+    </div>`;
+
+  // カラムヘッダー
+  const colHeaders = `
+    <div class="theme-col-headers">
+      <div class="theme-col-header">
+        🇺🇸 米国市場（${toDisp(S.usClose?.date||S.current)}）
+        <div class="count-chips">
+          <span class="chip chip-long">↑ ${st.long??0}</span>
+          <span class="chip chip-short">↓ ${st.short??0}</span>
+          <span class="chip chip-neutral">→ ${st.neutral??0}</span>
+        </div>
+      </div>
+      <div class="theme-col-header">🇯🇵 日本市場</div>
+    </div>`;
+
+  // テーマ行
+  const themes = S.master?.themes || [];
+  const rowsHtml = themes.map(t=>{
+    const theme = t.theme;
+    const pred  = predMap[theme] || {};
+    const ans   = ansMap[theme]  || {};
+    const act   = ans.actual     || {};
+    const sig   = sigMap[theme]  || {};
+    const pr    = sig.primary    || {};
+    const sd    = sigs[pr.ticker]|| {};
+    const pc    = pCls(pred.prediction||'Neutral');
+    const vc    = ans.verdict||'';
+    const avgChg= act.avg_change_pct;
+    const am    = act.anomaly_mode?'🔄':act.excluded_count>0?`⚠️${act.excluded_count}`:'';
+
+    // US側
+    const usCell = `
+      <div class="theme-cell theme-cell-us">
+        <div class="cell-top">
+          <div class="theme-name">${theme}</div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <span class="conf-dot ${pred.confidence||'Low'}"></span>
+            <span class="pred-badge ${pc}">${pred.prediction?pLbl(pred.prediction):'--'}</span>
+          </div>
+        </div>
+        <div class="signal-row">
+          <span class="signal-ticker">${pr.ticker||'--'}</span>
+          <span class="signal-chg ${chgCls(sd.change_pct)}">${chgStr(sd.change_pct)}</span>
+          <span style="color:var(--text2)">${pr.name||''}</span>
+        </div>
+        <div class="card-reason">${pred.reason||''}</div>
+      </div>`;
+
+    // JP側
+    let jpCell;
+    if (!hasAnswer) {
+      jpCell = `
+        <div class="theme-cell theme-cell-jp">
+          <div class="cell-top">
+            <div class="theme-name" style="color:var(--text2)">${theme}</div>
+          </div>
+          <div class="jp-pending">⏳ ---</div>
+        </div>`;
+    } else {
+      jpCell = `
+        <div class="theme-cell theme-cell-jp">
+          <div class="cell-top">
+            <div class="theme-name">${theme}</div>
+            <span class="verdict-icon">${vc?vIcon(vc):''}</span>
+          </div>
+          <div class="answer-row">
+            <span class="pred-badge ${pCls(pred.prediction||'Neutral')}">${pred.prediction?pLbl(pred.prediction):'--'}</span>
+            <span style="color:var(--text2);font-size:11px;">→</span>
+            <span class="pred-badge ${pCls(act.direction||'Neutral')}">${pLbl(act.direction||'Neutral')}</span>
+            <span class="answer-chg ${chgCls(avgChg)}">${chgStr(avgChg)}</span>
+            ${am}
+          </div>
+          <div class="answer-meta">${act.used_count??'--'}銘柄で判定</div>
+        </div>`;
+    }
+
+    return `<div class="theme-row ${pc} ${vc}">${usCell}${jpCell}</div>`;
+  }).join('');
+
+  area.innerHTML = `
+    <div class="top-summary">
+      <div class="top-summary-inner">
+        <div>
+          <div class="market-section-title">🇺🇸 米国市場指数</div>
+          <div class="market-grid">${mktHtml}</div>
+        </div>
+        ${scoreHtml}
+      </div>
+    </div>
+    ${colHeaders}
+    ${rowsHtml}`;
 }
 
-// =====================
-// 個別銘柄タブ
-// =====================
+// ── 個別銘柄タブ ──
 function renderStocksTab() {
   const area = document.getElementById('stocks-area');
-  if (!S.master) { area.innerHTML = '<div class="error-msg">マスターデータなし</div>'; return; }
+  if (!S.master) { area.innerHTML='<div class="error-msg">マスターデータなし</div>'; return; }
 
   const sigMap  = {};
   (S.master.themes||[]).forEach(t=>{ sigMap[t.theme]=t.us_signal; });
@@ -635,51 +610,43 @@ function renderStocksTab() {
     const ans     = ansMap[theme]  || {};
     const act     = ans.actual     || {};
     const sig     = sigMap[theme]  || {};
-    const verdict = ans.verdict;
     const pc      = pCls(pred.prediction||'Neutral');
-    const acc     = verdict ? `${vIcon(verdict)} ` : '';
+    const vc      = ans.verdict;
     const avgChg  = act.avg_change_pct;
 
-    // 米国シグナルリスト
-    const primTicker = sig.primary?.ticker || '';
-    const subTickers = sig.sub || [];
-    const allTickers = primTicker ? [primTicker, ...subTickers] : subTickers;
-    const usRows = allTickers.slice(0,6).map(tk=>{
-      const d = sigs[tk] || {};
-      const isPrim = tk === primTicker;
+    const primT   = sig.primary?.ticker||'';
+    const allT    = primT ? [primT,...(sig.sub||[])] : (sig.sub||[]);
+    const usRows  = allT.slice(0,6).map(tk=>{
+      const d=sigs[tk]||{};
       return `<div class="signal-item">
-        <span class="signal-item-ticker" style="${isPrim?'color:var(--accent);font-weight:700':''}">${tk}</span>
+        <span class="signal-item-ticker" style="${tk===primT?'color:var(--accent);font-weight:700':''}">${tk}</span>
         <span class="signal-item-chg ${chgCls(d.change_pct)}">${chgStr(d.change_pct)}</span>
       </div>`;
     }).join('');
 
-    // 日本銘柄リスト
-    const details = ans.verdict ? ans.details || [] : [];
-    const detailMap = {};
-    details.forEach(d=>{ detailMap[d.code]=d; });
-
+    const detMap = {};
+    (ans.details||[]).forEach(d=>{ detMap[d.code]=d; });
     const jpRows = (t.jp_stocks||[]).map(s=>{
-      const d   = detailMap[s.code] || {};
+      const d   = detMap[s.code]||{};
       const chg = d.change_pct;
-      const isExcluded = d.fetched && Math.abs(chg||0) > 5 && !act.anomaly_mode;
-      return `<div class="jp-stock-item ${isExcluded?'jp-stock-excluded':''}">
-        <div>
+      const exc = d.fetched && Math.abs(chg||0)>5 && !act.anomaly_mode;
+      return `<div class="jp-stock-item ${exc?'jp-excluded':''}">
+        <div class="jp-stock-left">
           <span class="jp-stock-code">${s.code}</span>
-          <span class="jp-stock-name"> ${s.name.slice(0,10)}</span>
-          ${isExcluded?'<span class="excluded-mark">⚠️除外</span>':''}
+          <span class="jp-stock-name">${s.name.slice(0,12)}${exc?'<span class="excluded-mark"> ⚠️除外</span>':''}</span>
         </div>
         <span class="jp-stock-chg ${chgCls(chg)}">${chg!=null?chgStr(chg):'--'}</span>
       </div>`;
     }).join('');
 
     return `<div class="theme-accordion">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="accordion-header" onclick="toggleAcc(this)">
         <div class="accordion-title">
           <span class="pred-badge ${pc}" style="font-size:10px;">${pred.prediction?pLbl(pred.prediction):'--'}</span>
           ${theme}
         </div>
         <div class="accordion-meta">
-          ${acc}<span class="${chgCls(avgChg)}">${avgChg!=null?chgStr(avgChg):'大引け後'}</span>
+          ${vc?vIcon(vc)+' ':''}<span class="${chgCls(avgChg)}">${avgChg!=null?chgStr(avgChg):'大引け後'}</span>
           <span class="accordion-arrow">›</span>
         </div>
       </div>
@@ -687,11 +654,11 @@ function renderStocksTab() {
         <div class="stock-split">
           <div class="stock-split-col">
             <div class="stock-col-title">🇺🇸 米国シグナル</div>
-            <div class="signal-list">${usRows||'<div style="color:var(--text2);font-size:12px;">データなし</div>'}</div>
+            <div class="signal-list">${usRows||'<div style="color:var(--text2);font-size:12px">データなし</div>'}</div>
           </div>
           <div class="stock-split-col">
             <div class="stock-col-title">🇯🇵 日本銘柄</div>
-            <div class="jp-stock-list">${jpRows||'<div style="color:var(--text2);font-size:12px;">大引け後に更新</div>'}</div>
+            <div class="jp-stock-list">${jpRows||'<div style="color:var(--text2);font-size:12px">大引け後に更新</div>'}</div>
           </div>
         </div>
       </div>
@@ -699,37 +666,26 @@ function renderStocksTab() {
   }).join('');
 }
 
-function toggleAccordion(header) {
-  const body  = header.nextElementSibling;
-  const arrow = header.querySelector('.accordion-arrow');
-  const isOpen = body.classList.contains('open');
-  body.classList.toggle('open', !isOpen);
-  arrow.classList.toggle('open', !isOpen);
+function toggleAcc(h) {
+  const b=h.nextElementSibling, ar=h.querySelector('.accordion-arrow');
+  b.classList.toggle('open'); ar.classList.toggle('open');
 }
 
-// =====================
-// 精度スコアタブ
-// =====================
+// ── 精度スコアタブ ──
 async function loadScore() {
   try {
     const h = await fetchJ(`${BASE}/score_history.json`);
-    const acc = h.overall_accuracy ?? '--';
-    document.getElementById('header-accuracy').textContent = acc;
+    document.getElementById('header-accuracy').textContent = h.overall_accuracy??'--';
     const records = (h.records||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
     const rows = records.map(r=>{
-      const a = r.accuracy!=null?`${r.accuracy}%`:'--';
-      const c = r.accuracy>=60?'var(--long)':r.accuracy>=40?'var(--neutral)':'var(--short)';
-      return `<tr>
-        <td>${toDate(r.date)}</td>
-        <td style="color:${c};font-weight:600">${a}</td>
-        <td>${r.correct??0}</td><td>${r.incorrect??0}</td>
-        <td style="color:var(--text2)">${r.skip??0}</td>
-      </tr>`;
+      const a=r.accuracy!=null?`${r.accuracy}%`:'--';
+      const c=r.accuracy>=60?'var(--long)':r.accuracy>=40?'var(--neutral)':'var(--short)';
+      return `<tr><td>${toDisp(r.date)}</td><td style="color:${c};font-weight:600">${a}</td><td>${r.correct??0}</td><td>${r.incorrect??0}</td><td style="color:var(--text2)">${r.skip??0}</td></tr>`;
     }).join('');
-    document.getElementById('score-area').innerHTML = `
+    document.getElementById('score-area').innerHTML=`
       <div class="score-section">
-        <div class="score-big">${acc}%</div>
-        <div class="score-label">累積正解率（Long/Short判定のみ）</div>
+        <div class="score-big">${h.overall_accuracy??'--'}%</div>
+        <div style="font-size:13px;color:var(--text2);margin-top:4px">累積正解率（Long/Short判定のみ）</div>
         <div class="score-stats">
           <div class="score-stat"><div class="score-stat-val" style="color:var(--long)">${h.total_correct??0}</div><div class="score-stat-label">通算正解</div></div>
           <div class="score-stat"><div class="score-stat-val" style="color:var(--short)">${h.total_incorrect??0}</div><div class="score-stat-label">通算不正解</div></div>
@@ -739,45 +695,35 @@ async function loadScore() {
       </div>
       <div class="section-title">日別履歴</div>
       ${records.length>0?`<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;">
-        <table class="history-table">
-          <thead><tr><th>日付</th><th>正解率</th><th>正解</th><th>不正解</th><th>スキップ</th></tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      </div>`:'<div class="no-data">まだ履歴がありません。</div>'}`;
+        <table class="history-table"><thead><tr><th>日付</th><th>正解率</th><th>正解</th><th>不正解</th><th>スキップ</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>`:'<div class="no-data">まだ履歴がありません。</div>'}`;
   } catch(e) {
-    document.getElementById('score-area').innerHTML = `<div class="error-msg">スコアデータ取得失敗: ${e.message}</div>`;
+    document.getElementById('score-area').innerHTML=`<div class="error-msg">スコアデータ取得失敗</div>`;
   }
 }
 
-// =====================
-// Calendar (PTSモニター準拠)
-// =====================
+// ── Calendar ──
 const calDOM = {
-  btn: document.getElementById('date-btn'),
-  popup: document.getElementById('calendar-popup'),
-  ymBtn: document.getElementById('cal-ym-btn'),
-  prev: document.getElementById('cal-prev'),
-  next: document.getElementById('cal-next'),
-  grid: document.getElementById('cal-grid'),
-  dateDisplay: document.getElementById('cal-date-display'),
-  drumOverlay: document.getElementById('cal-drum-overlay'),
-  drumYear: document.getElementById('drum-year'),
-  drumMonth: document.getElementById('drum-month'),
-  drumOk: document.getElementById('drum-ok'),
-  drumCancel: document.getElementById('drum-cancel'),
+  btn:calDOM_get('date-btn'), popup:calDOM_get('calendar-popup'),
+  ymBtn:calDOM_get('cal-ym-btn'), prev:calDOM_get('cal-prev'), next:calDOM_get('cal-next'),
+  grid:calDOM_get('cal-grid'), dateDisplay:calDOM_get('cal-date-display'),
+  drumOverlay:calDOM_get('cal-drum-overlay'), drumYear:calDOM_get('drum-year'),
+  drumMonth:calDOM_get('drum-month'), drumOk:calDOM_get('drum-ok'), drumCancel:calDOM_get('drum-cancel'),
 };
+function calDOM_get(id){ return document.getElementById(id); }
 
-function openCal()  { renderCal(); calDOM.popup.classList.remove('hidden'); calS.open=true; }
-function closeCal() { calDOM.popup.classList.add('hidden'); calS.open=false; }
+function openCal()  { renderCal(); document.getElementById('calendar-popup').classList.remove('hidden'); calS.open=true; }
+function closeCal() { document.getElementById('calendar-popup').classList.add('hidden'); calS.open=false; }
 
 function renderCal() {
-  calDOM.ymBtn.textContent = `${calS.viewY}年${calS.viewM}月 ›`;
-  const first = (new Date(calS.viewY,calS.viewM-1,1).getDay()+6)%7;
-  const days  = new Date(calS.viewY,calS.viewM,0).getDate();
-  const today = new Date(); today.setHours(0,0,0,0);
-  const avail = new Set(S.dates);
-  calDOM.grid.innerHTML='';
-  for(let i=0;i<first;i++){const e=document.createElement('div');e.className='cal-day';calDOM.grid.appendChild(e);}
+  document.getElementById('cal-ym-btn').textContent=`${calS.viewY}年${calS.viewM}月 ›`;
+  const first=(new Date(calS.viewY,calS.viewM-1,1).getDay()+6)%7;
+  const days=new Date(calS.viewY,calS.viewM,0).getDate();
+  const today=new Date(); today.setHours(0,0,0,0);
+  const avail=new Set(S.dates);
+  const grid=document.getElementById('cal-grid');
+  grid.innerHTML='';
+  for(let i=0;i<first;i++){const e=document.createElement('div');e.className='cal-day';grid.appendChild(e);}
   for(let d=1;d<=days;d++){
     const dash=`${calS.viewY}-${String(calS.viewM).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     const cell=new Date(calS.viewY,calS.viewM-1,d);
@@ -785,46 +731,39 @@ function renderCal() {
     const btn=document.createElement('button');
     btn.className='cal-day'; btn.textContent=d;
     if(cell>today||!avail.has(dash)){btn.disabled=true;}
-    else{
-      btn.classList.add('available');
-      btn.addEventListener('click',e=>{e.stopPropagation();selectDay(fromDash(dash));});
-    }
+    else{btn.classList.add('available');btn.addEventListener('click',e=>{e.stopPropagation();selectDay(fromD(dash));});}
     if(S.current&&dash===toDash(S.current)) btn.classList.add('selected');
     if(cell.getTime()===today.getTime()) btn.classList.add('today');
     if(dow===5) btn.classList.add('sat');
     if(dow===6) btn.classList.add('sun');
-    calDOM.grid.appendChild(btn);
+    grid.appendChild(btn);
   }
-  if(S.current) calDOM.dateDisplay.textContent=fmtJP(toDash(S.current));
+  if(S.current) document.getElementById('cal-date-display').textContent=fmtJP(toDash(S.current));
 }
 
-function selectDay(yyyymmdd) {
+function selectDay(yyyymmdd){
   closeCal();
   calS.viewY=parseInt(yyyymmdd.slice(0,4));
   calS.viewM=parseInt(yyyymmdd.slice(4,6));
   loadByDate(yyyymmdd);
 }
 
-function openDrum() {
+function openDrum(){
   calS.drumY=calS.viewY; calS.drumM=calS.viewM;
   const maxY=new Date().getFullYear()+1;
   const years=[]; for(let y=2025;y<=maxY;y++) years.push({value:y,label:`${y}年`});
   const months=Array.from({length:12},(_,i)=>({value:i+1,label:`${i+1}月`}));
-  setupDrum(calDOM.drumYear, years, calS.drumY-2025, v=>{calS.drumY=v;});
-  setupDrum(calDOM.drumMonth,months,calS.drumM-1,   v=>{calS.drumM=v;});
-  calDOM.drumOverlay.classList.remove('hidden');
+  setupDrum(document.getElementById('drum-year'), years, calS.drumY-2025, v=>{calS.drumY=v;});
+  setupDrum(document.getElementById('drum-month'),months,calS.drumM-1,   v=>{calS.drumM=v;});
+  document.getElementById('cal-drum-overlay').classList.remove('hidden');
 }
-function closeDrum(){calDOM.drumOverlay.classList.add('hidden');}
+function closeDrum(){document.getElementById('cal-drum-overlay').classList.add('hidden');}
 
 function setupDrum(el,items,idx,onChange){
   el.innerHTML='';
   const pad=()=>{const p=document.createElement('div');p.className='drum-pad';el.appendChild(p);};
   pad();pad();
-  items.forEach((item,i)=>{
-    const d=document.createElement('div');
-    d.className='drum-item'+(i===idx?' selected':'');
-    d.textContent=item.label; el.appendChild(d);
-  });
+  items.forEach((item,i)=>{const d=document.createElement('div');d.className='drum-item'+(i===idx?' selected':'');d.textContent=item.label;el.appendChild(d);});
   pad();pad();
   requestAnimationFrame(()=>{el.scrollTop=idx*DRUM_H;});
   let timer;
@@ -840,51 +779,34 @@ function setupDrum(el,items,idx,onChange){
 }
 
 function initCal(){
-  calDOM.btn.addEventListener('click',e=>{e.stopPropagation();calS.open?closeCal():openCal();});
-  calDOM.ymBtn.addEventListener('click',e=>{e.stopPropagation();openDrum();});
-  calDOM.prev.addEventListener('click',e=>{e.stopPropagation();if(--calS.viewM<1){calS.viewM=12;calS.viewY--;}renderCal();});
-  calDOM.next.addEventListener('click',e=>{e.stopPropagation();if(++calS.viewM>12){calS.viewM=1;calS.viewY++;}renderCal();});
-  calDOM.popup.addEventListener('click',e=>e.stopPropagation());
-  calDOM.drumOk.addEventListener('click',()=>{calS.viewY=calS.drumY;calS.viewM=calS.drumM;closeDrum();renderCal();});
-  calDOM.drumCancel.addEventListener('click',e=>{e.stopPropagation();closeDrum();});
-  calDOM.drumOverlay.addEventListener('click',e=>{if(e.target===calDOM.drumOverlay)closeDrum();});
+  document.getElementById('date-btn').addEventListener('click',e=>{e.stopPropagation();calS.open?closeCal():openCal();});
+  document.getElementById('cal-ym-btn').addEventListener('click',e=>{e.stopPropagation();openDrum();});
+  document.getElementById('cal-prev').addEventListener('click',e=>{e.stopPropagation();if(--calS.viewM<1){calS.viewM=12;calS.viewY--;}renderCal();});
+  document.getElementById('cal-next').addEventListener('click',e=>{e.stopPropagation();if(++calS.viewM>12){calS.viewM=1;calS.viewY++;}renderCal();});
+  document.getElementById('calendar-popup').addEventListener('click',e=>e.stopPropagation());
+  document.getElementById('drum-ok').addEventListener('click',()=>{calS.viewY=calS.drumY;calS.viewM=calS.drumM;closeDrum();renderCal();});
+  document.getElementById('drum-cancel').addEventListener('click',e=>{e.stopPropagation();closeDrum();});
+  document.getElementById('cal-drum-overlay').addEventListener('click',e=>{if(e.target===document.getElementById('cal-drum-overlay'))closeDrum();});
   document.addEventListener('click',()=>{if(calS.open)closeCal();});
 }
 
-// =====================
-// Init
-// =====================
-async function init() {
+// ── Init ──
+async function init(){
   try {
     S.master = await fetchJ(`${BASE}/signal_master.json`);
-
-    let dates = [];
-    try {
-      const idx = await fetchJ(`${BASE}/index.json`);
-      dates = idx.dates || [];
-    } catch(e) {
-      try {
-        const h = await fetchJ(`${BASE}/score_history.json`);
-        dates = (h.records||[]).map(r=>toDash(r.date));
-      } catch(e2) {}
-    }
-    S.dates = dates;
-
-    const latest = dates.length > 0 ? fromDash(dates[0]) : (() => {
-      const jst = new Date(Date.now()+9*3600*1000);
-      return jst.toISOString().slice(0,10).replace(/-/g,'');
-    })();
-
+    let dates=[];
+    try{ const idx=await fetchJ(`${BASE}/index.json`); dates=idx.dates||[]; }
+    catch(e){ try{ const h=await fetchJ(`${BASE}/score_history.json`); dates=(h.records||[]).map(r=>toDash(r.date)); }catch(e2){} }
+    S.dates=dates;
+    const latest=dates.length>0?fromD(dates[0]):(()=>{const jst=new Date(Date.now()+9*3600*1000);return jst.toISOString().slice(0,10).replace(/-/g,'');})();
     await loadByDate(latest);
     await loadScore();
     initCal();
-
-  } catch(e) {
+  } catch(e){
     console.error(e);
-    document.getElementById('predict-area').innerHTML=`<div class="error-msg">初期化失敗: ${e.message}</div>`;
+    document.getElementById('theme-area').innerHTML=`<div class="error-msg">初期化失敗: ${e.message}</div>`;
   }
 }
-
 init();
 </script>
 </body>
