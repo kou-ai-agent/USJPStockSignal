@@ -21,10 +21,16 @@ jobs:
           python-version: '3.12'
 
       - name: install-deps
-        run: pip install yfinance
+        run: pip install yfinance requests
 
       - name: answer-check
         run: python scripts/answer_check.py
+
+      - name: notify
+        if: always()
+        env:
+          USJP_LINE_ACCESS_TOKEN: ${{ secrets.USJP_LINE_ACCESS_TOKEN }}
+        run: python scripts/notify_evening.py
 
       - name: commit-and-push
         run: |
