@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/answer_*.json data/score_history.json
+          git add data/answer_*.json data/score_history.json data/index.json
           git diff --cached --quiet || git commit -m "data: answer and score $(date +'%Y%m%d' -d '+9 hours')"
           git pull --rebase origin main
           git push
