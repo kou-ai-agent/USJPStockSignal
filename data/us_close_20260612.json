@@ -1,6 +1,6 @@
 {
   "date": "20260612",
-  "fetched_at": "2026-06-12 07:23:03 JST",
+  "fetched_at": "2026-06-12 22:00:51 JST",
   "market_summary": {
     "sp500": {
       "ticker": "^GSPC",
@@ -22,29 +22,29 @@
     },
     "vix": {
       "ticker": "^VIX",
-      "close": 19.44,
-      "prev_close": 22.22,
-      "change_pct": -12.51
+      "close": 19.41,
+      "prev_close": 19.44,
+      "change_pct": -0.15
     },
     "dxy": {
       "ticker": "DX-Y.NYB",
-      "close": 99.675,
-      "prev_close": 99.95,
-      "change_pct": -0.28
+      "close": 99.844,
+      "prev_close": 99.86,
+      "change_pct": -0.02
     },
     "us10y": {
       "ticker": "^TNX",
-      "close": 4.463,
-      "prev_close": 4.542,
-      "change_pct": -1.74
+      "close": 4.483,
+      "prev_close": 4.463,
+      "change_pct": 0.45
     }
   },
   "signals": {
     "ABB": {
       "ticker": "ABBNY",
-      "close": 104.44,
+      "close": 104.45,
       "prev_close": 98.5,
-      "change_pct": 6.03
+      "change_pct": 6.04
     },
     "ABNB": {
       "ticker": "ABNB",
@@ -541,7 +541,7 @@
     },
     "SOX": {
       "ticker": "^SOX",
-      "close": 13171.4385,
+      "close": 13171.4404,
       "prev_close": 12206.46,
       "change_pct": 7.91,
       "name": "フィラデルフィア半導体指数"
