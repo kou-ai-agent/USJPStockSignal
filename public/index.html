@@ -83,10 +83,9 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 .market-grid { display: flex; gap: 8px; flex-wrap: wrap; }
 .market-item {
   background: var(--bg3); border: 1px solid var(--border);
-  border-radius: 6px; padding: 6px 10px; min-width: 92px; flex: 1;
+  border-radius: 6px; padding: 6px 10px; min-width: 78px; flex: 1;
 }
 .market-name { font-size: 10px; color: var(--text2); }
-.market-val  { font-size: 12px; font-weight: 600; margin: 1px 0; }
 .market-chg  { font-size: 13px; font-weight: 700; }
 
 .score-section-box {
@@ -191,8 +190,8 @@ main { padding: 16px; max-width: 1400px; margin: 0 auto; }
 .accordion-header:hover { background: var(--bg3); }
 .accordion-title { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
 .accordion-meta  { font-size: 12px; color: var(--text2); display: flex; align-items: center; gap: 8px; }
-.accordion-arrow { font-size: 12px; color: var(--text2); transition: transform 0.2s; transform: rotate(90deg); }
-.accordion-arrow.open { transform: rotate(-90deg); }
+.accordion-arrow { font-size: 12px; color: var(--text2); transition: transform 0.2s; }
+.accordion-arrow.open { transform: rotate(90deg); }
 .accordion-body { display: none; border-top: 1px solid var(--border); }
 .accordion-body.open { display: block; }
 .stock-split { display: grid; grid-template-columns: 1fr 1fr; }
@@ -418,7 +417,6 @@ async function fetchJ(url) {
 }
 const chgCls = v => v==null||isNaN(v)?'':v>0?'up':v<0?'down':'flat';
 const chgStr = (v,d=2) => v==null||isNaN(v)?'--':(v>=0?'+':'')+v.toFixed(d)+'%';
-const idxStr = (v,d=2) => v==null||isNaN(v)?'--':v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
 const pCls   = p => p==='Long'?'long':p==='Short'?'short':'neutral';
 const pLbl   = p => p==='Long'?'↑ Long':p==='Short'?'↓ Short':'→ Neutral';
 const vIcon  = v => v==='correct'?'✅':v==='incorrect'?'❌':'⏭';
@@ -483,11 +481,7 @@ function renderThemeTab() {
   ];
   const mktHtml = mktItems.map(({k,l})=>{
     const d=mkt[k]||{}; const chg=d.change_pct;
-    return `<div class="market-item">
-      <div class="market-name">${l}</div>
-      <div class="market-val">${idxStr(d.close)}</div>
-      <div class="market-chg ${chgCls(chg)}">${chgStr(chg)}</div>
-    </div>`;
+    return `<div class="market-item"><div class="market-name">${l}</div><div class="market-chg ${chgCls(chg)}">${chgStr(chg)}</div></div>`;
   }).join('');
 
   // 本日正解率
@@ -577,7 +571,6 @@ function renderThemeTab() {
             ${am}
           </div>
           <div class="answer-meta">${act.used_count??'--'}銘柄で判定</div>
-          ${vc==='incorrect' ? `<div class="card-reason">🔍 予測理由: ${pred.reason||''}</div>` : ''}
         </div>`;
     }
 
@@ -685,8 +678,10 @@ async function loadScore() {
     document.getElementById('header-accuracy').textContent = h.overall_accuracy??'--';
     const records = (h.records||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
     const rows = records.map(r=>{
-      const a=r.accuracy!=null?`${r.accuracy}%`:'--';
-      const c=r.accuracy>=60?'var(--long)':r.accuracy>=40?'var(--neutral)':'var(--short)';
+      const judged = (r.correct??0) + (r.incorrect??0);
+      const acc = judged>0 ? Math.round((r.correct/judged)*1000)/10 : null;
+      const a=acc!=null?`${acc}%`:'--';
+      const c=acc==null?'var(--text2)':acc>=60?'var(--long)':acc>=40?'var(--neutral)':'var(--short)';
       return `<tr><td>${toDisp(r.date)}</td><td style="color:${c};font-weight:600">${a}</td><td>${r.correct??0}</td><td>${r.incorrect??0}</td><td style="color:var(--text2)">${r.skip??0}</td></tr>`;
     }).join('');
     document.getElementById('score-area').innerHTML=`
