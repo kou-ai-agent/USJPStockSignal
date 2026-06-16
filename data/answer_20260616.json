@@ -131,7 +131,7 @@
         {
           "code": "4072",
           "name": "電算システムホールディングス",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -295,7 +295,7 @@
         {
           "code": "5243",
           "name": "note",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -441,7 +441,7 @@
         {
           "code": "7380",
           "name": "十六フィナンシャルグループ",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -633,13 +633,13 @@
         {
           "code": "2935",
           "name": "ピックルスホールディングス",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
           "code": "2936",
           "name": "ベースフード",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -1061,7 +1061,7 @@
         {
           "code": "281A",
           "name": "インフォメティス",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         }
       ]
@@ -1393,7 +1393,7 @@
         {
           "code": "6521",
           "name": "オキサイド",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -1411,7 +1411,7 @@
         {
           "code": "6526",
           "name": "ソシオネクスト",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -1703,7 +1703,7 @@
         {
           "code": "4069",
           "name": "BlueMeme",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -1733,7 +1733,7 @@
         {
           "code": "6521",
           "name": "オキサイド",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         },
         {
@@ -1745,7 +1745,7 @@
         {
           "code": "6613",
           "name": "QDレーザ",
-          "change_pct": NaN,
+          "change_pct": null,
           "fetched": true
         }
       ]
