@@ -7,6 +7,7 @@ Outputs: data/answer_YYYYMMDD.json, data/score_history.json, data/index.json
 """
 
 import json
+import math
 import sys
 import time
 from datetime import datetime, timezone, timedelta
@@ -50,6 +51,8 @@ def fetch_jp_price(code):
         if not close or not prev or float(prev) == 0:
             return None
         chg = (float(close) - float(prev)) / float(prev) * 100
+        if math.isnan(chg):
+            return None
         return round(chg, 2)
     except Exception as e:
         print(f"  WARN: {symbol} failed - {e}")
