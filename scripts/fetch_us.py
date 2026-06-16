@@ -69,7 +69,8 @@ def fetch_price(ticker):
         if not close or float(close) <= 0:
             return None
         close = round(float(close), 4)
-        prev  = round(float(prev), 4) if prev else None
+        prev_f = float(prev) if prev is not None else None
+        prev = round(prev_f, 4) if (prev_f is not None and not math.isnan(prev_f)) else None
         if prev:
             chg = (close - prev) / prev * 100
             chg = None if math.isnan(chg) else round(chg, 2)
