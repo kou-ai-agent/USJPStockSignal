@@ -1,6 +1,6 @@
 {
   "date": "20260616",
-  "fetched_at": "2026-06-16 07:34:54 JST",
+  "fetched_at": "2026-06-16 11:30:51 JST",
   "market_summary": {
     "sp500": {
       "ticker": "^GSPC",
@@ -28,8 +28,8 @@
     },
     "dxy": {
       "ticker": "DX-Y.NYB",
-      "close": 99.662,
-      "prev_close": NaN,
+      "close": 99.711,
+      "prev_close": null,
       "change_pct": null
     },
     "us10y": {
@@ -42,9 +42,9 @@
   "signals": {
     "ABB": {
       "ticker": "ABBNY",
-      "close": 104.01,
+      "close": 102.17,
       "prev_close": 102.17,
-      "change_pct": 1.8
+      "change_pct": 0.0
     },
     "ABNB": {
       "ticker": "ABNB",
