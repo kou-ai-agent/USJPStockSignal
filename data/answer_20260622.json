@@ -1,0 +1,2293 @@
+{
+  "date": "20260622",
+  "checked_at": "2026-06-22 22:08:06 JST",
+  "results": [
+    {
+      "theme": "AI",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "NVDAが+2.95%で強い上昇。NASDAQ+1.91%も堅調で、生成AI関連の日本株は確実に買い先行。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.36,
+        "used_count": 8,
+        "excluded_count": 2,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "5574",
+          "name": "ABEJA",
+          "change_pct": 7.52,
+          "fetched": true
+        },
+        {
+          "code": "3905",
+          "name": "データセクション",
+          "change_pct": -4.55,
+          "fetched": true
+        },
+        {
+          "code": "3807",
+          "name": "フィスコ",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "3652",
+          "name": "ディジタルメディアプロフェッショナル",
+          "change_pct": 4.32,
+          "fetched": true
+        },
+        {
+          "code": "5586",
+          "name": "Laboro.AI",
+          "change_pct": 6.83,
+          "fetched": true
+        },
+        {
+          "code": "9984",
+          "name": "ソフトバンクグループ",
+          "change_pct": 1.87,
+          "fetched": true
+        },
+        {
+          "code": "6701",
+          "name": "日本電気",
+          "change_pct": -0.11,
+          "fetched": true
+        },
+        {
+          "code": "4307",
+          "name": "野村総合研究所",
+          "change_pct": -2.34,
+          "fetched": true
+        },
+        {
+          "code": "4056",
+          "name": "ニューラルグループ",
+          "change_pct": 0.96,
+          "fetched": true
+        },
+        {
+          "code": "2158",
+          "name": "FRONTEO",
+          "change_pct": 2.76,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "暗号・ステーブル",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "COIN-1.01%、MSTR-3.46%と主要シグナルが弱い。ビットコイン価格代理としての下げ圧力が継続。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.55,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "254A",
+          "name": "AIフュージョンキャピタルグループ",
+          "change_pct": 1.55,
+          "fetched": true
+        },
+        {
+          "code": "3350",
+          "name": "メタプラネット",
+          "change_pct": 4.26,
+          "fetched": true
+        },
+        {
+          "code": "3747",
+          "name": "インタートレード",
+          "change_pct": 2.36,
+          "fetched": true
+        },
+        {
+          "code": "3825",
+          "name": "リミックスポイント",
+          "change_pct": -1.91,
+          "fetched": true
+        },
+        {
+          "code": "3853",
+          "name": "アステリア",
+          "change_pct": 0.15,
+          "fetched": true
+        },
+        {
+          "code": "3903",
+          "name": "gumi",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "4072",
+          "name": "電算システムホールディングス",
+          "change_pct": 0.64,
+          "fetched": true
+        },
+        {
+          "code": "8105",
+          "name": "Bitcoin Japan",
+          "change_pct": 6.71,
+          "fetched": true
+        },
+        {
+          "code": "8746",
+          "name": "unbanked",
+          "change_pct": -4.35,
+          "fetched": true
+        },
+        {
+          "code": "8783",
+          "name": "abc",
+          "change_pct": 2.25,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "宇宙",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "RKLB-0.69%で弱く、ASTS-5.58%が大幅下落。米宇宙ベンチャーセクター全体の調整が見られる。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 2.19,
+        "used_count": 7,
+        "excluded_count": 3,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "186A",
+          "name": "アストロスケールホールディングス",
+          "change_pct": 10.18,
+          "fetched": true
+        },
+        {
+          "code": "290A",
+          "name": "Synspective",
+          "change_pct": 6.54,
+          "fetched": true
+        },
+        {
+          "code": "9348",
+          "name": "ispace",
+          "change_pct": 4.84,
+          "fetched": true
+        },
+        {
+          "code": "402A",
+          "name": "アクセルスペースホールディングス",
+          "change_pct": 4.47,
+          "fetched": true
+        },
+        {
+          "code": "464A",
+          "name": "ＱＰＳホールディングス",
+          "change_pct": 4.45,
+          "fetched": true
+        },
+        {
+          "code": "9412",
+          "name": "スカパーJSAT",
+          "change_pct": 1.09,
+          "fetched": true
+        },
+        {
+          "code": "5256",
+          "name": "Fusic",
+          "change_pct": -1.15,
+          "fetched": true
+        },
+        {
+          "code": "4316",
+          "name": "ビーマップ",
+          "change_pct": 10.66,
+          "fetched": true
+        },
+        {
+          "code": "6503",
+          "name": "三菱電機",
+          "change_pct": 2.18,
+          "fetched": true
+        },
+        {
+          "code": "7270",
+          "name": "ＳＵＢＡＲＵ",
+          "change_pct": -0.53,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "エンタメ",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "DIS+3.00%、RBLX+7.31%と補助シグナルが強い。コンテンツ・ゲーム関連の日本株に波及しやすい。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.93,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "5253",
+          "name": "カバー",
+          "change_pct": -1.46,
+          "fetched": true
+        },
+        {
+          "code": "7803",
+          "name": "ブシロード",
+          "change_pct": 3.05,
+          "fetched": true
+        },
+        {
+          "code": "9166",
+          "name": "GENDA",
+          "change_pct": 8.9,
+          "fetched": true
+        },
+        {
+          "code": "7974",
+          "name": "任天堂",
+          "change_pct": -1.07,
+          "fetched": true
+        },
+        {
+          "code": "9684",
+          "name": "スクウェア・エニックス・ホールディングス",
+          "change_pct": -0.37,
+          "fetched": true
+        },
+        {
+          "code": "3765",
+          "name": "ガンホー・オンライン・エンターテイメント",
+          "change_pct": 2.72,
+          "fetched": true
+        },
+        {
+          "code": "2432",
+          "name": "ディー・エヌ・エー",
+          "change_pct": 3.59,
+          "fetched": true
+        },
+        {
+          "code": "3656",
+          "name": "KLab",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "5243",
+          "name": "note",
+          "change_pct": 2.27,
+          "fetched": true
+        },
+        {
+          "code": "4337",
+          "name": "ぴあ",
+          "change_pct": -0.37,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "核融合",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "SMR+13.54%、NNE+11.46%と次世代原子力が急騰。AI電力需要の文脈で日本原子力株も反応期待。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.36,
+        "used_count": 8,
+        "excluded_count": 2,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "7711",
+          "name": "助川電気工業",
+          "change_pct": 0.18,
+          "fetched": true
+        },
+        {
+          "code": "3446",
+          "name": "ジェイテックコーポレーション",
+          "change_pct": 2.68,
+          "fetched": true
+        },
+        {
+          "code": "5310",
+          "name": "東洋炭素",
+          "change_pct": -0.72,
+          "fetched": true
+        },
+        {
+          "code": "6330",
+          "name": "東洋エンジニアリング",
+          "change_pct": -2.84,
+          "fetched": true
+        },
+        {
+          "code": "5801",
+          "name": "古河電気工業",
+          "change_pct": 8.7,
+          "fetched": true
+        },
+        {
+          "code": "5021",
+          "name": "コスモエネルギーホールディングス",
+          "change_pct": -1.43,
+          "fetched": true
+        },
+        {
+          "code": "6703",
+          "name": "沖電気工業",
+          "change_pct": 6.27,
+          "fetched": true
+        },
+        {
+          "code": "6504",
+          "name": "富士電機",
+          "change_pct": 1.64,
+          "fetched": true
+        },
+        {
+          "code": "6361",
+          "name": "荏原製作所",
+          "change_pct": 3.28,
+          "fetched": true
+        },
+        {
+          "code": "6367",
+          "name": "ダイキン工業",
+          "change_pct": 0.06,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "銀行",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "JPM-2.47%で主要シグナル弱い。XLF-0.89%でセクター全体が軟調。日本銀行株に下げ圧力。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 2.03,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "8306",
+          "name": "三菱UFJフィナンシャル・グループ",
+          "change_pct": 1.68,
+          "fetched": true
+        },
+        {
+          "code": "8316",
+          "name": "三井住友フィナンシャルグループ",
+          "change_pct": 2.51,
+          "fetched": true
+        },
+        {
+          "code": "8411",
+          "name": "みずほフィナンシャルグループ",
+          "change_pct": 2.02,
+          "fetched": true
+        },
+        {
+          "code": "8331",
+          "name": "千葉銀行",
+          "change_pct": 1.38,
+          "fetched": true
+        },
+        {
+          "code": "8334",
+          "name": "群馬銀行",
+          "change_pct": 0.8,
+          "fetched": true
+        },
+        {
+          "code": "7173",
+          "name": "東京きらぼしフィナンシャルグループ",
+          "change_pct": 3.52,
+          "fetched": true
+        },
+        {
+          "code": "7182",
+          "name": "ゆうちょ銀行",
+          "change_pct": 2.48,
+          "fetched": true
+        },
+        {
+          "code": "7380",
+          "name": "十六フィナンシャルグループ",
+          "change_pct": 2.57,
+          "fetched": true
+        },
+        {
+          "code": "7189",
+          "name": "西日本フィナンシャルホールディングス",
+          "change_pct": 2.65,
+          "fetched": true
+        },
+        {
+          "code": "8558",
+          "name": "東和銀行",
+          "change_pct": 0.7,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "建設・土木",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "CAT+3.13%、VMC+2.72%、MLM+3.05%と建設機械・資材が堅調。インフラ投資テーマで日本建設株上昇期待。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": -0.07,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "3987",
+          "name": "エコモット",
+          "change_pct": 1.52,
+          "fetched": true
+        },
+        {
+          "code": "5612",
+          "name": "日本鋳鉄管",
+          "change_pct": 2.27,
+          "fetched": true
+        },
+        {
+          "code": "5262",
+          "name": "日本ヒューム",
+          "change_pct": 0.49,
+          "fetched": true
+        },
+        {
+          "code": "5602",
+          "name": "栗本鐵工所",
+          "change_pct": -0.35,
+          "fetched": true
+        },
+        {
+          "code": "1801",
+          "name": "大成建設",
+          "change_pct": 0.34,
+          "fetched": true
+        },
+        {
+          "code": "1802",
+          "name": "大林組",
+          "change_pct": -2.29,
+          "fetched": true
+        },
+        {
+          "code": "1803",
+          "name": "清水建設",
+          "change_pct": -0.76,
+          "fetched": true
+        },
+        {
+          "code": "1812",
+          "name": "鹿島建設",
+          "change_pct": 0.15,
+          "fetched": true
+        },
+        {
+          "code": "1925",
+          "name": "大和ハウス工業",
+          "change_pct": -1.63,
+          "fetched": true
+        },
+        {
+          "code": "1808",
+          "name": "長谷工コーポレーション",
+          "change_pct": -0.44,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "サイバーセキュリティ",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "PANW+2.00%、ZS+0.38%、S+1.49%と補助シグナルが正。クラウドストライク・パロアルト先行で日本セキュリティ株に波及。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.95,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "2326",
+          "name": "デジタルアーツ",
+          "change_pct": 2.27,
+          "fetched": true
+        },
+        {
+          "code": "4493",
+          "name": "サイバーセキュリティクラウド",
+          "change_pct": 0.12,
+          "fetched": true
+        },
+        {
+          "code": "3692",
+          "name": "FFRIセキュリティ",
+          "change_pct": 2.59,
+          "fetched": true
+        },
+        {
+          "code": "4475",
+          "name": "HENNGE",
+          "change_pct": 2.27,
+          "fetched": true
+        },
+        {
+          "code": "3927",
+          "name": "フーバーブレイン",
+          "change_pct": 4.63,
+          "fetched": true
+        },
+        {
+          "code": "4307",
+          "name": "野村総合研究所",
+          "change_pct": -2.34,
+          "fetched": true
+        },
+        {
+          "code": "3853",
+          "name": "アステリア",
+          "change_pct": 0.15,
+          "fetched": true
+        },
+        {
+          "code": "3788",
+          "name": "ＧＭＯグローバルサイン・ホールディングス",
+          "change_pct": 0.15,
+          "fetched": true
+        },
+        {
+          "code": "2169",
+          "name": "ＣＤＳ",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "6033",
+          "name": "エクストリーム",
+          "change_pct": -0.37,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "食品",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "KO-0.68%でわずかに弱いが、連動性が構造的に低いディフェンシブテーマ。下落耐性の指標にとどまる。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": -0.08,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "409A",
+          "name": "オリオンビール",
+          "change_pct": -0.59,
+          "fetched": true
+        },
+        {
+          "code": "2935",
+          "name": "ピックルスホールディングス",
+          "change_pct": -0.18,
+          "fetched": true
+        },
+        {
+          "code": "2936",
+          "name": "ベースフード",
+          "change_pct": 1.47,
+          "fetched": true
+        },
+        {
+          "code": "2802",
+          "name": "味の素",
+          "change_pct": 6.39,
+          "fetched": true
+        },
+        {
+          "code": "2503",
+          "name": "キリンホールディングス",
+          "change_pct": 1.39,
+          "fetched": true
+        },
+        {
+          "code": "2914",
+          "name": "日本たばこ産業",
+          "change_pct": -1.76,
+          "fetched": true
+        },
+        {
+          "code": "2282",
+          "name": "日本ハム",
+          "change_pct": -0.83,
+          "fetched": true
+        },
+        {
+          "code": "2269",
+          "name": "明治ホールディングス",
+          "change_pct": -0.08,
+          "fetched": true
+        },
+        {
+          "code": "2871",
+          "name": "ニチレイ",
+          "change_pct": -0.34,
+          "fetched": true
+        },
+        {
+          "code": "2002",
+          "name": "日清製粉グループ本社",
+          "change_pct": 0.21,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "製造業",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "CAT+3.13%、GE+0.17%、MMM+0.86%で資本財が強い。世界景気敏感株として日本製造業に好影響。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 1.37,
+        "used_count": 8,
+        "excluded_count": 2,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "6166",
+          "name": "中村超硬",
+          "change_pct": -4.12,
+          "fetched": true
+        },
+        {
+          "code": "7727",
+          "name": "オーバル",
+          "change_pct": 1.42,
+          "fetched": true
+        },
+        {
+          "code": "5857",
+          "name": "AREホールディングス",
+          "change_pct": 0.94,
+          "fetched": true
+        },
+        {
+          "code": "6999",
+          "name": "KOA",
+          "change_pct": 4.78,
+          "fetched": true
+        },
+        {
+          "code": "5726",
+          "name": "大阪チタニウムテクノロジーズ",
+          "change_pct": 8.11,
+          "fetched": true
+        },
+        {
+          "code": "6981",
+          "name": "村田製作所",
+          "change_pct": 4.26,
+          "fetched": true
+        },
+        {
+          "code": "6971",
+          "name": "京セラ",
+          "change_pct": -0.22,
+          "fetched": true
+        },
+        {
+          "code": "6723",
+          "name": "ルネサスエレクトロニクス",
+          "change_pct": 6.49,
+          "fetched": true
+        },
+        {
+          "code": "6762",
+          "name": "TDK",
+          "change_pct": 3.94,
+          "fetched": true
+        },
+        {
+          "code": "4063",
+          "name": "信越化学工業",
+          "change_pct": -0.04,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "戦争・紛争",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "XOM-2.08%、LMT-4.01%、RTX-3.62%、CVX-2.22%とエネルギー・防衛が大幅下落。地政学リスク後退のシグナル。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": -0.04,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "1605",
+          "name": "INPEX",
+          "change_pct": -1.49,
+          "fetched": true
+        },
+        {
+          "code": "7011",
+          "name": "三菱重工業",
+          "change_pct": -0.2,
+          "fetched": true
+        },
+        {
+          "code": "4107",
+          "name": "伊勢化学工業",
+          "change_pct": 1.15,
+          "fetched": true
+        },
+        {
+          "code": "1663",
+          "name": "K&Oエナジーグループ",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "6208",
+          "name": "石川製作所",
+          "change_pct": 1.62,
+          "fetched": true
+        },
+        {
+          "code": "4275",
+          "name": "カーリット",
+          "change_pct": 1.56,
+          "fetched": true
+        },
+        {
+          "code": "4274",
+          "name": "細谷火工",
+          "change_pct": 1.17,
+          "fetched": true
+        },
+        {
+          "code": "6203",
+          "name": "豊和工業",
+          "change_pct": 5.56,
+          "fetched": true
+        },
+        {
+          "code": "1963",
+          "name": "日揮ホールディングス",
+          "change_pct": -3.64,
+          "fetched": true
+        },
+        {
+          "code": "1662",
+          "name": "石油資源開発",
+          "change_pct": -0.55,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "通信",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "T-1.92%、VZ-1.03%でやや弱いが、連動性が構造的に低い。米通信キャリアの動きは日本通信株への波及限定的。",
+      "actual": {
+        "direction": "Short",
+        "avg_change_pct": -0.5,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "9433",
+          "name": "KDDI",
+          "change_pct": -3.16,
+          "fetched": true
+        },
+        {
+          "code": "9434",
+          "name": "ソフトバンク",
+          "change_pct": -0.85,
+          "fetched": true
+        },
+        {
+          "code": "3774",
+          "name": "インターネットイニシアティブ",
+          "change_pct": 0.8,
+          "fetched": true
+        },
+        {
+          "code": "9419",
+          "name": "ワイヤレスゲート",
+          "change_pct": -1.67,
+          "fetched": true
+        },
+        {
+          "code": "9432",
+          "name": "NTT",
+          "change_pct": -0.28,
+          "fetched": true
+        },
+        {
+          "code": "9984",
+          "name": "ソフトバンクグループ",
+          "change_pct": 1.87,
+          "fetched": true
+        },
+        {
+          "code": "9449",
+          "name": "ＧＭＯインターネットグループ",
+          "change_pct": 18.07,
+          "fetched": true
+        },
+        {
+          "code": "9424",
+          "name": "日本通信",
+          "change_pct": -0.88,
+          "fetched": true
+        },
+        {
+          "code": "3843",
+          "name": "フリービット",
+          "change_pct": 0.81,
+          "fetched": true
+        },
+        {
+          "code": "9416",
+          "name": "ビジョン",
+          "change_pct": -1.17,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "データセンター",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "VRT+4.87%、ANET+2.87%と電力・冷却インフラが強い。NVIDIA関連でAI需要が続く。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": -0.09,
+        "used_count": 8,
+        "excluded_count": 2,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "3565",
+          "name": "アセンテック",
+          "change_pct": 1.62,
+          "fetched": true
+        },
+        {
+          "code": "3778",
+          "name": "さくらインターネット",
+          "change_pct": 1.27,
+          "fetched": true
+        },
+        {
+          "code": "5803",
+          "name": "フジクラ",
+          "change_pct": 19.38,
+          "fetched": true
+        },
+        {
+          "code": "9432",
+          "name": "NTT",
+          "change_pct": -0.28,
+          "fetched": true
+        },
+        {
+          "code": "3774",
+          "name": "インターネットイニシアティブ",
+          "change_pct": 0.8,
+          "fetched": true
+        },
+        {
+          "code": "6506",
+          "name": "安川電機",
+          "change_pct": 7.39,
+          "fetched": true
+        },
+        {
+          "code": "6501",
+          "name": "日立製作所",
+          "change_pct": 2.1,
+          "fetched": true
+        },
+        {
+          "code": "6702",
+          "name": "富士通",
+          "change_pct": -0.72,
+          "fetched": true
+        },
+        {
+          "code": "4307",
+          "name": "野村総合研究所",
+          "change_pct": -2.34,
+          "fetched": true
+        },
+        {
+          "code": "9433",
+          "name": "KDDI",
+          "change_pct": -3.16,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "電力",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "VST+3.10%、CEG+2.58%、GEV+5.80%とIPPが急騰。AI電力需要で米独立電力が買われ、日本電力株に波及。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.47,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "9501",
+          "name": "東京電力ホールディングス",
+          "change_pct": -7.1,
+          "fetched": true
+        },
+        {
+          "code": "9503",
+          "name": "関西電力",
+          "change_pct": 0.6,
+          "fetched": true
+        },
+        {
+          "code": "9502",
+          "name": "中部電力",
+          "change_pct": 1.44,
+          "fetched": true
+        },
+        {
+          "code": "9509",
+          "name": "北海道電力",
+          "change_pct": 0.08,
+          "fetched": true
+        },
+        {
+          "code": "9506",
+          "name": "東北電力",
+          "change_pct": -0.76,
+          "fetched": true
+        },
+        {
+          "code": "9504",
+          "name": "中国電力",
+          "change_pct": -0.14,
+          "fetched": true
+        },
+        {
+          "code": "9507",
+          "name": "四国電力",
+          "change_pct": 0.14,
+          "fetched": true
+        },
+        {
+          "code": "9508",
+          "name": "九州電力",
+          "change_pct": 0.09,
+          "fetched": true
+        },
+        {
+          "code": "3825",
+          "name": "リミックスポイント",
+          "change_pct": -1.91,
+          "fetched": true
+        },
+        {
+          "code": "281A",
+          "name": "インフォメティス",
+          "change_pct": 4.7,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "ドローン",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "KTOS-3.47%で補助シグナル弱い。AVAV+1.50%も小幅上昇で軍用・商用ドローンセクター全体では力強さ不足。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 7.97,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": true
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "218A",
+          "name": "Liberaware",
+          "change_pct": 17.86,
+          "fetched": true
+        },
+        {
+          "code": "6232",
+          "name": "ACSL",
+          "change_pct": 10.4,
+          "fetched": true
+        },
+        {
+          "code": "5597",
+          "name": "ブルーイノベーション",
+          "change_pct": 7.53,
+          "fetched": true
+        },
+        {
+          "code": "278A",
+          "name": "Terra Drone",
+          "change_pct": 18.94,
+          "fetched": true
+        },
+        {
+          "code": "3653",
+          "name": "モルフォ",
+          "change_pct": 0.52,
+          "fetched": true
+        },
+        {
+          "code": "3444",
+          "name": "菊池製作所",
+          "change_pct": 16.27,
+          "fetched": true
+        },
+        {
+          "code": "6986",
+          "name": "双葉電子工業",
+          "change_pct": 0.17,
+          "fetched": true
+        },
+        {
+          "code": "7013",
+          "name": "IHI",
+          "change_pct": -0.02,
+          "fetched": true
+        },
+        {
+          "code": "6506",
+          "name": "安川電機",
+          "change_pct": 7.39,
+          "fetched": true
+        },
+        {
+          "code": "6592",
+          "name": "マブチモーター",
+          "change_pct": 0.68,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "非鉄金属",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "FCX-0.55%で微弱、ALB-3.73%で下落。商品市況を通じて日本非鉄株に下げ圧力。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 1.68,
+        "used_count": 7,
+        "excluded_count": 3,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "1491",
+          "name": "中外鉱業",
+          "change_pct": 0.9,
+          "fetched": true
+        },
+        {
+          "code": "5726",
+          "name": "大阪チタニウムテクノロジーズ",
+          "change_pct": 8.11,
+          "fetched": true
+        },
+        {
+          "code": "5016",
+          "name": "JX金属",
+          "change_pct": 12.39,
+          "fetched": true
+        },
+        {
+          "code": "5711",
+          "name": "三菱マテリアル",
+          "change_pct": 1.1,
+          "fetched": true
+        },
+        {
+          "code": "5706",
+          "name": "三井金属",
+          "change_pct": 8.42,
+          "fetched": true
+        },
+        {
+          "code": "5707",
+          "name": "東邦亜鉛",
+          "change_pct": 2.17,
+          "fetched": true
+        },
+        {
+          "code": "5713",
+          "name": "住友金属鉱山",
+          "change_pct": 2.64,
+          "fetched": true
+        },
+        {
+          "code": "5714",
+          "name": "DOWAホールディングス",
+          "change_pct": 2.0,
+          "fetched": true
+        },
+        {
+          "code": "5724",
+          "name": "アサカ理研",
+          "change_pct": -0.15,
+          "fetched": true
+        },
+        {
+          "code": "5741",
+          "name": "UACJ",
+          "change_pct": 3.1,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "農業",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "DE+0.13%で横ばい、ADM-1.83%で下落。米農業機械・肥料セクターの方向性が混在。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": 0.11,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "5616",
+          "name": "雨風太陽",
+          "change_pct": 1.7,
+          "fetched": true
+        },
+        {
+          "code": "6310",
+          "name": "井関農機",
+          "change_pct": -0.27,
+          "fetched": true
+        },
+        {
+          "code": "6325",
+          "name": "タカキタ",
+          "change_pct": -0.5,
+          "fetched": true
+        },
+        {
+          "code": "2700",
+          "name": "木徳神糧",
+          "change_pct": 0.39,
+          "fetched": true
+        },
+        {
+          "code": "6326",
+          "name": "クボタ",
+          "change_pct": -0.3,
+          "fetched": true
+        },
+        {
+          "code": "2379",
+          "name": "ディップ",
+          "change_pct": 0.35,
+          "fetched": true
+        },
+        {
+          "code": "1379",
+          "name": "ホクト",
+          "change_pct": -1.11,
+          "fetched": true
+        },
+        {
+          "code": "1332",
+          "name": "ニッスイ",
+          "change_pct": 0.88,
+          "fetched": true
+        },
+        {
+          "code": "1376",
+          "name": "カネコ種苗",
+          "change_pct": -1.24,
+          "fetched": true
+        },
+        {
+          "code": "1384",
+          "name": "ホクリヨウ",
+          "change_pct": 1.21,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "バイオ",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "MRNA+3.50%、CRSP+1.88%と補助シグナルが強い。新薬・ゲノム関連の日本バイオ株に上昇波及。",
+      "actual": {
+        "direction": "Short",
+        "avg_change_pct": -1.58,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "4588",
+          "name": "オンコリスバイオファーマ",
+          "change_pct": -1.08,
+          "fetched": true
+        },
+        {
+          "code": "4592",
+          "name": "サンバイオ",
+          "change_pct": -4.01,
+          "fetched": true
+        },
+        {
+          "code": "2160",
+          "name": "ジーエヌアイグループ",
+          "change_pct": -2.26,
+          "fetched": true
+        },
+        {
+          "code": "219A",
+          "name": "Heartseed",
+          "change_pct": -4.23,
+          "fetched": true
+        },
+        {
+          "code": "4593",
+          "name": "ヘリオス",
+          "change_pct": -3.1,
+          "fetched": true
+        },
+        {
+          "code": "6190",
+          "name": "フェニックスバイオ",
+          "change_pct": -4.71,
+          "fetched": true
+        },
+        {
+          "code": "4025",
+          "name": "多木化学",
+          "change_pct": 0.21,
+          "fetched": true
+        },
+        {
+          "code": "4506",
+          "name": "住友ファーマ",
+          "change_pct": -1.19,
+          "fetched": true
+        },
+        {
+          "code": "4021",
+          "name": "日産化学",
+          "change_pct": 3.01,
+          "fetched": true
+        },
+        {
+          "code": "7707",
+          "name": "プレシジョン・システム・サイエンス",
+          "change_pct": 1.55,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "半導体",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "SOX+6.42%、NVDA+2.95%、AMD+4.86%、TSM+6.94%と半導体全体が大きく上昇。翌日の日本半導体株に最も強く波及する。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 1.2,
+        "used_count": 8,
+        "excluded_count": 2,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "285A",
+          "name": "キオクシアホールディングス",
+          "change_pct": 0.09,
+          "fetched": true
+        },
+        {
+          "code": "6521",
+          "name": "オキサイド",
+          "change_pct": 1.58,
+          "fetched": true
+        },
+        {
+          "code": "5016",
+          "name": "JX金属",
+          "change_pct": 12.39,
+          "fetched": true
+        },
+        {
+          "code": "6857",
+          "name": "アドバンテスト",
+          "change_pct": 1.35,
+          "fetched": true
+        },
+        {
+          "code": "6526",
+          "name": "ソシオネクスト",
+          "change_pct": 3.06,
+          "fetched": true
+        },
+        {
+          "code": "6668",
+          "name": "アドテック プラズマ テクノロジー",
+          "change_pct": 3.72,
+          "fetched": true
+        },
+        {
+          "code": "6315",
+          "name": "TOWA",
+          "change_pct": 6.47,
+          "fetched": true
+        },
+        {
+          "code": "6525",
+          "name": "KOKUSAI ELECTRIC",
+          "change_pct": 1.33,
+          "fetched": true
+        },
+        {
+          "code": "3436",
+          "name": "SUMCO",
+          "change_pct": -0.78,
+          "fetched": true
+        },
+        {
+          "code": "5310",
+          "name": "東洋炭素",
+          "change_pct": -0.72,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "病院・介護",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "TDOC+6.32%、ISRG+1.14%と遠隔医療・医療DXが強い。医療DX関連の日本株に好影響。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": 0.01,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "9158",
+          "name": "シーユーシー",
+          "change_pct": 0.97,
+          "fetched": true
+        },
+        {
+          "code": "7061",
+          "name": "日本ホスピスホールディングス",
+          "change_pct": -0.96,
+          "fetched": true
+        },
+        {
+          "code": "2435",
+          "name": "シダー",
+          "change_pct": 0.49,
+          "fetched": true
+        },
+        {
+          "code": "286A",
+          "name": "ユカリア",
+          "change_pct": -2.4,
+          "fetched": true
+        },
+        {
+          "code": "6197",
+          "name": "ソラスト",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "6062",
+          "name": "チャームケア・コーポレーション",
+          "change_pct": -0.53,
+          "fetched": true
+        },
+        {
+          "code": "3779",
+          "name": "ジェイ・エスコムホールディングス",
+          "change_pct": -0.75,
+          "fetched": true
+        },
+        {
+          "code": "6059",
+          "name": "ウチヤマホールディングス",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "2413",
+          "name": "エムスリー",
+          "change_pct": 4.18,
+          "fetched": true
+        },
+        {
+          "code": "4350",
+          "name": "メディカルシステムネットワーク",
+          "change_pct": -0.85,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "不動産",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "PLD-0.28%でわずか下落、SPG+0.70%で弱含み。金利と連動する構造だが、全体では方向性が曖昧。",
+      "actual": {
+        "direction": "Short",
+        "avg_change_pct": -0.81,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "5535",
+          "name": "ミガロホールディングス",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "9238",
+          "name": "バリュークリエーション",
+          "change_pct": 0.78,
+          "fetched": true
+        },
+        {
+          "code": "3491",
+          "name": "GA technologies",
+          "change_pct": 0.53,
+          "fetched": true
+        },
+        {
+          "code": "2983",
+          "name": "アールプランナー",
+          "change_pct": -1.33,
+          "fetched": true
+        },
+        {
+          "code": "3231",
+          "name": "野村不動産ホールディングス",
+          "change_pct": -0.92,
+          "fetched": true
+        },
+        {
+          "code": "8802",
+          "name": "三菱地所",
+          "change_pct": -1.56,
+          "fetched": true
+        },
+        {
+          "code": "8801",
+          "name": "三井不動産",
+          "change_pct": -2.05,
+          "fetched": true
+        },
+        {
+          "code": "3289",
+          "name": "東急不動産ホールディングス",
+          "change_pct": -0.89,
+          "fetched": true
+        },
+        {
+          "code": "8830",
+          "name": "住友不動産",
+          "change_pct": -1.83,
+          "fetched": true
+        },
+        {
+          "code": "3288",
+          "name": "オープンハウスグループ",
+          "change_pct": -0.83,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "防衛",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "LMT-4.01%、RTX-3.62%、NOC-5.21%、GD-3.53%と防衛大手が大幅下落。地政学リスク後退で日米防衛株に下げ圧力。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.32,
+        "used_count": 8,
+        "excluded_count": 2,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "7011",
+          "name": "三菱重工業",
+          "change_pct": -0.2,
+          "fetched": true
+        },
+        {
+          "code": "7012",
+          "name": "川崎重工業",
+          "change_pct": 1.63,
+          "fetched": true
+        },
+        {
+          "code": "7013",
+          "name": "IHI",
+          "change_pct": -0.02,
+          "fetched": true
+        },
+        {
+          "code": "6208",
+          "name": "石川製作所",
+          "change_pct": 1.62,
+          "fetched": true
+        },
+        {
+          "code": "4274",
+          "name": "細谷火工",
+          "change_pct": 1.17,
+          "fetched": true
+        },
+        {
+          "code": "4275",
+          "name": "カーリット",
+          "change_pct": 1.56,
+          "fetched": true
+        },
+        {
+          "code": "7721",
+          "name": "東京計器",
+          "change_pct": 8.06,
+          "fetched": true
+        },
+        {
+          "code": "6330",
+          "name": "東洋エンジニアリング",
+          "change_pct": -2.84,
+          "fetched": true
+        },
+        {
+          "code": "5602",
+          "name": "栗本鐵工所",
+          "change_pct": -0.35,
+          "fetched": true
+        },
+        {
+          "code": "6203",
+          "name": "豊和工業",
+          "change_pct": 5.56,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "量子コンピュータ",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "IONQ+3.40%、RGTI+5.51%、QBTS+7.72%、QUBT+10.13%と量子ピュアプレイが軒並み上昇。日本量子株に波及期待。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 2.03,
+        "used_count": 6,
+        "excluded_count": 4,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "6597",
+          "name": "HPCシステムズ",
+          "change_pct": 4.7,
+          "fetched": true
+        },
+        {
+          "code": "5582",
+          "name": "グリッド",
+          "change_pct": 4.04,
+          "fetched": true
+        },
+        {
+          "code": "4069",
+          "name": "BlueMeme",
+          "change_pct": -0.46,
+          "fetched": true
+        },
+        {
+          "code": "6864",
+          "name": "エヌエフホールディングス",
+          "change_pct": 6.69,
+          "fetched": true
+        },
+        {
+          "code": "3687",
+          "name": "フィックスターズ",
+          "change_pct": 12.5,
+          "fetched": true
+        },
+        {
+          "code": "6777",
+          "name": "santec Holdings",
+          "change_pct": 4.29,
+          "fetched": true
+        },
+        {
+          "code": "3741",
+          "name": "セック",
+          "change_pct": 11.75,
+          "fetched": true
+        },
+        {
+          "code": "6521",
+          "name": "オキサイド",
+          "change_pct": 1.58,
+          "fetched": true
+        },
+        {
+          "code": "7713",
+          "name": "シグマ光機",
+          "change_pct": -1.99,
+          "fetched": true
+        },
+        {
+          "code": "6613",
+          "name": "QDレーザ",
+          "change_pct": 19.84,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "旅行・ホテル",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "ABNB+1.33%、DAL+2.35%と旅行・航空が堅調。インバウンド・旅行関連の日本株に好影響。",
+      "actual": {
+        "direction": "Short",
+        "avg_change_pct": -0.52,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "324A",
+          "name": "ブッキングリゾート",
+          "change_pct": 0.59,
+          "fetched": true
+        },
+        {
+          "code": "3498",
+          "name": "霞ヶ関キャピタル",
+          "change_pct": 1.6,
+          "fetched": true
+        },
+        {
+          "code": "9726",
+          "name": "KNT-CTホールディングス",
+          "change_pct": -1.38,
+          "fetched": true
+        },
+        {
+          "code": "9603",
+          "name": "エイチ・アイ・エス",
+          "change_pct": -2.4,
+          "fetched": true
+        },
+        {
+          "code": "9005",
+          "name": "東急",
+          "change_pct": -2.1,
+          "fetched": true
+        },
+        {
+          "code": "9020",
+          "name": "東日本旅客鉄道",
+          "change_pct": -2.66,
+          "fetched": true
+        },
+        {
+          "code": "6030",
+          "name": "アドベンチャー",
+          "change_pct": 4.65,
+          "fetched": true
+        },
+        {
+          "code": "9008",
+          "name": "京王電鉄",
+          "change_pct": -3.25,
+          "fetched": true
+        },
+        {
+          "code": "9706",
+          "name": "日本空港ビルデング",
+          "change_pct": 1.14,
+          "fetched": true
+        },
+        {
+          "code": "9708",
+          "name": "帝国ホテル",
+          "change_pct": -1.4,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "自動運転",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "TSLA+1.04%、GOOGL+1.17%、NVDA+2.95%と自動運転関連銘柄が上昇。FSD・Waymo・モービルアイの先行指標は好調。",
+      "actual": {
+        "direction": "Neutral",
+        "avg_change_pct": -0.1,
+        "used_count": 7,
+        "excluded_count": 3,
+        "anomaly_mode": false
+      },
+      "verdict": "skip",
+      "details": [
+        {
+          "code": "336A",
+          "name": "ダイナミックマッププラットフォーム",
+          "change_pct": 12.1,
+          "fetched": true
+        },
+        {
+          "code": "7203",
+          "name": "トヨタ自動車",
+          "change_pct": -1.26,
+          "fetched": true
+        },
+        {
+          "code": "6902",
+          "name": "デンソー",
+          "change_pct": -0.45,
+          "fetched": true
+        },
+        {
+          "code": "6954",
+          "name": "ファナック",
+          "change_pct": 6.52,
+          "fetched": true
+        },
+        {
+          "code": "9984",
+          "name": "ソフトバンクグループ",
+          "change_pct": 1.87,
+          "fetched": true
+        },
+        {
+          "code": "6861",
+          "name": "キーエンス",
+          "change_pct": 0.37,
+          "fetched": true
+        },
+        {
+          "code": "6758",
+          "name": "ソニーグループ",
+          "change_pct": 1.37,
+          "fetched": true
+        },
+        {
+          "code": "7259",
+          "name": "アイシン",
+          "change_pct": -2.44,
+          "fetched": true
+        },
+        {
+          "code": "7261",
+          "name": "マツダ",
+          "change_pct": -0.14,
+          "fetched": true
+        },
+        {
+          "code": "4667",
+          "name": "アイサンテクノロジー",
+          "change_pct": 12.88,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "自動車・部品",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "TSLA+1.04%、TM+0.68%でテスラ・トヨタが堅調。米EV・自動車大手の上昇が日本完成車・部品に波及。",
+      "actual": {
+        "direction": "Short",
+        "avg_change_pct": -0.89,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "7273",
+          "name": "イクヨ",
+          "change_pct": 0.0,
+          "fetched": true
+        },
+        {
+          "code": "3569",
+          "name": "セーレン",
+          "change_pct": -0.87,
+          "fetched": true
+        },
+        {
+          "code": "7203",
+          "name": "トヨタ自動車",
+          "change_pct": -1.26,
+          "fetched": true
+        },
+        {
+          "code": "7267",
+          "name": "本田技研工業",
+          "change_pct": 0.07,
+          "fetched": true
+        },
+        {
+          "code": "7269",
+          "name": "スズキ",
+          "change_pct": -0.29,
+          "fetched": true
+        },
+        {
+          "code": "7270",
+          "name": "SUBARU",
+          "change_pct": -0.53,
+          "fetched": true
+        },
+        {
+          "code": "7201",
+          "name": "日産自動車",
+          "change_pct": -3.2,
+          "fetched": true
+        },
+        {
+          "code": "6902",
+          "name": "デンソー",
+          "change_pct": -0.45,
+          "fetched": true
+        },
+        {
+          "code": "7259",
+          "name": "アイシン",
+          "change_pct": -2.44,
+          "fetched": true
+        },
+        {
+          "code": "7240",
+          "name": "NOK",
+          "change_pct": 0.05,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "造船",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "GD-3.53%、HII-3.86%、LMT-4.01%と米艦艇（防衛造船）が大幅下落。防衛・海運の複合シグナルで下げ圧力。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.68,
+        "used_count": 10,
+        "excluded_count": 0,
+        "anomaly_mode": false
+      },
+      "verdict": "incorrect",
+      "details": [
+        {
+          "code": "7012",
+          "name": "川崎重工業",
+          "change_pct": 1.63,
+          "fetched": true
+        },
+        {
+          "code": "7013",
+          "name": "IHI",
+          "change_pct": -0.02,
+          "fetched": true
+        },
+        {
+          "code": "7022",
+          "name": "サノヤスホールディングス",
+          "change_pct": 1.7,
+          "fetched": true
+        },
+        {
+          "code": "7004",
+          "name": "カナデビア",
+          "change_pct": -0.56,
+          "fetched": true
+        },
+        {
+          "code": "7003",
+          "name": "三井E&S",
+          "change_pct": -1.12,
+          "fetched": true
+        },
+        {
+          "code": "9101",
+          "name": "日本郵船",
+          "change_pct": 0.99,
+          "fetched": true
+        },
+        {
+          "code": "9104",
+          "name": "商船三井",
+          "change_pct": 0.55,
+          "fetched": true
+        },
+        {
+          "code": "9107",
+          "name": "川崎汽船",
+          "change_pct": 1.9,
+          "fetched": true
+        },
+        {
+          "code": "7011",
+          "name": "三菱重工業",
+          "change_pct": -0.2,
+          "fetched": true
+        },
+        {
+          "code": "6814",
+          "name": "古野電気",
+          "change_pct": 1.97,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "フィジカルAI・ロボット",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "NVDA+2.95%、TSLA+1.04%、ISRG+1.14%でロボット関連が上昇。NVIDIA Isaac・テスラOptimus先行で日本ロボット株に波及。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.77,
+        "used_count": 7,
+        "excluded_count": 3,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "6954",
+          "name": "ファナック",
+          "change_pct": 6.52,
+          "fetched": true
+        },
+        {
+          "code": "6506",
+          "name": "安川電機",
+          "change_pct": 7.39,
+          "fetched": true
+        },
+        {
+          "code": "6324",
+          "name": "ハーモニックドライブシステムズ",
+          "change_pct": 12.1,
+          "fetched": true
+        },
+        {
+          "code": "6861",
+          "name": "キーエンス",
+          "change_pct": 0.37,
+          "fetched": true
+        },
+        {
+          "code": "7013",
+          "name": "IHI",
+          "change_pct": -0.02,
+          "fetched": true
+        },
+        {
+          "code": "6701",
+          "name": "日本電気",
+          "change_pct": -0.11,
+          "fetched": true
+        },
+        {
+          "code": "6702",
+          "name": "富士通",
+          "change_pct": -0.72,
+          "fetched": true
+        },
+        {
+          "code": "6963",
+          "name": "ローム",
+          "change_pct": 3.14,
+          "fetched": true
+        },
+        {
+          "code": "6301",
+          "name": "小松製作所",
+          "change_pct": 0.91,
+          "fetched": true
+        },
+        {
+          "code": "6141",
+          "name": "DMG森精機",
+          "change_pct": 1.8,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "水素・蓄電池",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "PLUG+7.55%、BE+15.41%、ENPH+9.42%と水素・蓄電池が大幅上昇。プラグパワー・ブルーム象徴でエネルギー転換テーマが強い。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 1.44,
+        "used_count": 7,
+        "excluded_count": 3,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "8088",
+          "name": "岩谷産業",
+          "change_pct": -2.05,
+          "fetched": true
+        },
+        {
+          "code": "7012",
+          "name": "川崎重工業",
+          "change_pct": 1.63,
+          "fetched": true
+        },
+        {
+          "code": "6584",
+          "name": "三櫻工業",
+          "change_pct": 7.44,
+          "fetched": true
+        },
+        {
+          "code": "4182",
+          "name": "三菱瓦斯化学",
+          "change_pct": 4.44,
+          "fetched": true
+        },
+        {
+          "code": "6333",
+          "name": "ＴＥＩＫＯＫＵ",
+          "change_pct": 1.61,
+          "fetched": true
+        },
+        {
+          "code": "6501",
+          "name": "日立製作所",
+          "change_pct": 2.1,
+          "fetched": true
+        },
+        {
+          "code": "6508",
+          "name": "明電舎",
+          "change_pct": 2.79,
+          "fetched": true
+        },
+        {
+          "code": "6703",
+          "name": "沖電気工業",
+          "change_pct": 6.27,
+          "fetched": true
+        },
+        {
+          "code": "4004",
+          "name": "レゾナック・ホールディングス",
+          "change_pct": 5.08,
+          "fetched": true
+        },
+        {
+          "code": "5019",
+          "name": "出光興産",
+          "change_pct": -0.44,
+          "fetched": true
+        }
+      ]
+    },
+    {
+      "theme": "原子力・次世代炉",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "SMR+13.54%、OKLO+4.00%、NNE+11.46%、CEG+2.58%とSMR・次世代炉が急騰。AI電力需要で日本原子力株に好影響。",
+      "actual": {
+        "direction": "Long",
+        "avg_change_pct": 0.48,
+        "used_count": 9,
+        "excluded_count": 1,
+        "anomaly_mode": false
+      },
+      "verdict": "correct",
+      "details": [
+        {
+          "code": "7011",
+          "name": "三菱重工業",
+          "change_pct": -0.2,
+          "fetched": true
+        },
+        {
+          "code": "6501",
+          "name": "日立製作所",
+          "change_pct": 2.1,
+          "fetched": true
+        },
+        {
+          "code": "7701",
+          "name": "島津製作所",
+          "change_pct": 1.12,
+          "fetched": true
+        },
+        {
+          "code": "6504",
+          "name": "富士電機",
+          "change_pct": 1.64,
+          "fetched": true
+        },
+        {
+          "code": "9501",
+          "name": "東京電力ホールディングス",
+          "change_pct": -7.1,
+          "fetched": true
+        },
+        {
+          "code": "9503",
+          "name": "関西電力",
+          "change_pct": 0.6,
+          "fetched": true
+        },
+        {
+          "code": "6361",
+          "name": "荏原製作所",
+          "change_pct": 3.28,
+          "fetched": true
+        },
+        {
+          "code": "5310",
+          "name": "東洋炭素",
+          "change_pct": -0.72,
+          "fetched": true
+        },
+        {
+          "code": "7711",
+          "name": "助川電気工業",
+          "change_pct": 0.18,
+          "fetched": true
+        },
+        {
+          "code": "1963",
+          "name": "日揮ホールディングス",
+          "change_pct": -3.64,
+          "fetched": true
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "correct": 11,
+    "incorrect": 10,
+    "skip": 9,
+    "judged": 21,
+    "accuracy": 52.4
+  }
+}
