@@ -1,0 +1,194 @@
+{
+  "date": "20260625",
+  "predicted_at": "2026-06-25 06:55:05 JST",
+  "model": "claude-haiku-4-5-20251001",
+  "us_date": "20260625",
+  "predictions": [
+    {
+      "theme": "AI",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "MSFT-2.27%、PLTR-2.74%の明確な下落。主力NVDA-0.52%も弱含みで、生成AI関連日本株は売られやすい。"
+    },
+    {
+      "theme": "暗号・ステーブル",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "COIN-5.10%、MSTR-9.35%の大幅下落。ビットコイン代理シグナルが大きく悪化し、国内暗号関連銘柄も下圧力を受けやすい。"
+    },
+    {
+      "theme": "宇宙",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "RKLB-10.21%、LUNR-8.69%など主力銘柄が大幅下落。米宇宙ベンチャーの急落は国内宇宙関連株に直結する。"
+    },
+    {
+      "theme": "エンタメ",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "NFLX-1.35%、DIS-2.33%が下落。ただしRBLX+1.76%など一部堅調なため、日本エンタメ・ゲーム株は混調と予想。"
+    },
+    {
+      "theme": "核融合",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "SMR-5.99%、OKLO-5.47%の急落。次世代原子力シグナルが大きく悪化し、国内核融合関連株は売られやすい。"
+    },
+    {
+      "theme": "銀行",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "JPM-0.21%、XLF-0.30%とほぼ横ばい。金利環境の大きな変化がなく、国内銀行株への連動は限定的と予想。"
+    },
+    {
+      "theme": "建設・土木",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "CAT+1.04%、VMC+2.74%、MMM+2.51%など製造業・建設機械が堅調。インフラテーマで国内建設株は上昇期待。"
+    },
+    {
+      "theme": "サイバーセキュリティ",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "CRWD-1.16%、PANW-1.95%の下落。ただしZS+0.87%など一部堅調なため、日本セキュリティ株は軟調も下落幅は限定的。"
+    },
+    {
+      "theme": "食品",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "KO+0.36%、PG+0.78%、MDLZ+1.11%と小幅上昇。ディフェンシブ銘柄の性質から日本食品株への波及は構造的に低い。"
+    },
+    {
+      "theme": "製造業",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "HON+2.27%、GE+2.64%、MMM+2.51%と広くプラス。世界景気敏感株の強さから日本製造業も上昇期待。"
+    },
+    {
+      "theme": "戦争・紛争",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "XOM-2.03%、LMT-2.39%、CVX-2.57%の下落。地政学リスク懸念も一時的と見られ、国内防衛・エネルギー株は軟調。"
+    },
+    {
+      "theme": "通信",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "T-1.93%、VZ-2.25%の下落も幅は小さく、5G関連の連動性は構造的に低い。国内通信インフラ株への影響は限定的。"
+    },
+    {
+      "theme": "データセンター",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "VRT-0.59%、DLR-1.02%の下落。AI電力需要が相対的に弱まる中、国内DC関連株は軟調と予想。"
+    },
+    {
+      "theme": "電力",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "NEE+1.38%、GEV+2.19%と電力・再生可能エネルギーが堅調。AI電力需要テーマで国内電力株は下支えされやすい。"
+    },
+    {
+      "theme": "ドローン",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "AVAV-4.63%、KTOS-5.61%、RCAT-8.25%など軍用・商用ドローンが急落。国内ドローン関連株の下落圧力は強い。"
+    },
+    {
+      "theme": "非鉄金属",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "FCX-3.98%、SCCO-3.77%、GLD-3.02%と商品市況が大きく悪化。国内銅・金鉱山関連株は下売られやすい。"
+    },
+    {
+      "theme": "農業",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "DE+1.49%、CTVA+1.24%と農業機械が堅調。ただしADM-1.00%、MOS-1.84%と肥料が下落しており、混調予想。"
+    },
+    {
+      "theme": "バイオ",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "XBI+1.82%、VRTX+1.45%とバイオ指数が上昇。新薬・ゲノム関連の国内株は上昇期待も、MRNA-0.95%など個別差あり。"
+    },
+    {
+      "theme": "半導体",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "SOX-0.18%、NVDA-0.52%の下落。半導体指数が弱く、翌日の国内半導体株は最も強く売圧力を受ける。"
+    },
+    {
+      "theme": "病院・介護",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "UNH-0.84%の下落も限定的で、HCA+0.22%、TDOC+1.56%など医療DX関連が堅調。国内医療株は混調と予想。"
+    },
+    {
+      "theme": "不動産",
+      "prediction": "Short",
+      "confidence": "Low",
+      "reason": "PLD-3.02%で急落も、SPG+2.50%など一部反発。REITと金利の連動は構造的に弱く、国内不動産株への影響は限定的。"
+    },
+    {
+      "theme": "防衛",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "LMT-2.39%、NOC-1.99%、GD-1.72%と防衛大手が下落。地政学シグナルの弱まりから国内防衛株も軟調。"
+    },
+    {
+      "theme": "量子コンピュータ",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "IONQ-7.35%、RGTI-8.22%、QBTS-8.19%など米量子ピュアプレイが大幅下落。国内量子株は売られやすい。"
+    },
+    {
+      "theme": "旅行・ホテル",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "BKNG+7.29%、ABNB+4.00%、DAL+4.53%と旅行・航空が大幅上昇。インバウンド・旅行関連の国内株は上昇期待。"
+    },
+    {
+      "theme": "自動運転",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "TSLA-1.59%、MBLY-1.89%の下落。自動運転シグナルが弱まる中、国内関連株は軟調と予想。"
+    },
+    {
+      "theme": "自動車・部品",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "TSLA-1.59%、F-1.14%とEV・自動車が下落。国内完成車・部品株も軟調だが、底堅さ予想（TM+0.32%）。"
+    },
+    {
+      "theme": "造船",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "GD-1.72%、HII-1.36%の防衛造船と XOM-2.03%のエネルギーが下落。海運・防衛複合テーマで国内造船株も弱含み。"
+    },
+    {
+      "theme": "フィジカルAI・ロボット",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "NVDA-0.52%、TSLA-1.59%と先行指標が下落。AI・ロボット化トレンドは長期強気も、短期は売圧力を受けやすい。"
+    },
+    {
+      "theme": "水素・蓄電池",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "PLUG-3.69%、TSLA-1.59%と水素・燃料電池が下落。ただしBE+1.31%など一部堅調で、国内関連株は混調と予想。"
+    },
+    {
+      "theme": "原子力・次世代炉",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "SMR-5.99%、OKLO-5.47%など次世代炉シグナルが大きく悪化。国内原子力関連株は売られやすい。"
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "long": 6,
+    "short": 20,
+    "neutral": 4
+  }
+}
