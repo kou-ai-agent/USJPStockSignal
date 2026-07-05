@@ -1,0 +1,194 @@
+{
+  "date": "20260706",
+  "predicted_at": "2026-07-06 06:35:27 JST",
+  "model": "claude-haiku-4-5-20251001",
+  "us_date": "20260706",
+  "predictions": [
+    {
+      "theme": "AI",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "NVDAが-1.39%と主要シグナルが弱く、補助のMSFTプラスもNVDAのネガティブが支配的。生成AI関連日本株は下圧力を受けやすい。"
+    },
+    {
+      "theme": "暗号・ステーブル",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "COINが+3.92%、MSTRが+7.90%と強いシグナル。ビットコイン連動の日本仮想通貨関連は上昇期待。"
+    },
+    {
+      "theme": "宇宙",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "RKLBが+0.39%とフラット近く、LUNRやRDWが大きくマイナス。シグナルが混在し確度が低い。"
+    },
+    {
+      "theme": "エンタメ",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "NFLXが+4.66%、DISが+3.96%と強いシグナル。コンテンツ・ゲーム関連の日本エンタメ株は上昇余地あり。"
+    },
+    {
+      "theme": "核融合",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "SMRが-3.84%、NNEが-3.47%と代理シグナルが弱い。次世代原子力関連は下圧力を受けやすい。"
+    },
+    {
+      "theme": "銀行",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "XLFが+1.53%で金融セクター堅調。米メガバンク決算との連動で日本銀行株は小幅上昇期待。"
+    },
+    {
+      "theme": "建設・土木",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "CATが-2.81%と主要シグナルが弱く、PWRも-3.34%。インフラ投資テーマの日本建設株は下落圧力。"
+    },
+    {
+      "theme": "サイバーセキュリティ",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "CRWDが+0.41%とほぼフラット、PANWが-1.13%、補助も混在。シグナルが分散し確度不足。"
+    },
+    {
+      "theme": "食品",
+      "prediction": "Neutral",
+      "confidence": "Low",
+      "reason": "KOが+3.51%とプラスだが、食品は構造的に連動性が低く、日本食品株への波及は限定的。"
+    },
+    {
+      "theme": "製造業",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "CATが-2.81%と資本財の主要シグナルが弱い。世界景気敏感性の高い日本製造業は下落圧力を受けやすい。"
+    },
+    {
+      "theme": "戦争・紛争",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "LMTが+4.62%、RTXが+3.90%、CVXが+2.12%と地政学リスク関連が強い。日本防衛・エネルギー関連は上昇期待。"
+    },
+    {
+      "theme": "通信",
+      "prediction": "Neutral",
+      "confidence": "Low",
+      "reason": "TMUSが+2.58%とプラスだが、通信は構造的に連動性が弱く、日本通信インフラ株への波及は限定的。"
+    },
+    {
+      "theme": "データセンター",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "VRTが-3.50%、ANETが-3.98%と主要シグナルが弱い。データセンター電力・冷却関連は下圧力。"
+    },
+    {
+      "theme": "電力",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "CEGが+1.16%、NEEが+2.28%とIPP関連が堅調。AI電力需要の強気シグナル、日本電力株上昇期待。"
+    },
+    {
+      "theme": "ドローン",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "AVAVが+10.70%と圧倒的強気シグナル、KTOSも+4.36%。米軍用・商用ドローン需要が強く日本関連株上昇期待。"
+    },
+    {
+      "theme": "非鉄金属",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "FCXが+0.73%、SCCOが+1.90%、GLDが+2.03%とプラス。商品市況堅調で日本非鉄株は小幅上昇期待。"
+    },
+    {
+      "theme": "農業",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "DEが-1.01%と農業機械が弱い。クボタ等の日本農機株は下圧力を受けやすい。"
+    },
+    {
+      "theme": "バイオ",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "XBIが+2.50%、MRNAが+10.01%、VRTXが+6.03%と米バイオ全般が強い。新薬・ゲノム関連の日本株は上昇期待。"
+    },
+    {
+      "theme": "半導体",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "SOXが-5.44%と米半導体指数が大幅下落、NVDAも-1.39%。翌日の日本半導体株への下押し波及は強い。"
+    },
+    {
+      "theme": "病院・介護",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "UNHが-0.28%と微弱だが、HCAが+4.39%、ISRGが+5.87%とヘルスケア補助が強い。医療DX関連は上昇期待。"
+    },
+    {
+      "theme": "不動産",
+      "prediction": "Neutral",
+      "confidence": "Low",
+      "reason": "PLDが+1.92%、SPGが+1.37%とプラスだが、不動産は構造的に連動性が低く、金利感応の日本REITへの波及は限定的。"
+    },
+    {
+      "theme": "防衛",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "LMTが+4.62%、RTXが+3.90%、NOCが+5.59%と米防衛大手が堅調。地政学イベント時の日本防衛株は上昇期待。"
+    },
+    {
+      "theme": "量子コンピュータ",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "IONQが-4.44%、RGTIが-3.96%、QBTSが-4.13%と米量子ピュアプレイが揃って弱い。日本量子株は下落圧力。"
+    },
+    {
+      "theme": "旅行・ホテル",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "BKNGが+1.05%、MARが+1.26%、ABNBが+1.10%と旅行セクターが堅調。インバウンド関連の日本株は小幅上昇期待。"
+    },
+    {
+      "theme": "自動運転",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "TSLAが-7.49%と主要シグナルが大幅ダウン、GOOGLも-0.36%。テスラFSD・Waymo関連は日本で下落圧力。"
+    },
+    {
+      "theme": "自動車・部品",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "TSLAが-7.49%と大幅下落。米EV・自動車大手が弱く、日本完成車・部品株は下落圧力を受けやすい。"
+    },
+    {
+      "theme": "造船",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "GDが+2.94%、HIIが+4.49%と防衛造船シグナルが強い。米艦艇需要が堅調で日本造船株は上昇期待。"
+    },
+    {
+      "theme": "フィジカルAI・ロボット",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "NVDAが-1.39%、TSLAが-7.49%とコア銘柄が弱い。ロボット基盤・Optimus関連は日本で下落圧力。"
+    },
+    {
+      "theme": "水素・蓄電池",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "BEが-6.43%、ENPHが-8.05%、TSLAが-7.49%と水素・蓄電池セクター全般が弱い。日本関連株は下落圧力。"
+    },
+    {
+      "theme": "原子力・次世代炉",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "SMRが-3.84%、NNEが-3.47%と代理シグナルが弱い。OKLOのフラット判断も確度不足で慎重姿勢。"
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "long": 12,
+    "short": 13,
+    "neutral": 5
+  }
+}
