@@ -1,0 +1,194 @@
+{
+  "date": "20260714",
+  "predicted_at": "2026-07-14 06:30:10 JST",
+  "model": "claude-haiku-4-5-20251001",
+  "us_date": "20260714",
+  "predictions": [
+    {
+      "theme": "AI",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "NVDA -3.52%の下落が主信号。NASDAQも-1.55%と弱く、生成AI関連の日本株は売り圧力が強い。"
+    },
+    {
+      "theme": "暗号・ステーブル",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "COIN -1.07%、MSTR -2.68%と暗号資産関連が軒並み下落。ビットコイン代理の日本暗号株は下げる見込み。"
+    },
+    {
+      "theme": "宇宙",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "RKLB -5.32%、ASTS -7.83%と宇宙ベンチャーが大幅下落。米宇宙産業の先行指標が悪化し日本宇宙株も売られやすい。"
+    },
+    {
+      "theme": "エンタメ",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "NFLX +0.63%と小幅プラスだがDIS +0.40%と弱い。全体下落環境で個別銘柄依存が強く、日本エンタメ株への波及は限定的。"
+    },
+    {
+      "theme": "核融合",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "OKLO -6.22%、SMR -7.63%と次世代原子力関連が急落。原子力テーマは構造的な期待の後退を示唆し、日本原子力関連株も売られやすい。"
+    },
+    {
+      "theme": "銀行",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "JPM -0.58%、GS -0.88%とメガバンク弱気。米10年債が上昇（4.609%）して逆イールド懸念が高まり、日本銀行株も売り気味。"
+    },
+    {
+      "theme": "建設・土木",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "CAT -2.20%、PWR -1.80%と建設機械が下落。S&P500全体が-0.79%と弱いため、日本建設株への波及が予想される。"
+    },
+    {
+      "theme": "サイバーセキュリティ",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "CRWD +0.39%、PANW +1.35%、S +3.75%とセキュリティ大手が上昇。日本サイバー関連株は買われやすい。"
+    },
+    {
+      "theme": "食品",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "KO +0.91%、PG +0.90%とディフェンシブ銘柄がプラス。日本食品株との連動性は構造的に低く、テーマ判断としてはニュートラル。"
+    },
+    {
+      "theme": "製造業",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "CAT -2.20%、HON -1.84%、GE -1.63%と製造業全般が下落。世界景気敏感株として日本製造業も売り圧力。"
+    },
+    {
+      "theme": "戦争・紛争",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "XOM +4.05%、CVX +3.29%とエネルギーが急上昇。地政学リスク上昇の中で原油価格上伸が示唆され、日本エネルギー・防衛株は支援される。"
+    },
+    {
+      "theme": "通信",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "T +1.99%、VZ +1.33%と通信キャリアが小幅プラス。日本通信株との連動性は構造的に弱く、テーマ判断はニュートラル。"
+    },
+    {
+      "theme": "データセンター",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "VRT -4.07%、ANET -3.11%とデータセンター株が下落。NVDA -3.52%と計算需要シグナルも弱く、日本DC関連株も売られやすい。"
+    },
+    {
+      "theme": "電力",
+      "prediction": "Long",
+      "confidence": "High",
+      "reason": "CEG +2.46%とAI電力需要関連が上昇。次世代電力インフラの需要期待が継続し、日本電力株（特に革新型）は買われやすい。"
+    },
+    {
+      "theme": "ドローン",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "AVAV -1.92%、RCAT -5.10%、UMAC -8.45%とドローン関連が軒並み下落。日本ドローン・防衛関連株は売り圧力。"
+    },
+    {
+      "theme": "非鉄金属",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "FCX -2.52%、GLD -2.62%と非鉄・金が下落。世界景気敏感性が高く、日本銅・鉱山株も売られやすい。"
+    },
+    {
+      "theme": "農業",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "DE -0.21%（ほぼ変わらず）、ADM +2.03%と混在シグナル。農業は景気敏感度が低めで、日本農機株への波及は限定的。"
+    },
+    {
+      "theme": "バイオ",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "XBI -2.32%、CRSP -5.10%とバイオ指数が下落。全体リスクオフ（VIX上昇）が影響し、日本バイオ関連株は売られやすい。"
+    },
+    {
+      "theme": "半導体",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "SOX -4.78%、NVDA -3.52%、AMD -4.21%と半導体が大幅下落。翌日の日本半導体株への波及が最も強く、売り圧力が強い。"
+    },
+    {
+      "theme": "病院・介護",
+      "prediction": "Neutral",
+      "confidence": "Medium",
+      "reason": "UNH +1.05%、TDOC +3.99%とヘルスケア分野に強弱混在。日本医療DX関連への連動性は中程度であり、総合判断はニュートラル。"
+    },
+    {
+      "theme": "不動産",
+      "prediction": "Neutral",
+      "confidence": "High",
+      "reason": "PLD +0.92%とREIT小幅プラスも、米金利上昇（10年債+0.88%）がネック。日本不動産株との連動性も低く、テーマ判断はニュートラル。"
+    },
+    {
+      "theme": "防衛",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "LMT -0.49%、GD -0.61%と防衛大手が軟調。エネルギー（XOM高）は上昇するも防衛株の弱さが目立ち、日本防衛株は慎重。"
+    },
+    {
+      "theme": "量子コンピュータ",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "IONQ -9.29%、QBTS -7.12%、QUBT -7.62%と量子関連が急落。ハイリスク成長株として全体下落環境で売られ、日本量子株も下げやすい。"
+    },
+    {
+      "theme": "旅行・ホテル",
+      "prediction": "Short",
+      "confidence": "Medium",
+      "reason": "BKNG -1.45%、MAR -3.52%と旅行・ホテルが下落。全体リスクオフでインバウンド期待が後退し、日本旅行関連株も売られやすい。"
+    },
+    {
+      "theme": "自動運転",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "TSLA -3.19%、NVDA -3.52%と自動運転コア銘柄が下落。成長期待銘柄として全体弱気の中で売り圧力が強い。"
+    },
+    {
+      "theme": "自動車・部品",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "TSLA -3.19%、GM -1.45%とEV・自動車が下落。日本完成車・部品との連動性が高く、売り圧力が予想される。"
+    },
+    {
+      "theme": "造船",
+      "prediction": "Long",
+      "confidence": "Medium",
+      "reason": "XOM +4.05%とエネルギー上昇が下支え。防衛造船＋海運市況の複合シグナルで、地政学リスク上昇が日本造船株を支援。"
+    },
+    {
+      "theme": "フィジカルAI・ロボット",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "NVDA -3.52%、TSLA -3.19%と基盤銘柄が下落。ロボット・AIハードウェアは期待銘柄として売り圧力が強い。"
+    },
+    {
+      "theme": "水素・蓄電池",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "PLUG -2.69%、BE -4.55%、ENPH -3.95%と水素・蓄電関連が下落。成長テーマとしてリスクオフで売られ、日本水素株も下げやすい。"
+    },
+    {
+      "theme": "原子力・次世代炉",
+      "prediction": "Short",
+      "confidence": "High",
+      "reason": "SMR -7.63%、OKLO -6.22%と次世代炉が急落。CEG +2.46%の上昇も相殺できず、全体として原子力成長期待が縮小し日本原子力株も売られやすい。"
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "long": 4,
+    "short": 20,
+    "neutral": 6
+  }
+}
