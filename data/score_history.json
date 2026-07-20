@@ -1,6 +1,12 @@
 {
   "records": [
     {
+      "date": "20260720",
+      "correct": 15,
+      "incorrect": 0,
+      "skip": 15
+    },
+    {
       "date": "20260717",
       "correct": 18,
       "incorrect": 3,
@@ -175,9 +181,9 @@
       "skip": 13
     }
   ],
-  "total_correct": 329,
+  "total_correct": 344,
   "total_incorrect": 237,
-  "total_skip": 304,
-  "overall_accuracy": 58.1,
-  "last_updated": "20260717"
+  "total_skip": 319,
+  "overall_accuracy": 59.2,
+  "last_updated": "20260720"
 }
